@@ -3,6 +3,7 @@ layout: post
 title: GitHub Composite Actions
 featured: true
 date: '2021-09-01 17:22:01'
+image: /assets/images/posts/actions.png
 description: >
   Composite Actions now allow you to run other Actions, not just script steps. This is great for composability and maintainability, but there are some limitations that you should be aware of.
 tags:
