@@ -1,6 +1,5 @@
 ---
-# Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: list
+layout: grid
 title: github
 slug: github
 description: >

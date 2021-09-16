@@ -41,16 +41,16 @@ Here we generate all the tags.
 {% assign tags_array = tags_list | split: '::' %}
 
 <div class="posts">
-    <ul class="tag-list">
+    <ul class="related-posts faded">
         {% for tag_info in tags_array %}
             {% assign info = tag_info | split: '|' %}
             {% assign tag = info[0] | strip %}
             {% assign count = info[1] %}
             <li>
-                <a href="/tag/{{ tag | slug }}">
+                <a href="/tag/{{ tag | slug }}" class="heading flip-title">
                     {{ tag }}
-                </a>
-                <small>{{ count }}</small>
+                </a> &nbsp;
+                <small> {{ count }}</small>
             </li>
         {% endfor %}
     </ul>
