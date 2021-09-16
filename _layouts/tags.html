@@ -47,7 +47,7 @@ Here we generate all the tags.
             {% assign tag = info[0] | strip %}
             {% assign count = info[1] %}
             {% assign url_slug = tag | slug %}
-            {% assign url = '/tag/' | append: url_slug %}
+            {% assign url = site.baseUrl | append: '/tag/' | append: url_slug %}
             <li>
                 <a href="{% include_cached smart-url url=url %}" class="heading flip-title">
                     {{ tag }}
