@@ -11,6 +11,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 > Resistance is futile.  
 > _The Borg. And GitHub._
 
