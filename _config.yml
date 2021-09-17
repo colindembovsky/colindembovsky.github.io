@@ -127,11 +127,11 @@ defaults:
     values:
       sitemap:         false
 
-  # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  # You can use the following to enable comments on all posts.
+  - scope:
+      type:            posts
+    values:
+      comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -172,6 +172,16 @@ kramdown:
 # PRO version only!
 # tinyletter:            <username>
 
+giscus:
+  repo: "colindembovsky/colindembovsky.github.io"
+  repo-id: "MDEwOlJlcG9zaXRvcnk0MDczMjI3MjU="
+  category: "Giscussions"
+  category-id: "DIC_kwDOGEdAZc4B_F18"
+  mapping: "pathname"
+  reactions-enabled: "1" 
+  emit-metadata: "0"
+  theme: "preferred_color_scheme"
+  crossorigin: "anonymous"
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
@@ -179,10 +189,10 @@ kramdown:
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons:         [related, random, comments]
+  post_addons:         [comments, related, random]
 
   # Configure the order of complementary content on project pages
-  project_addons:      [other, comments]
+  project_addons:      [comments, other]
 
   # Set to `true` if you don't want to show an icon indicating external links
   no_mark_external:    false

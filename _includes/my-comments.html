@@ -22,3 +22,19 @@
   }
 }(window, document);</script>
 {% endif %}
+
+{% assign giscus = site.giscus %}
+{% if giscus %}
+<script src="https://giscus.app/client.js"
+        data-repo={{ giscus.repo }}
+        data-repo-id={{ giscus.repo-id }}
+        data-category={{ giscus.category }}
+        data-category-id={{ giscus.category-id }}
+        data-mapping={{ giscus.mapping }}
+        data-reactions-enabled={{ giscus.reactions-enabled }}
+        data-emit-metadata={{ giscus.repo }}
+        data-theme={{ giscus.theme }}
+        crossorigin={{ giscus.crossorigin }}
+        async>
+</script>
+{% endif %}
