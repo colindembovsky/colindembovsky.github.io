@@ -6,6 +6,9 @@ tags:
 - sourcecontrol
 ---
 
+1. TOC
+{:toc}
+
 I remember when I first learned about [Git](https://git-scm.com/) circa 2012. I was skeptical - _you can change history? What kind of source control system let you change history?_ However, it seemed to have huge momentum and so I started learning how to use it. Once you get over the initial learning curve - and there is one when you switch from centralized version control systems like [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/overview?view=vsts) or [Subversion](https://subversion.apache.org/) - I started to see the beauty of Git. And now I believe that teams can benefit enormously if they migrate to Git. I believe that so strongly that I spoke about [this very topic at VSLive! in Orlando](https://live360events.com/Events/Orlando-2018/Sessions/Tuesday/VST04-Modernizing-Your-Source-Control-Migrating-to-Git-from-Team-Foundation-Version-Control-TFVC.aspx) earlier this month.
 
 In this post I want to detail why I think migrating to Git makes sense, common objections I hear, and some common ways you can migrate to Git. Migrating to Git make _business sense_ as well as _technical sense_ - so I'll call out business value-adds along the way. I'll primarily be talking about migrating from TFVC, but similar principles apply if you're migrating from other centralized source control systems.

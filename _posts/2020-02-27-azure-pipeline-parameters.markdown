@@ -8,6 +8,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 In a [previous post](/azure-pipeline-variables), I did a deep dive into Azure Pipeline variables. That post turned out to be longer than I anticipated, so I left off the topic of parameters until this post.
 
 ## Type: Any

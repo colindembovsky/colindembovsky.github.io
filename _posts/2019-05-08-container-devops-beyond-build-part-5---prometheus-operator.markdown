@@ -7,6 +7,9 @@ tags:
 - devops
 ---
 
+1. TOC
+{:toc}
+
 Series:
 
 - [Part 1: Intro](/container-devops-beyond-build-part-1)

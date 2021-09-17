@@ -8,6 +8,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/) (AKS) Clusters are amazing - all the power of Kubernetes (K8s) without the hassle of a full tin-based installation. However, by default the management plane, or k8s API, is public. If you want to harden your cluster, one sensible step would be to prevent public access to the management API by making your cluster _[private](https://docs.microsoft.com/en-us/azure/aks/private-clusters)_.
 
 > Note: There are many other steps you should take to truly harden your cluster, so making your cluster private alone does not guarantee a secure cluster!

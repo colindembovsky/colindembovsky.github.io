@@ -7,6 +7,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 I read a great [blogpost](https://blog.ehn.nu/2019/01/running-net-core-unit-tests-with-docker-and-azure-pipelines/) recently by my friend and fellow MVP [Jakob Ehn](https://blog.ehn.nu/about-me/). In this post he outlines how he created a [multi-stage Dockerfile](https://docs.docker.com/develop/develop-images/multistage-build/) to run .NET Core tests. I've always been on the fence about running tests during a container build - I usually run the tests outside and then build/publish the container proper only if the tests pass. However, this means I have to have the test frameworks on the build agent - and that's where doing it inside a container is great, since the container can have all the test dependencies without affecting the host machine. However, if you do this then you'll have test assets in your final container image, which isn't ideal. Fortunately, with multi-stage Dockerfiles you can compile (and/or test) and then create a final image that just has the app binaries!
 
 I was impressed by Jakob's solution, but I wanted to add a couple enhancements:

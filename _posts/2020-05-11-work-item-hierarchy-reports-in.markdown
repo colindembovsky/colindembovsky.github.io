@@ -9,6 +9,9 @@ tags:
 - analytics
 ---
 
+1. TOC
+{:toc}
+
 My colleague Josh Johanning and I were working with a team that is using Azure DevOps to track work. Their team lead was opening Excel and pulling in Work Item data and creating a feature timeline by hand. This process was manual, painstaking and error-prone. Josh and I set out to see if we could create the same report using [OData and PowerBI](https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops).
 
 ## tl;dr Just give me the pbix file!

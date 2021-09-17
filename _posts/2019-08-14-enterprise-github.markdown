@@ -6,6 +6,9 @@ tags:
 - sourcecontrol
 ---
 
+1. TOC
+{:toc}
+
 Since [Microsoft acquired GitHub](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), and the anti-Microsoft folks had calmed down, there have been a number of interesting developments in the GitHub ecosystem. If you’ve ever read one of my blogs or attended any events that I’ve spoken at, you’ll know that I am a raving Azure DevOps fan. I do, however, also have several [repos on GitHub](https://github.com/colindembovsky). As a DevOpsologist (someone who is in a constant state of learning about DevOps) I haven’t ever recommended GitHub for Enterprises – but the lines of functionality are starting to blur between GitHub and Azure DevOps. So which should you use, and when?
 
 One note before we launch in: Azure DevOps is the name of the suite of functionality for the Microsoft DevOps platform. There are a number of “verticals” within the suite, which you can mix and match according to your needs. [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) is the source control feature, [Azure Boards](https://azure.microsoft.com/en-us/services/devops/boards/) the project management feature, [Azure Test Plans](https://azure.microsoft.com/en-us/services/devops/test-plans/) the manual test management feature, [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) the Continuous Integration/Continuous Deployment (CI/CD) feature and [Azure Artifacts](https://azure.microsoft.com/en-us/services/devops/artifacts/), the package management feature.

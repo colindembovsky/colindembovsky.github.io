@@ -8,6 +8,9 @@ tags:
 - github
 ---
 
+1. TOC
+{:toc}
+
 Over this weekend, I ported a task from Azure Pipelines to [GitHub Actions](https://github.com/colindembovsky/azure-webapp-route-traffic). It was a fun project, and while I was busy I realized that I could now do some ChatOps. I decided to create a quick video which is below.
 
 <!--kg-card-begin: html--><iframe width="560" height="315" src="https://www.youtube.com/embed/Yo6O55OQSIA" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe><!--kg-card-end: html-->

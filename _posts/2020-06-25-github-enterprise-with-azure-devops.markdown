@@ -9,6 +9,9 @@ tags:
 - devops
 ---
 
+1. TOC
+{:toc}
+
 I've been working recently with several customers that are migrating source code to GitHub Enterprise. Most of these customers are also on Team Foundation Server (TFS) or Azure DevOps Server (the newer version of TFS).
 
 In this post I want to point out some considerations when migrating to GitHub Enterprise:

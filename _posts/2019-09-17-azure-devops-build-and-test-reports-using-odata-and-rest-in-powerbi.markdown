@@ -6,6 +6,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 I have been playing with the Azure DevOps [OData service](https://docs.microsoft.com/en-us/azure/devops/report/extend-analytics/?view=azure-devops) recently to start creating some reports. Most of my fiddling has been with the Work Item and Work Item Board Snaphot entities, but I recently read a great post focused more on [Build metrics](https://wouterdekort.com/2019/09/12/measuring-your-way-around-azure-devops/) by my friend and fellow ALM MVP, [Wouter de Kort](https://twitter.com/wouterdekort). I just happened to be working with a customer that is migrating from Azure DevOps Server to Azure DevOps Services and they had some SSRS reports that I knew could fairly easily be created using OData and PowerBI. In this post I’ll go over some of my experiences with the OData service and share a PowerBI template so that you can start creating some simple build reports yourself.
 
 ## TL;DR

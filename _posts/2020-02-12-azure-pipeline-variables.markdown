@@ -8,6 +8,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 I am a big fan of Azure Pipelines. Yes it’s YAML, but once you get over that it’s a fantastic way to represent pipelines as code. It would be tough to achieve any sort of sophistication in your pipelines without variables. There are several types of variables, though this classification is partly mine and pipelines don’t distinguish between these types. However, I’ve found it useful to categorize pipeline variables to help teams understand some of the nuances that occur when dealing with them.
 
 Every variable is really a key:value pair. The key is the name of the variable, and it has a string value. To dereference a variable, simply wrap the key in `$()`. Let’s consider this simple example:

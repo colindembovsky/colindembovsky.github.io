@@ -9,6 +9,9 @@ tags:
 - build
 ---
 
+1. TOC
+{:toc}
+
 Microsoft have deprecated Load Testing in Visual Studio. Along with this, they have also [deprecated the cloud load testing](https://docs.microsoft.com/en-us/azure/devops/test/load-test/getting-started-with-performance-testing?view=azure-devops) capability in Azure/Azure DevOps. On the official [alternatives document](https://docs.microsoft.com/en-us/azure/devops/test/load-test/getting-started-with-performance-testing?view=azure-devops), several alternative load testing tools and platforms are mentioned, including [JMeter](http://jmeter.apache.org/). What is not clear from this page is how exactly you’re supposed to integrate JMeter into your pipelines.
 
 I have a demo that shows how you can use Application Insights to provide [business telemetry](/appinsights-analytics-in-the-real-world). In the demo, I update a website (PartsUnlimited) and then use traffic routing to [route 20% of traffic to a canary slot](/testing-in-production-routing-traffic-during-a-release). To simulate traffic, I run a cloud load test. Unfortunately, I won’t be able to use that for much longer since the cloud load test functionality will end of life soon! I set about figuring out how to run this test using JMeter.

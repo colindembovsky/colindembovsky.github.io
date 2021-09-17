@@ -6,6 +6,9 @@ tags:
 - docker
 ---
 
+1. TOC
+{:toc}
+
 Series:
 
 - Part 1: Intro (this post)

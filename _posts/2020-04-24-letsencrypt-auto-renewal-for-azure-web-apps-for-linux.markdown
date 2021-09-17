@@ -8,6 +8,9 @@ tags:
 - azure
 ---
 
+1. TOC
+{:toc}
+
 This is my first post after converting my blog to Ghost. There are dozens of posts from all sorts of people about how they adopted/migrated to Ghost. I had some interesting challenges to get my site going, which I will post about. One of them was SSL security.
 
 <!--kg-card-begin: markdown-->

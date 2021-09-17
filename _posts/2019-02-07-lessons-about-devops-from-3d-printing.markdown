@@ -6,6 +6,9 @@ tags:
 - devops
 ---
 
+1. TOC
+{:toc}
+
 It's no surprise that I'm passionate about DevOps. I think that has to do with my personality - my top five [StrengthsFinder](https://www.gallupstrengthscenter.com/home/en-us/strengthsfinder) strengths are Strategic, Ideation, Learner, Activator, Achiever. I love the combination of people and tools that DevOps brings together. Being deeply technical and also fascinated by how people interact means I'm built for DevOps consulting. Add to that my love of learning, and I'm in my perfect job, since if there's one thing I've learned about DevOps - it's that I'll never learn everything there is to learn about it!
 
 <!--kg-card-begin: html--> [![IMG_20190120_001801](/assets/images/files/c6ecad64-eefb-40d6-819e-327fc336a254.jpg "IMG\_20190120\_001801")](/assets/images/files/8feab4fd-e6bb-48e4-a8c6-ea80d50779ba.jpg)<!--kg-card-end: html-->

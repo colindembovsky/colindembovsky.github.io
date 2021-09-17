@@ -9,6 +9,9 @@ tags:
 - github
 ---
 
+1. TOC
+{:toc}
+
 Security is a big deal. So big that the marketing folks have created the moniker "DevSecOps" to highlight a focus on security. I've never liked that term, since DevOps is supposed to include security by definition. However, integrating security into your culture and into your pipelines can be a challenge.
 
 Typically, security is left to the end of the delivery life cycle. Perhaps you're fortunate enough to work in a team where you are at least somewhat security conscious - but you probably don't have InfoSec involved in your daily routine. This challenge has given rise to the term "shift left" where teams work to intentionally embed security earlier in the life cycle.

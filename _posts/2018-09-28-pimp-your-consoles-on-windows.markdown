@@ -6,6 +6,9 @@ tags:
 - development
 ---
 
+1. TOC
+{:toc}
+
 I spend a fair amount of time in consoles - specifically PowerShell and Bash (Windows Subsystem for Linux) on my Windows 10 machine. I also work with Git - a lot. So having a cool console that is Git aware is a must. I always recommend [Posh-Git](https://www.powershellgallery.com/packages/posh-git/0.7.1) (a PowerShell prompt that shows you which Git branch you're on as well as the branch status). At Ignite this I saw some zsh consoles in VS Code on Mac machines. So I wondered if I could get my consoles to look as cool. And it's not just about the looks - seeing your context in the console is a productivity booster!
 
 It turns out that other than installing some updated fonts for both PowerShell and Bash, you can get pretty sweet consoles fairly easily.

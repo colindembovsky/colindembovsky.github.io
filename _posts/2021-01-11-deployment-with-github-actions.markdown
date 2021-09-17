@@ -8,6 +8,9 @@ tags:
 - actions
 ---
 
+1. TOC
+{:toc}
+
 Let me start this post with three disclaimers:
 
 1. [GitHub Actions Environments](https://docs.github.com/en/free-pro-team@latest/actions/reference/environments) is in beta

@@ -9,6 +9,9 @@ tags:
 - process
 ---
 
+1. TOC
+{:toc}
+
 We've recently completed several DevOps Assessments for various customers. These assessments go through work item tracking and planning, source control practices, automated build and test, release and test management, database DevOps, security, architecture, ops and monitoring and team structures. It's a lot to cover - and I've noticed a common theme that comes up over and over: almost every team has too much work in progress (WIP).
 
 This generally comes up early on when we talk about work item tracking, which I won't cover here since there are plenty of posts (including some of mine) that cover why you should limit WIP for work items. But there are numerous impacts of having too much WIP in other areas of the delivery lifecycle. In this post I'll go through some of them.

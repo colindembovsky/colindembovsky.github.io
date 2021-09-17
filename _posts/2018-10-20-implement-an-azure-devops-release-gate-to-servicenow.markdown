@@ -6,6 +6,9 @@ tags:
 - releasemanagement
 ---
 
+1. TOC
+{:toc}
+
 I'm currently doing some work with a customer that is integrating between ServiceNow and Azure DevOps (the artist formerly known as VSTS). I quickly spun up a development ServiceNow instance to play around a bit. One of the use-cases I could foresee was a release gate that only allows a release to continue if a Change Request (CR) is in the Implement state. So I had to do some investigation: I know there are a few out-of-the-box Azure DevOps [release gates](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=vsts), including a REST API call - but I knew that you could also create a custom gate. I decided to see if I could create the gate without expecting the release author having to know the REST API call to ServiceNow or how to parse the JSON response!
 
 Follow along to see the whole process - or just grab the code in the [Github repo](https://github.com/colindembovsky/cols-service-now-extensions).

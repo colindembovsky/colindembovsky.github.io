@@ -8,6 +8,9 @@ tags:
 - devops
 ---
 
+1. TOC
+{:toc}
+
 I remember being mesmerized watching one of my favorite humans, [Steven Borg](https://www.linkedin.com/in/steven-borg-968558b/), talk about flow in knowledge work. Watching him train teams on queues and lean practices was amazing. Of course, Steve pointed me to [The Principles of Product Development Flow by Donald G. Reinertsen](https://www.amazon.com/Principles-Product-Development-Flow-Generation/dp/1935401009) and I highly recommend that you read it if you're in any kind of knowledge work.
 
 It's been a while since I read anything fresh on these topics - mostly due to a change in role for me at work. I'm doing more technical sales than delivery, so I don't get as much time code-slinging and working with teams as I used to. However, I finally decided to read some [work on Agile metrics by Daniel S. Vacanti](https://www.amazon.com/Books-Daniel-S-Vacanti/s?rh=n%3A283155%2Cp_27%3ADaniel+S.+Vacanti).

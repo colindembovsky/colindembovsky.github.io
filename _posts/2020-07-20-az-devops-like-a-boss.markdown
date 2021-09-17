@@ -8,6 +8,9 @@ tags:
 - automation
 ---
 
+1. TOC
+{:toc}
+
 One of the best features of Azure DevOps is the [extensive API](https://docs.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-6.0). However, while having a REST API is great, interacting with a service at HTTP level can be frustrating.
 
 Azure itself has an [extensive API](https://docs.microsoft.com/en-us/rest/api/azure/), and the API has been wrapped into an easy to use cross-platform command line interface (CLI) called `az`. Fortunately, there is an extension to `az` for interacting with Azure DevOps called `az devops`.
