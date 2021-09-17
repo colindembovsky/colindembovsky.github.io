@@ -29,58 +29,6 @@
   <div id="giscus">
     <div></div>
   </div>
-  <!-- <div id="giscus">
-    <script src="https://giscus.app/client.js" 
-            data-repo="{{ giscus.repo }}"
-            data-repo-id="{{ giscus.repo-id }}"
-            data-category="{{ giscus.category }}"
-            data-category-id="{{ giscus.category-id }}"
-            data-mapping="{{ giscus.mapping }}"
-            data-reactions-enabled="{{ giscus.reactions-enabled }}"
-            data-emit-metadata="{{ giscus.repo }}"
-            data-theme="{{ giscus.dark-theme }}"
-            crossorigin="{{ giscus.crossorigin }}" 
-            async>
-    </script>
-  </div> -->
-
-  <!-- <div id="giscus_light">
-    <script src="https://giscus.app/client.js" 
-            data-repo="{{ giscus.repo }}"
-            data-repo-id="{{ giscus.repo-id }}"
-            data-category="{{ giscus.category }}"
-            data-category-id="{{ giscus.category-id }}"
-            data-mapping="{{ giscus.mapping }}"
-            data-reactions-enabled="{{ giscus.reactions-enabled }}"
-            data-emit-metadata="{{ giscus.repo }}"
-            data-theme="{{ giscus.light-theme }}"
-            crossorigin="{{ giscus.crossorigin }}" 
-            async>
-    </script> 
-  </div>-->
-
-  <!-- <script>
-    function toggle_giscus() {
-      const c = document.body.classList;
-      const dark = c.contains("dark-mode") || "_sunset" in window && !c.contains("light-mode") && matchMedia("(prefers-color-scheme: dark)").matches;
-
-      const glight = document.getElementById("giscus_light");
-      const gdark = document.getElementById("giscus_dark");
-
-      if (dark) {
-        const parent = glight.parentElement;
-        parent.removeChild(glight);
-        parent.appendChild(gdark);
-      } else {
-        const parent = gdark.parentElement;
-        parent.removeChild(gdark);
-        parent.appendChild(glight);
-      }
-    }
-
-    document.addEventListener("hydejack-dark-mode-toggle", function() { toggle_giscus(); });
-    toggle_giscus();
-  </script> -->
 
   <script>
     function toggle_giscus() {
