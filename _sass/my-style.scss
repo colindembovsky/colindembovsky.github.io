@@ -1,0 +1,34 @@
+
+$custom-dark-gray-bg: rgba(0,0,0,0.833);
+$custom-light-gray-bg: rgba(0,0,0,0.166);
+
+@media screen {
+    body.light-mode {
+        @include light-mode();
+        --gray-bg: #{$custom-light-gray-bg};
+    }
+
+    body.dark-mode {
+        @include dark-mode();
+        --gray-bg: #{$custom-dark-gray-bg};
+    }
+
+    blockquote {
+        border-left: 0.25rem solid var(--accent-color) !important;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+      @include dark-mode();
+      --gray-bg: #{$custom-dark-gray-bg};
+    }
+
+    blockquote {
+        border-left: 0.25rem solid var(--accent-color) !important;
+    }
+  }
+
+hy-push-state a {
+    text-underline-offset: .2rem;
+}

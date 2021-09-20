@@ -87,12 +87,14 @@ paginate_path:         /blog/:num/
  
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          rgb(79,177,186)
+#accent_color:          rgb(79,177,186)
+accent_color:          rgb(79, 129, 220)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(8,46,57)
+#theme_color:           rgb(8,46,57)
+theme_color:           rgb(5,19,24)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -151,10 +153,10 @@ defaults:
       seo:
         type:          WebPage
 
-kramdown:
-  math_engine:         mathjax
-  math_engine_opts:    {}
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
+# kramdown:
+#   math_engine:         mathjax
+#   math_engine_opts:    {}
+#   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
 
 # 3rd Party Integrations
