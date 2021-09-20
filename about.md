@@ -5,7 +5,7 @@ hide_description: true
 permalink: /about/
 ---
 <div style="text-align: center">
-    <img src="/assets/images/2020/4/23177_profile_mox.jpg" alt loading="lazy" width="350">
+    <img src="/assets/images/2020/4/23177_profile_mox.jpg" alt loading="lazy" width="350" style="border-radius: 15px;">
 </div>
 
 <br/><br/>
