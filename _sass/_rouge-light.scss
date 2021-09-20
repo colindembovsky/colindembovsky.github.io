@@ -12,8 +12,8 @@
     .highlight .o { color: #555555  !important; } /* Operator */
     .highlight .cm { color: #0099FF !important; font-style: italic  !important; } /* Comment.Multiline */
     .highlight .cp { color: #009999  !important; } /* Comment.Preproc */
-    .highlight .c1 { color: #0099FF !important; font-style: italic  !important; } /* Comment.Single */
-    .highlight .cs { color: #0099FF !important; font-weight: bold !important; font-style: italic  !important; } /* Comment.Special */
+    .highlight .c1 { color: #0099FF !important; font-style: italic  !important; background: #ddd !important; } /* Comment.Single */
+    .highlight .cs { color: #0099FF !important; font-weight: bold !important; font-style: italic  !important; background: #ddd !important; } /* Comment.Special */
     .highlight .gd { background-color: #FFCCCC !important; border: 1px solid #CC0000  !important; } /* Generic.Deleted */
     .highlight .ge { font-style: italic  !important; } /* Generic.Emph */
     .highlight .gr { color: #FF0000  !important; } /* Generic.Error */
