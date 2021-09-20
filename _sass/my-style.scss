@@ -1,3 +1,5 @@
+@import "_rouge-dark.scss";
+@import "_rouge-light.scss";
 
 $custom-dark-gray-bg: rgba(0,0,0,0.833);
 $custom-light-gray-bg: rgba(0,0,0,0.166);
@@ -6,11 +8,15 @@ $custom-light-gray-bg: rgba(0,0,0,0.166);
     body.light-mode {
         @include light-mode();
         --gray-bg: #{$custom-light-gray-bg};
+        
+        @include rouge-light();
     }
 
     body.dark-mode {
         @include dark-mode();
         --gray-bg: #{$custom-dark-gray-bg};
+
+        @include rouge-dark();
     }
 
     blockquote {
@@ -22,6 +28,8 @@ $custom-light-gray-bg: rgba(0,0,0,0.166);
     body {
       @include dark-mode();
       --gray-bg: #{$custom-dark-gray-bg};
+
+      @include rouge-dark();
     }
 
     blockquote {
