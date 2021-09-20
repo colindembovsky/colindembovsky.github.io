@@ -29,7 +29,7 @@ description:           >
   philosophy.
 
 # A shorter description for the sidebar.
-tagline:               DevOpsology & GitHub. Opinions my own.
+tagline:               DevOpsology & GitHub. <br/> <em>Opinions my own</em>.
 
 # A list of keywords for your blog
 keywords:              [ devops, github, actions, build, ci, cd ]
