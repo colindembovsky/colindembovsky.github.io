@@ -21,7 +21,8 @@ code, pre {
 code {
   @extend .color-transition;
   padding: .25em .5em;
-  background-color: var(--gray-bg);
+  background-color: var(--code-bg);
+  //background-color: var(--gray-bg);
   font-size: smaller;
 }
 

@@ -1,20 +1,21 @@
 @import "_rouge-dark.scss";
 @import "_rouge-light.scss";
 
-$custom-dark-gray-bg: rgba(0,0,0,0.833);
-$custom-light-gray-bg: rgba(0,0,0,0.166);
+$dark-code-bg: rgba(0,0,0,0.833);
+$light-code-bg: rgba(0,0,0,0.166);
 
 @media screen {
     body.light-mode {
         @include light-mode();
-        --gray-bg: #{$custom-light-gray-bg};
+        --code-bg: #{$light-code-bg};
         
         @include rouge-light();
+
     }
 
     body.dark-mode {
         @include dark-mode();
-        --gray-bg: #{$custom-dark-gray-bg};
+        --code-bg: #{$dark-code-bg};
 
         @include rouge-dark();
     }
@@ -26,10 +27,10 @@ $custom-light-gray-bg: rgba(0,0,0,0.166);
 
 @media screen and (prefers-color-scheme: dark) {
     body {
-      @include dark-mode();
-      --gray-bg: #{$custom-dark-gray-bg};
+        @include dark-mode();
+        --code-bg: #{$dark-code-bg};
 
-      @include rouge-dark();
+        @include rouge-dark();
     }
 
     blockquote {
