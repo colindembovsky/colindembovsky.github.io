@@ -4,7 +4,7 @@
     /*********************/
     /*! darkocean; https://stylishthemes.github.io/Syntax-Themes/pygments/ */
     
-    .highlight, .highlight pre, .highlight table { background: #000000 !important; color: #e0ffff !important; }
+    .highlight, .highlight pre, .highlight table, .pre-header { background: #000000 !important; color: #e0ffff !important; }
     .highlight .hll { background-color: #ffffcc !important; }
     .highlight .c { color: #8db6cd !important; background-color: #102520 !important; } /* Comment */
     .highlight .err { color: #e0ffff !important; } /* Error */
@@ -74,4 +74,8 @@
     .highlight .vg { color: #009acd !important; } /* Name.Variable.Global */
     .highlight .vi { color: #009acd !important; } /* Name.Variable.Instance */
     .highlight .il { color: #c34a2c !important; } /* Literal.Number.Integer.Long */
+
+    .pre-header-common { border-bottom: 1px solid #000000 !important; }
+    div.highlight>button { border-left: none;}
 }
+

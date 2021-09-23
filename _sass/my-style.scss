@@ -1,22 +1,24 @@
 @import "_rouge-dark.scss";
 @import "_rouge-light.scss";
 
-$dark-code-bg: rgba(0,0,0,0.833);
-$light-code-bg: rgba(0,0,0,0.166);
+@mixin light-mode-code() {
+    --code-bg: rgba(0,0,0,0.166);
+}
+
+@mixin dark-mode-code() {
+    --code-bg: rgba(0,0,0,0.8333);
+}
 
 @media screen {
     body.light-mode {
         @include light-mode();
-        --code-bg: #{$light-code-bg};
-        
+        @include light-mode-code();        
         @include rouge-light();
-
     }
 
     body.dark-mode {
         @include dark-mode();
-        --code-bg: #{$dark-code-bg};
-
+        @include dark-mode-code();
         @include rouge-dark();
     }
 
@@ -28,8 +30,7 @@ $light-code-bg: rgba(0,0,0,0.166);
 @media screen and (prefers-color-scheme: dark) {
     body {
         @include dark-mode();
-        --code-bg: #{$dark-code-bg};
-
+        @include dark-mode-code();
         @include rouge-dark();
     }
 

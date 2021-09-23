@@ -4,7 +4,7 @@
     /*********************/
     /*! manni !important; https://raw.githubusercontent.com/jwarby/pygments-css/master/manni.css */
     
-    .highlight, .highlight pre, .highlight table { background: #ddd !important; color: #000000 !important; }
+    .highlight, .highlight pre, .highlight table, .pre-header { background: #ddd !important; color: #000000 !important; }
     .highlight .hll { background-color: #ffffcc !important; }
     .highlight .c { color: #0099FF !important; font-style: italic  !important; } /* Comment */
     .highlight .err { color: #AA0000 !important; background-color: #FFAAAA  !important; } /* Error */
@@ -66,4 +66,9 @@
     .highlight .vg { color: #003333  !important; } /* Name.Variable.Global */
     .highlight .vi { color: #003333  !important; } /* Name.Variable.Instance */
     .highlight .il { color: #FF6600  !important; } /* Literal.Number.Integer.Long */
+    .highlight .nx { color: #4e71cf !important; } /* Name.Other */
+    .highlight .p  { color: #006699 !important; } /* Punctuation */
+
+    .pre-header-common { border-bottom: 1px solid #ddd !important; }
+    div.highlight>button { border-left: none;}
 }
