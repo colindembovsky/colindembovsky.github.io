@@ -68,7 +68,7 @@ copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
 #permalink:             /blog/:categories/:year-:month-:day-:title/
-permalink:             /:slug
+permalink:             /:slug/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
