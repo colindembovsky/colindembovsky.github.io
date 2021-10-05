@@ -44,9 +44,18 @@ These limitations mean that reusable workflows are nowhere near as powerful as A
 
 ## Making a Workflow Reusable
 
+### Add the Call Trigger
 Making a workflow reusable is not too hard - you just add a `workflow_call` trigger, with some optional `inputs` and `secrets`. The `workflow_call` trigger allows your workflow to be called by other workflows, and obviously you can pass values for the `inputs` and `secrets` using the `with` keyword, just like any other Action.
 
-### Creating a Reusable DotNet Build, Test and Publish Workflow
+### Enable Actions Access on the Repo
+The `workflow_call` trigger makes the workflow callable, but you still need to allow access. In the `Settings->Actions` tab of your repo, scroll to the bottom and enable the desired level of access:
+
+![Setting Actions Access level on a repo](/assets/images/2021/10/actions-access.png){: .center-image }
+
+Setting Actions Access level on a repo.
+{:.figcaption}
+
+## Creating a Reusable DotNet Build, Test and Publish Workflow
 
 Imagine you have a standard way of building and testing dotnet applications. Before reusable workflows, you would have had to copy/paste a workflow to every dotnet repo. Now you can set up a single workflow that can be reused. Let's take a look at an example:
 
@@ -94,7 +103,7 @@ Notes:
 
 So far so good. Let's enhance this workflow to add in some more functionality. 
 
-#### Parameterize the Platform
+### Parameterize the Platform
 
 Let's parameterized the `runs-on` so that we can pass in the hosted or private pool we want to run the workflow on:
 
@@ -121,7 +130,7 @@ jobs:
 Adding a `runs-on` input.
 {:.figcaption}
 
-#### Parameterize the Source Directory
+### Parameterize the Source Directory
 
 What if the project file isn't in the root directory of the repo? Many teams put the app code into a folder called `src` or have a mono-repo with several apps in different folders. Not a problem - we can add a `project-folder` input and set that as the default working directory:
 
@@ -151,7 +160,7 @@ jobs:
 Adding a `project-folder` input.
 {:.figcaption}
 
-#### Parameterize the Source Directory
+### Parameterize the Source Directory
 
 What if there are no tests to run or we don't want to run them because they take too long? We can add a boolean parameter and skip the test step if this value is false:
 
@@ -182,7 +191,7 @@ jobs:
 Adding a `run-tests` boolean input.
 {:.figcaption}
 
-#### Publish the App
+### Publish the App
 
 What if we want to publish the compiled app, and specify the configuration and name of the published artifact? No problem.
 
@@ -223,7 +232,7 @@ jobs:
 Adding steps and inputs for publishing.
 {:.figcaption}
 
-#### Putting it all together
+### Putting it all together
 
 The final workflow looks like this:
 
