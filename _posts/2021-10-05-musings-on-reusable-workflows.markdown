@@ -160,7 +160,7 @@ jobs:
 Adding a `project-folder` input.
 {:.figcaption}
 
-### Parameterize the Source Directory
+### Parameterize Running Tests
 
 What if there are no tests to run or we don't want to run them because they take too long? We can add a boolean parameter and skip the test step if this value is false:
 
