@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Musings on GitHub Actions Reusable Workflows
-date: '2021-10-01 01:22:01'
+date: '2021-10-05 01:22:01'
 image: /assets/images/2021/10/reuse.jpeg
 description: >
   Newly released Reusable Workflows allows you to reuse workflows in your GitHub workflows. While this still has some limitations, it's still better than copy/paste!
@@ -31,10 +31,16 @@ For teams that are building their own automation, they can still benefit from a 
 
 There are still some limitations to reusable wofklows:
 
+1. Reusable workflows only run on _hosted_ runners, not yet on _private_ runners.
+1. Reusable workflows cannot call other reusable workflows.
+1. You cannot access job outputs from reusable workflows.
+1. `env` variables set in the calling workflow are not accessible to the called workflow.
 1. The only parameter types that are supported are `string`, `number` and `boolean`. Arrays are not supported.
 1. You cannot pass in steps to inject (like you can with Azure Pipelines templates).
 1. Repos that contain reusable workflows must be either `internal` or `public`.
 1. You cannot enforce use of a reusable workflow. In other words, there is no equivalent for [extends templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops#extend-from-a-template).
+
+These limitations mean that reusable workflows are nowhere near as powerful as Azure Pipeline templates, but it's a step in the right direction for Actions. At the very least, reusable workflows minimized copy/paste for simple scenarios.
 
 ## Making a Workflow Reusable
 
@@ -386,6 +392,61 @@ Invoking a workflow with a JSON array parameter.
 You can see the value that we pass to `runs-on`: it's a JSON array that has been stringified.
 
 This is definitely hacky, but it's probably the only way to pass a list to a reusable workflow. And it won't work for injecting steps.
+
+## Secrets
+
+If you want to pass secrets to a reusable workflow, you should use the `secrets` keyword. These are really the same as inputs, but instead of being plaintext, they are treated as secrets. Here's an example:
+
+~~~yml
+{% raw %}
+# file: 'reusable.yml'
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./.github/actions/some-authenticated-action@v1
+      with:
+        username: ${{ inputs.username }}
+        token: ${{ secrets.token }}      
+{% endraw %}
+~~~
+
+Defining a `secret` input to a reusable workflow.
+{:.figcaption}
+
+~~~yml
+{% raw %}
+# file: 'caller.yml'
+name: Deploy
+
+on:
+  push:
+    
+jobs:
+  deploy:
+    - uses: my-org/my-workflow-repo./.github/workflows/reusable.yml@v1
+      with:
+        username: ${{ github.actor }}
+        token: ${{ github.token }}      
+{% endraw %}
+~~~
+
+Invoking a reusable workflow with a secret.
+{:.figcaption}
+
+You can see that while `token` is a secret, from the caller it looks just like any other parameter.
 
 # Conclusion
 
