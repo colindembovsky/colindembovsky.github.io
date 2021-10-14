@@ -456,7 +456,7 @@ jobs:
 Invoking a reusable workflow with a secret.
 {:.figcaption}
 
-You can see how the secret `token` is passed using `secret` under the `uses`.
+You can see how the secret `token` is passed using `secrets` under the `uses` keyword.
 
 # Conclusion
 
