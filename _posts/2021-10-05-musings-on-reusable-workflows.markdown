@@ -448,6 +448,7 @@ jobs:
     - uses: my-org/my-workflow-repo./.github/workflows/reusable.yml@v1
       with:
         username: ${{ github.actor }}
+      secrets:
         token: ${{ github.token }}      
 {% endraw %}
 ~~~
@@ -455,7 +456,7 @@ jobs:
 Invoking a reusable workflow with a secret.
 {:.figcaption}
 
-You can see that while `token` is a secret, from the caller it looks just like any other parameter.
+You can see how the secret `token` is passed using `secret` under the `uses`.
 
 # Conclusion
 
