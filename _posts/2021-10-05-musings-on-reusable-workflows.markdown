@@ -31,7 +31,7 @@ For teams that are building their own automation, they can still benefit from a 
 
 There are still some limitations to reusable wofklows:
 
-1. ~~Reusable workflows only run on _hosted_ runners, not yet on _private_ runners.~~ **Update** Reusable workflows are supported on self-hosted runners now!
+1. ~~Reusable workflows only run on _hosted_ runners, not yet on _private_ runners.~~ **Update**: Reusable workflows are supported on self-hosted runners now (10/14/2021)!
 1. Reusable workflows cannot call other reusable workflows.
 1. You cannot access job outputs from reusable workflows.
 1. `env` variables set in the calling workflow are not accessible to the called workflow.
