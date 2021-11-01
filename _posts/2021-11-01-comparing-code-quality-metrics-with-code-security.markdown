@@ -4,7 +4,7 @@ title: Comparing Code Quality Metrics with Code Security
 date: '2021-11-01 01:22:01'
 image: /assets/images/2021/11/code-quality/matrix.jpeg
 description: >
-  Code security is becoming more important for moden software development. What about code quality? How do code quality and code security compare and contrast? I'll discuss some thoughts in this post.
+  Code security is becoming more important for moden software development. What about code quality metrics? How do code quality metrics and code security compare and contrast? I'll discuss some thoughts in this post.
 tags:
 - security
 ---
