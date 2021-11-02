@@ -16,9 +16,11 @@ tags:
 
 Code security has traditionally been an "after the fact" activity. Developers would develop, build, test applications, and then when they're ready to ship to production, attempt to get a security sign-off. This not only isolates developers from security professionals, but this usually ends up either blocking deployments completely or causing teams to deploy vulnerable code with the promise to come back and fix later.
 
-The irony is that we've had security awareness, training and tooling for decades. [OWASP](https://owasp.org/) was founded 20 years ago! Tools like Black Duck (2002), Fortify (2003), Veracode and Checkmarx (2006) are in a rich landscape of security tools. So why are we still seeing so many breaches?
+The irony is that we've had security awareness, training and tooling for decades. [OWASP](https://owasp.org/) was founded 20 years ago! Tools like Black Duck (2002), Fortify (2003), Veracode (2006) and Checkmarx (2006) are in a rich landscape of security tools. So why are we still seeing so many breaches?
 
-"Not in my code! Vulnerabilities are in infra," I head you confidently state. But the Verizon Data Breach Investigation reports between 2016 and 2020 show that the primary attach vector in breaches is _application flaws_. Furthermore, GitHub's Data Science team analyzed 70 million lines of open source code and showed a linear relationship between lines of code and security threats introduced. In other words, the more code you have, the more potential threats you have.
+> Note: Even Semmle (which was acquired by GitHub and turned into CodeQL) has been around for many years.
+
+"Not in my code! Vulnerabilities are in infra," I hear you state confidently. But the Verizon Data Breach Investigation reports between 2016 and 2020 show that the primary attach vector in breaches is _application flaws_. Furthermore, GitHub's Data Science team analyzed 70 million lines of open source code and showed a linear relationship between lines of code and security threats introduced. In other words, the more code you have, the more potential threats you have.
 
 Many of these companies have been banging the "shift-left" drum: that is, integrate security earlier into the development lifecylce. Still we don't see drastically more secure code. Why?
 
@@ -89,7 +91,7 @@ If we assume that your code base is going to grow, and that attackers are going 
 
 ## Consequences
 
-We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Though Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable erformance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
+We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Thought Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable erformance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
 
 Let's assume no-one is going to ignore security vulnerabilities that are surfaced through tooling. More likely, teams are not going to be performing code security scanning regularly. But what are the consequences of not ensuring that the PayPal checkout experience is secure? What would the impact be if a customer account is hacked because of a flaw in your code?
 
