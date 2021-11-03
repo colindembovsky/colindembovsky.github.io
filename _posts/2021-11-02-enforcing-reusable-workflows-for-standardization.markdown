@@ -350,9 +350,11 @@ The Compliance Team now creates a `CODEOWNERS` file in the `.github` folder of t
 
 ~~~yml
 {% raw %}
-# file: 'APP_REPO/.github/CODEOWNERS'
 # Changes to `compliant-` workflows requires @compliance-team approval
 /.github/workflows/compliant-* @colinsalmcorner/compliance-team
+
+# Changes to `CODEOWNERS` requires @compliance-team approval
+/.github/CODEOWNERS @colinsalmcorner/compliance-team
 {% endraw %}
 ~~~
 
@@ -418,15 +420,102 @@ Now that we have things configured, let's see if we can bypass anything! I creat
 
 `faux-colin`'s first attack vector might be the code itself. So he tries to change the code on `main`. Cloning locally, changing the code, and pushing fails. In the UI, there's no way to change code other than creating a branch and submitting a PR:
 
-![Trying to inject bad code into main](/assets/images/2021/11/compliance-reusable/trying-to-change-main.png){: .center-image }
+![Trying to inject bad code into main](/assets/images/2021/11/compliance-reusable/inject-bad-code.png){: .center-image }
 
 Trying to inject bad code into `main`.
 {:.figcaption}
 
-## Attempt to Change `CODEOWNERS`
+Looks like `faux-colin` will have to submit a PR. He can't just sneak bad code into the codebase - at least, not into the `main` branch, without a code review.
 
 ## Deploy a Bad Branch to Prod
 
+`faux-colin` then tries his second attack vector: he'll inject bad code into a branch and then deploy _that_ to production! He commits bad code to an innoucously named branch: `faux-colin-patch-2` for example. No PR - wouldn't want anyone blocking the bad code, now would we? Now to sneak that code into production, he goes to the Actions tab and queues the Deployment Pipeline, selecting his malicious branch as the source:
+
+![Queuing a deployment containing malicious code](/assets/images/2021/11/compliance-reusable/queue-bad-code.png){: .center-image }
+
+Queuing a deployment containing malicious code.
+{:.figcaption}
+
+Ha! Bad code on its way...
+
+Except that the branch protection policy kicks in and prevents the deployment to prod!
+
+![Branch protection policy rejecting prod deployment](/assets/images/2021/11/compliance-reusable/no-prod-deploy.png){: .center-image }
+
+Branch protection policy rejecting prod deployment.
+{:.figcaption}
+
+At worst, the malicious code is now in the dev environment. You could technically add approvals to the dev environment too, but if you've walled off your dev/prod environments correctly, the risk of malicious code in dev should be minimal. You have to trust your developers at some stage of the process, otherwise people will be totally bogged down in red tape. At least you can rest assured that prod environments are still protected.
+
+## Change Deployment Steps
+
+`faux-colin` then decides to change the workflows. Perhaps he doesn't want code scanning to uncover the vulnerability he's introducing, so he'll just bypass the code scanning workflow. So he opens up the `.github/workflows/compliant-scan.yml` and removes the call to the reusable workflow:
+
+~~~yml
+{% raw %}
+# file: 'APP-REPO/.github/workflows/compliant-scan.yml'
+name: Scan app
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  scan:
+    #name: Code scan
+    #uses: colinsalmcorner/super-approved-workflows/.github/workflows/codeql-scan.yml@main
+    #with:
+    #  languages: '["csharp"]'
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo Code is secure
+{% endraw %}
+~~~
+
+Attempting to modify the `compliant-scan.yml` file.
+{:.figcaption}
+
+Once again, he can't do this on `main` so he has to create a branch and a PR. Interestingly, GitHub is smart enought to know that even though the workflow executed on the PR branch is the required workflow, it still required a check from the workflow in the `main` branch. In the screenshot below, you can see that the "bad" workflow (`Scan app / scan (pull_request)`) is passing, but the check is still blocked because the "good" workflow (`Code scan / Analyze (csharp)`) hasn't been run:
+
+![Unable to bypass the Code Scan workflow requirement](/assets/images/2021/11/compliance-reusable/bypass-code-scan-fail.png){: .center-image }
+
+Unable to bypass the Code Scan workflow requirement.
+{:.figcaption}
+
+## Attempt to Change `CODEOWNERS`
+
+`faux-colin` then decides to see if he can jimmy the `CODEOWNERS` file. He tries to add himself as a code owner:
+
+~~~yml
+{% raw %}
+# Changes to `compliant-` workflows requires @compliance-team approval
+/.github/workflows/compliant-* @colinsalmcorner/compliance-team @faux-colin
+
+# Changes to `CODEOWNERS` requires @compliance-team approval
+/.github/CODEOWNERS @colinsalmcorner/compliance-team @faux-colin
+{% endraw %}
+~~~
+
+Attempt to modify the `CODEOWNERS` file to add `faux-colin` as a code owner for the workflows.
+{:.figcaption}
+
+Once again our hacker is foiled! A PR now contains his attempted modifications and merging would require approvals from the Compliance Team:
+
+![PR blocks unapproved changes to the CODEOWNERS file](/assets/images/2021/11/compliance-reusable/attempted-codeowner-change.png){: .center-image }
+
+PR blocks unapproved changes to the `CODEOWNERS` file.
+{:.figcaption}
+
+# Caring About Culture
+
+It seems that `faux-colin` has not been able to inject malicious code into the application. Of course this gives the Compliance Team peace of mind: after all, malicious developers are probably few and far between. However, if a malicious developer can't bypass the process, then there's little chance that a developer will _mistakenly_ do something bad. There are enough checks and balances in the configuration.
+
+That means that the Compliance Team have done their job and can _get out of the way_ and let the App Team do what they do best - code, and hopefully innovate! Remember, DevOps (or DevSecOps if you really prefer) is _cultural_ too. Here we have a good balance of process adherance and compliance without developers being overburdened with red tape or the Complaince Team becoming a bottleneck because they have to enforce draconian policies manually.
+
+Caring about the culture your team works under is critical to success today. After all, Talent Management is one of the four top [Developer Velocity](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance) _business_ performance indicators. If you can ensure your code is safe and compliant _and_ foster a positive culture, you're winning. And using GitHub you can!
 
 # Conclusion
 Using a combination of branch protection policies, permission management, reusable workflows, environment approvals and `CODEOWNERS` file, teams can achieve a good combination of autonomy and enterprise alignment. Compliance Teams can rest assured that the process is being enforced without becoming blockers.
