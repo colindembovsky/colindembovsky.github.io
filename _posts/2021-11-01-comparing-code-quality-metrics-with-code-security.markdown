@@ -42,7 +42,17 @@ Many teams try to measure quality through code quality metrics, and there are to
 
 Sounds great - we should all be deploying high quality code, right?
 
-The problem is where (or when) in the lifecycle you really care about code quality metrics. Let me explain it using a hypothetical scenario.
+## Can You Trust Code Qualtiy Metrics?
+
+There are definitely some problems with code quality metrics. A common code quality metric is _cyclomatic complexity_ - a measure of how many paths there are through a portion of code. Perhaps we want to ensure that no single file has a cyclomatic complexity higher than 10. Now if a file has a cyclomatic complexity of 11, we _might_ have a "bad file" - or maybe the logic is just complicated.
+
+So in the "negative" direction, we may or may not agree with the metric result. What about the "positive" direction? If a file has a cyclomatic complexity of 7, does that tell us if the code is good or not?
+
+You begin to see the problem - if we can't trust the metrics, then what value do they really have? If we have code that "scores high" in code quality metrics, can we conclude definitively that we have good code?
+
+In contrast, assuming we have a good security tool like CodeQL that is known to have very low false positive rates, we can most definitely trust the code security alerts. If we run through the CodeQL suite and there are no alerts, we have high confidence in the security of our code!
+
+Another problem is where (or when) in the lifecycle you really care about code quality metrics. Let me explain it using a hypothetical scenario.
 
 # When Do You Care - A Thought Exercise
 Imagine your team is maintaining an application that's in production and has a solid user base. Let's imagine it's an e-commerce site, something like Amazon. Now imagine that you are implementing improvements to the checkout experience to ensure that customers can more easily pay using PayPal. The team has been working on the "PayPal Improvement Feature" for several weeks and are getting ready to deploy. Black Friday is coming, and you know that it's a huge day for your company and site because of all the specials that you run. Your team has been unit testing and they've been running continuous deployment to staging environments and they've demonstrated performance is acceptable through integration testing. All systems are a go!
