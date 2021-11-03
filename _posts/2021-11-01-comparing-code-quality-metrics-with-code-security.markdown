@@ -16,9 +16,11 @@ tags:
 
 Code security has traditionally been an "after the fact" activity. Developers would develop, build, test applications, and then when they're ready to ship to production, attempt to get a security sign-off. This not only isolates developers from security professionals, but this usually ends up either blocking deployments completely or causing teams to deploy vulnerable code with the promise to come back and fix later.
 
-The irony is that we've had security awareness, training and tooling for decades. [OWASP](https://owasp.org/) was founded 20 years ago! Tools like Black Duck (2002), Fortify (2003), Veracode and Checkmarx (2006) are in a rich landscape of security tools. So why are we still seeing so many breaches?
+The irony is that we've had security awareness, training and tooling for decades. [OWASP](https://owasp.org/) was founded 20 years ago! Tools like Black Duck (2002), Fortify (2003), Veracode (2006) and Checkmarx (2006) are in a rich landscape of security tools. So why are we still seeing so many breaches?
 
-"Not in my code! Vulnerabilities are in infra," I head you confidently state. But the Verizon Data Breach Investigation reports between 2016 and 2020 show that the primary attach vector in breaches is _application flaws_. Furthermore, GitHub's Data Science team analyzed 70 million lines of open source code and showed a linear relationship between lines of code and security threats introduced. In other words, the more code you have, the more potential threats you have.
+> Note: Even Semmle (which was acquired by GitHub and turned into CodeQL) has been around for many years.
+
+"Not in my code! Vulnerabilities are in infra," I hear you state confidently. But the Verizon Data Breach Investigation reports between 2016 and 2020 show that the primary attach vector in breaches is _application flaws_. Furthermore, GitHub's Data Science team analyzed 70 million lines of open source code and showed a linear relationship between lines of code and security threats introduced. In other words, the more code you have, the more potential threats you have.
 
 Many of these companies have been banging the "shift-left" drum: that is, integrate security earlier into the development lifecylce. Still we don't see drastically more secure code. Why?
 
@@ -40,7 +42,17 @@ Many teams try to measure quality through code quality metrics, and there are to
 
 Sounds great - we should all be deploying high quality code, right?
 
-The problem is where (or when) in the lifecycle you really care about code quality metrics. Let me explain it using a hypothetical scenario.
+## Can You Trust Code Qualtiy Metrics?
+
+There are definitely some problems with code quality metrics. A common code quality metric is _cyclomatic complexity_ - a measure of how many paths there are through a portion of code. Perhaps we want to ensure that no single file has a cyclomatic complexity higher than 10. Now if a file has a cyclomatic complexity of 11, we _might_ have a "bad file" - or maybe the logic is just complicated.
+
+So in the "negative" direction, we may or may not agree with the metric result. What about the "positive" direction? If a file has a cyclomatic complexity of 7, does that tell us if the code is good or not?
+
+You begin to see the problem - if we can't trust the metrics, then what value do they really have? If we have code that "scores high" in code quality metrics, can we conclude definitively that we have good code?
+
+In contrast, assuming we have a good security tool like CodeQL that is known to have very low false positive rates, we can most definitely trust the code security alerts. If we run through the CodeQL suite and there are no alerts, we have high confidence in the security of our code!
+
+Another problem is where (or when) in the lifecycle you really care about code quality metrics. Let me explain it using a hypothetical scenario.
 
 # When Do You Care - A Thought Exercise
 Imagine your team is maintaining an application that's in production and has a solid user base. Let's imagine it's an e-commerce site, something like Amazon. Now imagine that you are implementing improvements to the checkout experience to ensure that customers can more easily pay using PayPal. The team has been working on the "PayPal Improvement Feature" for several weeks and are getting ready to deploy. Black Friday is coming, and you know that it's a huge day for your company and site because of all the specials that you run. Your team has been unit testing and they've been running continuous deployment to staging environments and they've demonstrated performance is acceptable through integration testing. All systems are a go!
@@ -89,7 +101,7 @@ If we assume that your code base is going to grow, and that attackers are going 
 
 ## Consequences
 
-We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Though Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable erformance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
+We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Thought Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable erformance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
 
 Let's assume no-one is going to ignore security vulnerabilities that are surfaced through tooling. More likely, teams are not going to be performing code security scanning regularly. But what are the consequences of not ensuring that the PayPal checkout experience is secure? What would the impact be if a customer account is hacked because of a flaw in your code?
 
