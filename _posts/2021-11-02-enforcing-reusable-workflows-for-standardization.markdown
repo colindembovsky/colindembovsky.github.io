@@ -15,9 +15,11 @@ tags:
 
 # Problem Statement
 
-Imagine you want to ensure that code that gets deployed is scanned using CodeQL. Furthermore, you want to enforce a specific set of steps for deploying your apps.
+There is a delicate balance between _team autonomy_ and _enterprise alignment_. Too much autonomy can result in chaos, rework and runaway spending. Too much red tape can result in logn cycle times, frustration and lack of innovation. But it is possible to implement some level of compliance and leave teams some autonomy too.
 
-For sake of brevity, let's imagine two Teams: the App Team and the Compliance Team. Let's take a look at the roles of these two teams:
+Imagine you want to ensure that code that gets deployed is scanned using CodeQL. Furthermore, you want to enforce a specific set of steps for deploying your apps. You would prefer your app teams to be able to build, test and package applications themselves. In this post I'll show how you can achieve do this using GitHub.
+
+We'll be working with two imaginary Teams: an App Team and a Compliance Team. Let's take a look at the roles of these two teams:
 
 Item|App Team|Compliance Team
 --|--|--
@@ -38,7 +40,7 @@ A better solution is to use the following mechanism:
 1. Compliance Team configures `main` branch to be protected. `Require Code Review by CODEOWNERS` is enabled. `Required Checks` is enabled, requiring the `compliant-code-scan` workflow to pass before allowing merges. Other settings can be set in collaboration with the App Team.
 1. Compliance Team creates `dev` and `prod` environments, requiring the appropriate approvers. On `prod`, require appropriate approvers and also require that only protected branches can be deployed. 
 
-With this set of configuration, the Compliance Team can ensure that teams are following approved processes. Let's walk through this configuration step by step. 
+With this set of configuration, the Compliance Team can ensure that teams are following approved processes, not beome a bottleneck, and leave the App Team to get on with their work. Let's walk through this configuration step by step.
 
 # Configuration
 
@@ -66,30 +68,24 @@ CConfigure Team access on app repo.
 
 > Note: Ensure that the App Team are not given `admin` permissions, or they will be able to work around the compliance settings! I think that the team should only require `write` permissions, but there may be cases where `maintain` is required. Default to lowest priviledges first (i.e. `write`) and create an App Maintainer team for a subset of the app team if you really need `maintain` permissions for some operations. You can see the different between `maintain` and `write` [here](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/repository-roles-for-an-organization#permissions-for-each-role).
 
-## `CODEOWNERS` and `compliant-` Workflows
+## Workflows
 
-Next, the Compliance Team created a `CODEOWNERS` file in the `.github` folder of the app repo. This tells the repo that any changes to the files specified require review by the Compliance Team:
+To help visualize how the workflow files are organized, I drew this awesome PowerPoint art:
 
-~~~yml
-{% raw %}
-# file: '.github/CODEOWNERS'
-# Changes to `compliant-` workflows requires @compliance-team approval
-/.github/workflows/compliant-* @colinsalmcorner/compliance-team
-{% endraw %}
-~~~
+![Overview of how the workflows are structured](/assets/images/2021/11/compliance-reusable/workflows-for-compliance.png){: .center-image }
 
-`CODEOWNERS` file to enforce Compliance Team approvals for changes to `compliant-*` workflows.
+Overview of how the workflows are structured.
 {:.figcaption}
 
-> Note: The `compliant-` prefix is an arbitrary prefix. It can be anything you want, but in this case I wanted to distinguish between workflows the App Team can mess with and those that they can't. All workflows must be in the `.github/workflows` folder, so adding a prefix was the only way this would work.
+Let's now dig into the workflows.
 
 ### App Team Code Scan Workflow
 
-Now the Compliance Team can add a workflow to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the App Team:
+The Compliance Team should add a workflow in the App Repo to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the App Team:
 
 ~~~yml
 {% raw %}
-# file: '.github/workflows/compliant-scan.yml'
+# file: 'APP_REPO/.github/workflows/compliant-scan.yml'
 name: Scan app
 
 on:
@@ -118,11 +114,11 @@ Notes:
 
 ### App Team Code Scan Workflow
 
-Now the Compliance Team can add a workflow to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the App Team:
+The Compliance Team should now add a workflow in the App Repo to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the App Team:
 
 ~~~yml
 {% raw %}
-# file: '.github/workflows/compliant-deploy.yml'
+# file: 'APP_REPO/.github/workflows/compliant-deploy.yml'
 name: Deploy Pipeline
 
 on:
@@ -144,18 +140,18 @@ jobs:
       environment-name: dev
       environment-url: https://dev.my-super-app.net
     secrets:
-      PASSWORD: ${{ secrets.DEV-PASSWORD }}
+      PASSWORD: ${{ secrets.DEV_PASSWORD }}
   
   prod:
     name: Deploy to PROD
-    needs: build
+    needs: dev
     uses: colinsalmcorner/super-approved-workflows/.github/workflows/deploy-app.yml@main
     with:
       artifact-name: drop
       environment-name: prod
       environment-url: https://my-super-app.net
     secrets:
-      PASSWORD: ${{ secrets.PROD-PASSWORD }}
+      PASSWORD: ${{ secrets.PROD_PASSWORD }}
 {% endraw %}
 ~~~
 
@@ -170,16 +166,269 @@ Notes:
 1. We can pass whatever parameters we need to here - in this case I've configured parameters for the `artifact-name`, `environment-name` and `environment-url`.
 1. Secrets are tricky since reusable workflows can't (yet?) read environment secrets. So you have to specify secrets on the repo (or org) level that are prefixed with the environment name in some way.
 
-## The Reusable Workflows
+### The Build Workflow
 
-Now back in the Workflows repo, the Compliance Team can add the reusable workflows. In this example, we're going to add the Code Scanning workflow and a deployment workflow.
+Before we switch over to the reusable workflows from the Compliance Team, let's have a look at the `build.yml` workflow from the App Team:
 
+~~~yml
+{% raw %}
+# file: 'APP_REPO/.github/workflows/compliant-deploy.yml'
+name: Build app
+
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: Name of the artifact to upload
+        type: string
+        default: drop
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      if: ${{ inputs.test }}
+      run: dotnet test --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish -c Release -o tmpdrop
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: tmpdrop/**
+        if-no-files-found: error
+{% endraw %}
+~~~
+
+`compliant-deploy.yml` workflow that invokes a "local" reusable workflow and then invokes the centrally managed Deploy workflow for each environment.
+{:.figcaption}
+
+### Reusable Code Scan Workflow
+
+This is just a stock CodeQL workflow that the Compliance Team will create in the Compliance repo. Obviously it must be reusable:
+
+~~~yml
+{% raw %}
+# file: 'COMPLIANCE-REPO/.github/workflows/codeql-scan.yml'
+name: "CodeQL"
+
+on: 
+  workflow_call:
+    inputs:
+      languages:
+        description: Languages to scan, in the format of JSON array, e.g. '["csharp", "typescript"]'
+        required: true
+        type: string
+  
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ${{ fromJSON(inputs.languages) }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: ${{ matrix.language }}
+    
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v1
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+{% endraw %}
+~~~
+
+`codeql-scan.yml` workflow that runs CodeQL scanning.
+{:.figcaption}
+
+Notes:
+1. The `workflow_call` makes this workflow reusable.
+1. We pass in a JSON string of languages (since we can't pass arrays to reusable workflows).
+1. We specify minimal `permissions` for the workflow.
+1. We create a matrix that spawns a job for each `language`: checkout, initialize, autobuild and then analyze.
+
+### Reusable Deploy Workflow
+
+This example shows how to download the build artifact and then dumps the secret to show that it's getting a value. The actual deployment steps would be inserted into this workflow in real life.
+
+~~~yml
+{% raw %}
+# file: 'COMPLIANCE-REPO/.github/workflows/deploy-app.yml'
+name: Build dotnet application
+
+on:
+  workflow_call:
+    inputs:
+      runs-on:
+        description: Platform to execute on
+        type: string
+        default: ubuntu-latest
+        
+      artifact-name:
+        description: Name of the artifact to deploy
+        type: string
+        default: drop
+      
+      environment-name:
+        description: Name of environment
+        type: string
+        required: true
+      
+      environment-url:
+        description: URL of environment
+        type: string
+        required: true
+    
+    secrets:
+      PASSWORD:
+        required: true
+
+jobs:
+  deploy:
+    name: Deploy app
+    
+    runs-on: ${{ inputs.runs-on }}
+    
+    environment:
+      name: ${{ inputs.environment-name }}
+      url: ${{ inputs.environment-url }}
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: ${{ inputs.artifact-name }}
+
+      - name: Display structure of downloaded files
+        run: ls -R
+
+      - name: Password
+        run: echo "JUST FOR TESTING: Password is ${{ secrets.PASSWORD }}"
+
+      ## INSERT deployment steps here
+{% endraw %}
+~~~
+
+`deploy-app.yml` workflow that downloads an artifact and has a placeholder for "real" deployment steps.
+{:.figcaption}
+
+Notes:
+1. The `workflow_call` makes this workflow reusable.
+1. We specify the input args and secrets that are required for deployment steps.
+1. The `runs-on` and `environment` settings are configurable.
+1. The workflow downloads the artifact, but doesn't actually do anything with it - the real deployment steps would go at the bottom of the job.
+
+## `CODEOWNERS` 
+
+The Compliance Team now creates a `CODEOWNERS` file in the `.github` folder of the App repo. This tells the repo that any changes to the files specified require review by the Compliance Team:
+
+~~~yml
+{% raw %}
+# file: 'APP_REPO/.github/CODEOWNERS'
+# Changes to `compliant-` workflows requires @compliance-team approval
+/.github/workflows/compliant-* @colinsalmcorner/compliance-team
+{% endraw %}
+~~~
+
+`CODEOWNERS` file to enforce Compliance Team approvals for changes to `compliant-*` workflows.
+{:.figcaption}
+
+> Note: The `compliant-` prefix is an arbitrary prefix. It can be anything you want, but in this case I wanted to distinguish between workflows the App Team can mess with and those that they can't. All workflows must be in the `.github/workflows` folder, so adding a prefix was the only way this would work.
+
+## Branch Protection Policy
+
+Now that we have the scaffolding in place, we need to ensure that no-one who doesn't have permissions overwrites or changes files that they shouldn't! We can do that using branch protection policies.
+
+In the App Repo, navigate to **Settings->Branches** and apply the following settings to the `main` branch (or whatever your protected branch is called):
+
+![Configuring Branch Protection](/assets/images/2021/11/compliance-reusable/branch-protection-settings.png){: .center-image }
+
+Configuring Branch Protection.
+{:.figcaption}
+
+Notes:
+1. We enable `Require a pull request before merging` and `Require approvals` - these should be default on any repo, regardless of compliance level.
+1. We enable `Require review from Code Owners` to ensure the Compliance Team is notified of changes to the `compliant-` workflows.
+1. To ensure that Code Scanning is performed for all deployable code, we enable `Require status checks to pass before merging` and then select the `Code Scan` workflow. We also enable `Require branches be up to date before merging` as a good practice.
+
+## Environments
+
+The final bit of configuration is performed on the Environments. Let's look at the settings for the `prod` environment:
+
+![Configuring the Prod Environment](/assets/images/2021/11/compliance-reusable/environment-config.png){: .center-image }
+
+Configuring the Prod Environment.
+{:.figcaption}
+
+Notes:
+1. We add appropriate manual approvals.
+1. Under `Deployent branches` we configure only `Protected branches` may be deployed (currently only `main`)
+
+## Secrets
+
+As mentioned, we'll have to create environment-prefixed repo (or org) secrets since reusable workflows don't support environment secrets. The Compliance Team can create `DEV_PASSWORD` and `PROD_PASSWORD` in this example.
+
+# Working Like a Charm
+
+Updates to `main` and PRs to `main` now trigger the code scanning workflow:
+
+![Code Scan running](/assets/images/2021/11/compliance-reusable/running-code-scan.png){: .center-image }
+
+Code Scan running.
+{:.figcaption}
+
+If the Deploy pipeline is triggered in the Actions tab, the pipeline executes as expected. First, the `build` job builds, tests and packages the application. Then the `dev` deployment job is triggered to deploy to the `dev` environment. Finally, the `prod` job is triggered, but only from the `main` branch and with the pause for manual approval:
+
+![Deploy Pipeline running](/assets/images/2021/11/compliance-reusable/running-deploy.png){: .center-image }
+
+Deploy Pipeline running.
+{:.figcaption}
+
+# Can It Be Bypassed?
+
+Now that we have things configured, let's see if we can bypass anything! I created an account called `faux-colin` that is a contributor on the App Repo - he's part of the App Team. Let's imagine he's nefarious too!
+
+## Inject Bad Code
+
+`faux-colin`'s first attack vector might be the code itself. So he tries to change the code on `main`. Cloning locally, changing the code, and pushing fails. In the UI, there's no way to change code other than creating a branch and submitting a PR:
+
+![Trying to inject bad code into main](/assets/images/2021/11/compliance-reusable/trying-to-change-main.png){: .center-image }
+
+Trying to inject bad code into `main`.
+{:.figcaption}
+
+## Attempt to Change `CODEOWNERS`
+
+## Deploy a Bad Branch to Prod
 
 
 # Conclusion
+Using a combination of branch protection policies, permission management, reusable workflows, environment approvals and `CODEOWNERS` file, teams can achieve a good combination of autonomy and enterprise alignment. Compliance Teams can rest assured that the process is being enforced without becoming blockers.
 
-Code Quality Metrics are useful, but their criticality typically decreases over time, especially when teams implement good quality gates in their software development life cycle. The criticality of Code Security, on the other hand, steadily increases over time as code bases and attack vectors grow.
-
-While there is a lot of tooling in both the Code Quality Metrics and Code Security spaces, GitHub Advanced Security offers a unique platform that enables developer-first security, integrating security into developer workflows naturally and seamlessly, making it an indispensable tool for modern software development.
-
-Happy securing!
+Happy complying!
