@@ -4,7 +4,7 @@ title: Comparing Code Quality Metrics with Code Security
 date: '2021-11-01 01:22:01'
 image: /assets/images/2021/11/code-quality/matrix.jpeg
 description: >
-  Code security is becoming more important for moden software development. What about code quality metrics? How do code quality metrics and code security compare and contrast? I'll discuss some thoughts in this post.
+  Code security is becoming more important for modern software development. What about code quality metrics? How do code quality metrics and code security compare and contrast? I'll discuss some thoughts in this post.
 tags:
 - security
 ---
@@ -22,7 +22,7 @@ The irony is that we've had security awareness, training and tooling for decades
 
 "Not in my code! Vulnerabilities are in infra," I hear you state confidently. But the Verizon Data Breach Investigation reports between 2016 and 2020 show that the primary attach vector in breaches is _application flaws_. Furthermore, GitHub's Data Science team analyzed 70 million lines of open source code and showed a linear relationship between lines of code and security threats introduced. In other words, the more code you have, the more potential threats you have.
 
-Many of these companies have been banging the "shift-left" drum: that is, integrate security earlier into the development lifecylce. Still we don't see drastically more secure code. Why?
+Many of these companies have been banging the "shift-left" drum: that is, integrate security earlier into the development life cylce. Still we don't see drastically more secure code. Why?
 
 I believe the primary security failure in the industry at the moment is due to the fact that most security tools are build by security professionals for security professionals.
 
@@ -42,11 +42,11 @@ Many teams try to measure quality through code quality metrics, and there are to
 
 Sounds great - we should all be deploying high quality code, right?
 
-## Can You Trust Code Qualtiy Metrics?
+## Can You Trust Code Quality Metrics?
 
-There are definitely some problems with code quality metrics. A common code quality metric is _cyclomatic complexity_ - a measure of how many paths there are through a portion of code. Perhaps we want to ensure that no single file has a cyclomatic complexity higher than 10. Now if a file has a cyclomatic complexity of 11, we _might_ have a "bad file" - or maybe the logic is just complicated.
+There are some problems with code quality metrics. A common code quality metric is _cyclomatic complexity_ - a measure of how many paths there are through a portion of code. Perhaps we want to ensure that no single file has a cyclomatic complexity higher than 10. Now if a file has a cyclomatic complexity of 11, we _might_ have a "bad file" - or maybe the logic is just complicated.
 
-So in the "negative" direction, we may or may not agree with the metric result. What about the "positive" direction? If a file has a cyclomatic complexity of 7, does that tell us if the code is good or not?
+In the "negative" direction, we may or may not agree with the metric result. What about the "positive" direction? If a file has a cyclomatic complexity of 7, does that tell us if the code is good or not?
 
 You begin to see the problem - if we can't trust the metrics, then what value do they really have? If we have code that "scores high" in code quality metrics, can we conclude definitively that we have good code?
 
@@ -57,7 +57,7 @@ Another problem is where (or when) in the lifecycle you really care about code q
 # When Do You Care - A Thought Exercise
 Imagine your team is maintaining an application that's in production and has a solid user base. Let's imagine it's an e-commerce site, something like Amazon. Now imagine that you are implementing improvements to the checkout experience to ensure that customers can more easily pay using PayPal. The team has been working on the "PayPal Improvement Feature" for several weeks and are getting ready to deploy. Black Friday is coming, and you know that it's a huge day for your company and site because of all the specials that you run. Your team has been unit testing and they've been running continuous deployment to staging environments and they've demonstrated performance is acceptable through integration testing. All systems are a go!
 
-But suddenly you get a B for some code quality metric. Perhaps the team have been getting A's so far - but the latest merged code has some code that could be written in an academically better way. Mind you, no tests are failing and integration and performance testing are all green. What do you do? Are you going to deploy? Or block the deployment until the team has improved the code quality metric from a B to an A?
+But suddenly you get a B for some code quality metric. Perhaps the team have been getting A's so far - but the latest merged code has some code that could be written in an academically better way. Mind you, no tests are failing, and integration and performance testing are all green. What do you do? Are you going to deploy? Or block the deployment until the team has improved the code quality metric from a B to an A?
 
 Let's now imagine that your security scans reveal that there is a vulnerability in the latest merged code. Do you still deploy, or get the team to fix the vulnerability?
 
@@ -69,11 +69,11 @@ Customers that use your code don't care about your code quality metrics. _Perfor
 
 ## Quality Gates
 
-I'm repeat: I'm not saying that _quality_ is unimportant. I think that there are other far more effective ways to measure and ensure quality than quality code metrics. 
+I'll repeat: I'm not saying that _quality_ is unimportant. I think that there are other far more effective ways to measure and ensure quality than quality code metrics. 
 
 I have coached many teams that are looking to implement testing that start by attempting to implementing UI testing. After all, they reason, if the test is at the UI layer, then we can ensure quality through the service layer to the data layer - no need to test those separately, right? 
 
-It turns out that this is a trap: different types of testing have different challenges, and differing rates of Return on Investment (ROI). I wrote about this [here]({% post_url 2013-07-18-why-you-absolutely-need-to-unit-test %}). Unit tests have a high ROI, since they are usually easy to write and don't require data or environment management. Integration and Functional tests are more expensive to write and maintain, since you need consistent, stable environments and have to manage test data. UI tests are notoriusly fragile. ROI diminishes quickly beyond unit testing.
+It turns out that this is a trap: different types of testing have different challenges, and differing rates of Return on Investment (ROI). I wrote about this [here]({% post_url 2013-07-18-why-you-absolutely-need-to-unit-test %}). Unit tests have a high ROI, since they are usually easy to write and don't require data or environment management. Integration and Functional tests are more expensive to write and maintain, since you need consistent, stable environments and have to manage test data. UI tests are notoriously fragile. ROI diminishes quickly beyond unit testing.
 
 In the same manner, the ROI for code quality metrics diminishes over time. Teams can (and should) implement _quality gates_ to ensure that deployed code meets quality criteria. Assuming you peer-review Pull Requests, implement unit testing, have some Integration and Functional tests, and monitor performance of your code running in production, what real value do code quality metrics add? It definitely has _some_ usefulness, but I would argue over time its usefulness diminishes over time, especially if you have other quality gates in place.
 
@@ -101,7 +101,7 @@ If we assume that your code base is going to grow, and that attackers are going 
 
 ## Consequences
 
-We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Thought Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable erformance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
+We can also contrast the _consequences_ of code quality metrics and code security being ignored. Going back to our Thought Exercise, you may well decide to deploy code that has a B rating for some Code Quality Metric. Let's imagine that this causes the PayPal checkout experience to demonstrate some allowable performance impact (like taking .75 seconds instead of .5 seconds to complete). If your quality gate for performance is .8 seconds, you're still within your performance quality gate, so while you probably do want to fix this at some stage, but the consequences of ignoring this metric are minimal.
 
 Let's assume no-one is going to ignore security vulnerabilities that are surfaced through tooling. More likely, teams are not going to be performing code security scanning regularly. But what are the consequences of not ensuring that the PayPal checkout experience is secure? What would the impact be if a customer account is hacked because of a flaw in your code?
 

@@ -515,9 +515,9 @@ PR blocks unapproved changes to the `CODEOWNERS` file.
 
 # Caring About Culture
 
-It seems that `faux-colin` has not been able to inject malicious code into the application. Of course this gives the Compliance Team peace of mind: after all, malicious developers are probably few and far between. However, if a malicious developer can't bypass the process, then there's little chance that a developer will _mistakenly_ do something bad. There are enough checks and balances in the configuration.
+It seems that `faux-colin` has not been able to inject malicious code into the application. Of course, this gives the Compliance Team peace of mind: after all, malicious developers are probably few and far between. However, if a malicious developer can't bypass the process, then there's little chance that a developer will _mistakenly_ do something bad. There are enough checks and balances in the configuration.
 
-That means that the Compliance Team have done their job and can _get out of the way_ and let the App Team do what they do best - code, and hopefully innovate! Remember, DevOps (or DevSecOps if you really prefer) is _cultural_ too. Here we have a good balance of process adherance and compliance without developers being overburdened with red tape or the Complaince Team becoming a bottleneck because they have to enforce draconian policies manually.
+That means that the Compliance Team have done their job and can _get out of the way_ and let the App Team do what they do best - code, and hopefully innovate! Remember, DevOps (or DevSecOps if you really prefer) is _cultural_ too. Here we have a good balance of process adherence and compliance without developers being overburdened with red tape or the Compliance Team becoming a bottleneck because they have to enforce draconian policies manually.
 
 Caring about the culture your team works under is critical to success today. After all, Talent Management is one of the four top [Developer Velocity](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance) _business_ performance indicators. If you can ensure your code is safe and compliant _and_ foster a positive culture, you're winning. And using GitHub, you can!
 
