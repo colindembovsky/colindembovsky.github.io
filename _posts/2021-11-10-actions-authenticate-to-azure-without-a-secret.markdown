@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions Authenticate to Azure Without a Secret
+title: 'GitHub Actions: Authenticate to Azure Without a Secret using OIDC'
 date: '2021-11-09 01:22:01'
 image: /assets/images/2021/11/oidc/Data_security_27.jpg
 description: >
