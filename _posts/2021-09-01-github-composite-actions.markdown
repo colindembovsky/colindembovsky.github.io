@@ -48,7 +48,7 @@ If I compare Azure Pipeline templates and Composite Actions, I would liken Compo
 Below we'll look at an example. Before we do, let's consider the limitations that Composite Actions have:
 
 - You cannot pass in complex objects (like arrays of steps)
-- You cannot use `if` conditions for steps
+- ~~You cannot use `if` conditions for steps~~ **Update 10/11/2021** `if` is [now supported](https://github.blog/changelog/2021-11-09-github-actions-conditional-execution-of-steps-in-actions/) in Composite Actions
 - Composite Actions cannot read `secrets` - you have to pass secrets in as parameters
 - The Actions log does not show a separate log per step as you would see in a "normal" Action - all the steps of the Composite are executed as if they were a single step, making debugging Composite Action logs harder to analyze:
 <figure class="kg-card kg-image-card"><img src="/assets/images/2021/9/1175_image.png" class="kg-image" alt loading="lazy"></figure>
