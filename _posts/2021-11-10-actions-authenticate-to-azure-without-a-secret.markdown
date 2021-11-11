@@ -4,7 +4,7 @@ title: 'GitHub Actions: Authenticate to Azure Without a Secret using OIDC'
 date: '2021-11-09 01:22:01'
 image: /assets/images/2021/11/oidc/Data_security_27.jpg
 description: >
-  Authenticating to Azure in GitHub Actions requires a secret for a Service Principle. However, at Universe, GitHub released a new OIDC-based authentication mechanism that eliminates the need for secrets in secure deployments.
+  Authenticating to Azure in GitHub Actions requires a secret for a Service Principal. However, at Universe, GitHub released a new OIDC-based authentication mechanism that eliminates the need for secrets in secure deployments.
 tags:
 - build
 - security
@@ -19,7 +19,7 @@ tags:
 
 Deploying to Azure or other cloud providers from Actions requires that you authenticate to the provider. Not only do you have to authenticate, but the credential you use needs authorization to perform tasks in the cloud platform.
 
-For Azure, this is accomplished by creating a Service Principle (SPN) and then saving the credentials for that SPN to your GitHub repo (or organization) as a secret. The secret is then consumed by the `actions/login` [task](https://github.com/azure/login) to authenticate to Azure before you perform any other steps:
+For Azure, this is accomplished by creating a Service Principal (SPN) and then saving the credentials for that SPN to your GitHub repo (or organization) as a secret. The secret is then consumed by the `actions/login` [task](https://github.com/azure/login) to authenticate to Azure before you perform any other steps:
 
 ~~~json
 {% raw %}
@@ -49,15 +49,15 @@ For Azure, this means that we can eliminate the _secret_ part of the Azure crede
 
 You can take a look at [this repo](https://github.com/colindembovsky/azure-oidc-demo) which contains the code for this post.
 
-For this sample, I wanted to configure two service principles (`mona-oidc-dev` and `mon-oidc-prod`) that are given access to `oidc-dev` and `oidc-prod` resource groups respectively. I used `dev` and `prod` environments in the repo, and configured the OIDC scoped to the environment, as we'll see later.
+For this sample, I wanted to configure two service Principals (`mona-oidc-dev` and `mon-oidc-prod`) that are given access to `oidc-dev` and `oidc-prod` resource groups respectively. I used `dev` and `prod` environments in the repo, and configured the OIDC scoped to the environment, as we'll see later.
 
 I then set up a workflow that used the correct clients for `dev` and `prod`, expecting those to work as advertised. Finally I added a "bad" job that hard-coded the `mona-oidc-dev` client ID and attempted to authenticate to the `prod` environment, just to make sure that the authentication fails.
 
 # Azure Configuration
 
-For the Azure side, I started by creating two service principles. Nothing special about these, apart from the fact that I have created a **federated credential** that enables the OIDC connection.
+For the Azure side, I started by creating two service Principals. Nothing special about these, apart from the fact that I have created a **federated credential** that enables the OIDC connection.
 
-## Creating a Service Principle (App Registration)
+## Creating a Service Principal (App Registration)
 
 Navigate to the Active Directory blade in the Azure Portal and click **+Add -> App registration**. Type in the name and URL - these just have to be unique, but can be any value:
 
