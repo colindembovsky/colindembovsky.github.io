@@ -40,6 +40,8 @@ In this manner, you get the experience of a hosted runner, but the "real" work i
 
 > Note: You also have to maintain the container image, but if you're not frequently messing with the tools, this is usually not a lot of overhead.
 
+> Note: The GitHub PAT required by the self-hosted runner is **VISIBLE on the config of the ACI in the Azure Portal or `az cli`**. Ensure that you set up appropriate RBAC to prevent leaking this credential!
+
 Code for this post can be found in [this repo](https://github.com/colindembovsky/scaling-self-hosted-aci).
 
 ## Prerequisites
