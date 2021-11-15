@@ -33,7 +33,7 @@ There are still some limitations to reusable wofklows:
 
 1. ~~Reusable workflows only run on _hosted_ runners, not yet on _private_ runners.~~ **Update**: Reusable workflows are supported on self-hosted runners now (10/14/2021)!
 1. Reusable workflows cannot call other reusable workflows.
-1. You cannot access job outputs from reusable workflows.
+1. ~~You cannot access job outputs from reusable workflows.~~ **Update**: You can now declare `outputs` to reusable workflows. These work just like `job` outputs and are available via `needs.<reusable>.outputs.<output>` format once you declare the output.
 1. `env` variables set in the calling workflow are not accessible to the called workflow.
 1. The only parameter types that are supported are `string`, `number` and `boolean`. Arrays are not supported.
 1. You cannot pass in steps to inject (like you can with Azure Pipelines templates).
