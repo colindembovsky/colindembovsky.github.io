@@ -15,6 +15,10 @@ tags:
 
 > Image from [www.freepik.com](https://www.freepik.com/vectors/business)
 
+# Update: 11/17/2021
+
+In my original post, I extracted the Azure login task to a Composite Action because you need a beta version of the `az cli` for the OIDC to work. As of today, you can use the `@v1` tag of `azure/login` (which has been updated to include OIDC logic) and you do not have to install the beta `az cli`. This makes the Composite Action obsolete - all you have to do now is call the `azure/login` task as before, not passing the secret (assuming you configure the federated credential on the SPN in Azure).
+
 # Problem Statement
 
 Deploying to Azure or other cloud providers from Actions requires that you authenticate to the provider. Not only do you have to authenticate, but the credential you use needs authorization to perform tasks in the cloud platform.
