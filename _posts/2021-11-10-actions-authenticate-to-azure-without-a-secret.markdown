@@ -17,7 +17,7 @@ tags:
 
 # Update: 11/17/2021
 
-In my original post, I extracted the Azure login task to a Composite Action because you need a beta version of the `az cli` for the OIDC to work. As of today, you can use the `@v1` tag of `azure/login` (which has been updated to include OIDC logic) and you do not have to install the beta `az cli`. This makes the Composite Action obsolete - all you have to do now is call the `azure/login` task as before, not passing the secret (assuming you configure the federated credential on the SPN in Azure).
+In the original version of this post, I extracted the Azure login task to a Composite Action because you need a beta version of the `az cli` for the OIDC to work. As of today, you can use the `@v1` tag of `azure/login` (which has been updated to include OIDC logic) and you do not have to install the beta `az cli`. This makes the Composite Action obsolete - all you have to do now is call the `azure/login` task as before, not passing the secret (assuming you configure the federated credential on the SPN in Azure).
 
 # Problem Statement
 
