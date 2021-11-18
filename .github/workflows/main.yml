@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Update bundler
-        run: gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+      - run: ruby --version
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.3p62
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
