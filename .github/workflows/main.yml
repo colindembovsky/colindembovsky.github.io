@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set repo env var
+        run: |
+          echo "PAGES_REPO_NWO=${{ github.repository }}" >> $GITHUB_ENV
+          
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
