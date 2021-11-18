@@ -1,0 +1,30 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest
+    name: Build Pages with Jekyll
+    steps:
+      - name: Build page with Jekyll
+        uses: actions/pages-jekyll@v4
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: github-pages
+          path: ./_site
+  
+  deploy-to-pages:
+    runs-on: ubuntu-latest
+    name: Deploy to Pages
+    steps:
+      - name: Deploy artifact
+        uses: actions/deploy-pages@main
+        with:
+          artifact-name: github-pages
+
