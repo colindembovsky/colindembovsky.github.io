@@ -28,5 +28,5 @@ jobs:
       #  uses: paper-spa/deploy-pages@main
       #  with:
       #    artifact-name: github-pages
-      run: echo ha
+      - run: echo ha
 
