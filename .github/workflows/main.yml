@@ -9,7 +9,7 @@ jobs:
     name: Build Pages with Jekyll
     steps:
       - name: Build page with Jekyll
-        uses: paper-spa/pages-jekyll@v4
+        uses: paper-spa/pages@v0.0.1
         with:
           source: ./
           destination: ./_site
