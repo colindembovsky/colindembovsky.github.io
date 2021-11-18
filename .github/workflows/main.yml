@@ -8,26 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      #- uses: helaili/jekyll-action@v2
-      #  with:
-      #    token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build page with Jekyll
-        uses: paper-spa/pages@v0.0.1
+      - uses: helaili/jekyll-action@v2
         with:
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: github-pages
-          path: ./_site
-
-  deploy-to-pages:
-    needs: build-pages
-    runs-on: ubuntu-latest
-    name: Deploy to Pages
-    steps:
-      #- name: Deploy artifact
-      #  uses: paper-spa/deploy-pages@main
-      #  with:
-      #    artifact-name: github-pages
-      - run: echo ha
+          token: ${{ secrets.GITHUB_TOKEN }}
