@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Pages with Jekyll
     steps:
+      - uses: actions/checkout@v2
       - name: Build page with Jekyll
         uses: paper-spa/pages@v0.0.1
         with:
-          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-artifact@main
@@ -24,8 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to Pages
     steps:
-      - name: Deploy artifact
-        uses: paper-spa/deploy-pages@main
-        with:
-          artifact-name: github-pages
+      #- name: Deploy artifact
+      #  uses: paper-spa/deploy-pages@main
+      #  with:
+      #    artifact-name: github-pages
+      run: echo ha
 
