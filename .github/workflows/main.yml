@@ -11,7 +11,7 @@ jobs:
       - run: ruby --version
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.3p62
+          ruby-version: 2.6.3
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
