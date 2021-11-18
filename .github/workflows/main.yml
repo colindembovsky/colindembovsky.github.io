@@ -9,7 +9,7 @@ jobs:
     name: Build Pages with Jekyll
     steps:
       - name: Build page with Jekyll
-        uses: actions/pages-jekyll@v4
+        uses: paper-spa/pages-jekyll@v4
         with:
           source: ./
           destination: ./_site
@@ -20,11 +20,12 @@ jobs:
           path: ./_site
   
   deploy-to-pages:
+    needs: build-pages
     runs-on: ubuntu-latest
     name: Deploy to Pages
     steps:
       - name: Deploy artifact
-        uses: actions/deploy-pages@main
+        uses: paper-spa/deploy-pages@main
         with:
           artifact-name: github-pages
 
