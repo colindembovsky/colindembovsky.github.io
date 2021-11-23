@@ -150,6 +150,8 @@ There are two kinds of query: `problem` and `path-problem`. `problem` is used fo
 
 For `problem` queries, we must only output two values: a CodeQL object and a description string. You'll also want to add meaningful metadata to describe what the query is doing - the metadata is used to mark up results in the repo itself. There is also the ability to write [CodeQL help files](https://codeql.github.com/docs/writing-codeql-queries/query-help-files/) that can guide developers on what the query is detecting and include examples of how to fix issues and links to CVEs and other useful information. Unfortunately, help files only render for standard queries, and not for custom queries.
 
+> **Update: 11/23/2021** GitHub will now render custom help files! You can read more about how to do this in [this post]({% post_url 2021-11-23-custom-codeql-help-files %}).
+
 ### Example CodeQL Query
 
 I was working with a customer that wanted to ensure that files are deleted in a certain way. As a naïve check, we wanted to find all calls to `shutil.rmtree()` in the code base and surface them as warnings for review. Here's the `problem` CodeQL query we wrote:
