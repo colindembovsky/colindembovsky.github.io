@@ -348,6 +348,6 @@ If you look closely at the caller workflow, you'll see we're passing `${{ secret
 If you've got a small number of secrets (say less than 10), then this technique works. If you've got more secrets for your environments, then you should probably look at storing your secrets in a secret store (like Azure KeyVault or HashiVault) and add steps in your workflow to retrieve the secrets you need from the vault. Then the only secret you really need is the credential to the vault!
 
 # Conclusion
-Reusable workflows are great - but understanding how environment secrets work with reusable workflows is challenging. Hopefully this post gives you some insight into how things work so that you can start authoring reusable deployment jobs that use environment secrets!
+Reusable workflows are great - but understanding how environment secrets work with reusable workflows can be challenging. Hopefully this post gives you some insight into how things work so that you can start authoring reusable deployment jobs that use environment secrets!
 
 Happy reusing!
