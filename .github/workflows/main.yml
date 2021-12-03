@@ -5,10 +5,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
 
 concurrency:
-  group: main
+  group: ${{ github.base_ref }}
   cancel-in-progress: true
     
 jobs:
