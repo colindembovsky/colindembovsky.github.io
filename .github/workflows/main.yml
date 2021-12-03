@@ -3,31 +3,43 @@ name: Manual Deploy
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+
+concurrency:
+  group: main
+  cancel-in-progress: true
+    
 jobs:
-  build-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      #- uses: helaili/jekyll-action@v2
-      #  with:
-      #    token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build page with Jekyll
-        uses: paper-spa/pages@v0.0.1
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
+          submodules: true
+      - name: Build page with Jekyll
+        uses: paper-spa/pages@v0.0.2
+        with:
+          source: .
           destination: ./_site
+      - name: Archive build output
+        run: "tar --dereference --directory _site/ -cvf artifact.tar ."
+        working-directory: .
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
           name: github-pages
-          path: ./_site
+          path: ./artifact.tar
 
-  deploy-to-pages:
-    needs: build-pages
+  deploy:
+    if: ${{ always() }}
     runs-on: ubuntu-latest
-    name: Deploy to Pages
+    needs: build
+    environment:
+      name: github-pages
+      url: https://colinsalmcorner.com
     steps:
-      #- name: Deploy artifact
-      #  uses: paper-spa/deploy-pages@main
-      #  with:
-      #    artifact-name: github-pages
-      - run: echo ha
+      - name: Deploy to GitHub Pages
+        uses: paper-spa/deploy-pages@main
