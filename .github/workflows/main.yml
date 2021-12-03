@@ -3,8 +3,8 @@ name: Manual Deploy
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
+# permissions:
+#   contents: read
 
 # concurrency:
 #   group: ${{ github.base_ref }}
