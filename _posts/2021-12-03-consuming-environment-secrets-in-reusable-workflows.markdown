@@ -23,11 +23,13 @@ The [documentation ](https://docs.github.com/en/actions/learn-github-actions/reu
 
 If you just want the summary about how to use environment secrets in reusable workflows, then just follow these steps:
 
+{% raw %}
 1. Define secrets in your environment
 1. Make `environment` an input parameter to your reusable workflow
 1. Use `environment: ${{ inputs.environment }}` inside the `job` within the reusable workflow
 1. Declare the `secrets` your reusable workflow requires alongside the `inputs`
 1. When you call the reusable workflow, pass in the secrets
+{% endraw %}
 
 A repo with the workflows is [here](https://github.com/colindembovsky/reusable-workflows-env-secrets). For a longer explanation and some examples, keep on reading!
 
@@ -341,7 +343,9 @@ jobs:
 What does `secrets.PASSWORD` mean here?
 {:.figcaption}
 
+{% raw %}
 If you look closely at the caller workflow, you'll see we're passing `${{ secrets.PASSWORD }}` to the `PASSWORD` secret of the reusable workflow. In this context, the value is actually meaningless, since we're not really "inside" and environment (the workflow doesn't know what the `environment` value means - it's just a string value). What we're really doing is passing the _key_ to the secret that we want the reusable workflow to use.
+{% endraw %}
 
 # Limitations
 
