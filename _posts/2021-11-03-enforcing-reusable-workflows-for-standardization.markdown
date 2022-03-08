@@ -57,7 +57,7 @@ Let's start by configuring the Teams. While you could configure these setting us
 Create a Compliance Team.
 {:.figcaption}
 
-Now you can create a repo for your approved workflows. Obviously the Compliance Team should be the owners/contributors to this repo. Other teams can create PRs if they wish to, but should not be able to directly write to this repo, or at leat to the `main` branch.
+Now you can create a repo for your approved workflows. Obviously the Compliance Team should be the owners/contributors to this repo. Other teams can create PRs if they wish to, but should not be able to directly write to this repo, or at least to the `main` branch.
 
 For this example, I'm putting my reusable workflows into a repo called `super-approved-workflows`.
 
