@@ -2,7 +2,7 @@
 layout: post
 title: 'GHAS Will Win the AppSec Wars'
 date: '2022-06-08 01:22:01'
-image: assets/images/2022/06/fly-d-9PivUW7l1m4-unsplash.jpg
+image: /assets/images/2022/06/fly-d-9PivUW7l1m4-unsplash.jpg
 description: >
   GitHub Advanced Security is positioned to win the "AppSec Wars". In this post I go over why I think this is the case.
 tags:
