@@ -105,11 +105,11 @@ GHAS is designed to be very "clean" - that is, it has extremely low false positi
 
 GHAS is powerful in its own right, but GitHub knows it can't do everything. For example, GHAS does not (at this point) have a container image scanning solution. However, because our SAST offering is built using SARIF files, _any security tool that can produce a SARIF file can be integrated into GHAS_. This allows you to quickly integrate scanning tools like Anchore and Trivy into GHAS to give the developer a consistent experience. Even some Dynamic Application Security Testing (DAST) tools like StackHawk have [extensions that upload SARIF files](https://github.com/marketplace/actions/stackhawk-hawkscan-action#codescanningalerts).
 
-### GHAS is open source
+### GHAS leverages the Global Security Community
 
-CodeQL is open source - you can see the repo [here](https://github.com/github/codeql). In this repo, you'll see standard query suites for CodeQL so you don't have to be a security professional to run comprehensive scans - ensuring that you can get going quickly. Of course, if you're fortunate enough as a developer to have security professionals in your company, they can create custom queries since CodeQL is a T-SQL-like language.
+CodeQL queries are open source - you can see them in the repo [here](https://github.com/github/codeql) under the language folders. Thes standard query suites are built by GitHub as well as security professionals across the globe. GitHub maintains the repo to ensure high quality. The point is that you don't have to know anything about CodeQL to run comprehensive scans - ensuring that you can get going quickly. Of course, if you're fortunate enough as a developer to have security professionals in your company, they can create custom queries since CodeQL is a T-SQL-like language. Hopefully, they'll contribute back to the CodeQL repo!
 
-Because CodeQL is open source, we all get to benefit from the _collective brain power of the security community_. Just as Actions is by far the most widely used CI/CD tool on the planet, in large part because of the community, CodeQL is poised to becoming the most widely used SAST tool on the planet. This means that the standard query suites are growing all the time, adding further value _which you don't pay more for_.
+Because CodeQL encourages collaboration, we all get to benefit from the _collective brain power of the security community_. Just as Actions is by far the most widely used CI/CD tool on the planet, in large part because of the community, CodeQL is poised to becoming the most widely used SAST tool on the planet. This means that the standard query suites are growing all the time, adding further value _which you don't pay more for_.
 
 ## Conclusion
 
