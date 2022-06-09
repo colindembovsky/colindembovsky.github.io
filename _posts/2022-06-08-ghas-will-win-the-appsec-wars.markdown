@@ -15,6 +15,8 @@ tags:
 
 > Image by [FLY:D](https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/cyber-attack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+> Special thanks to [Derek Chowaniec](https://www.linkedin.com/in/derekchowaniec/) who helped me "see the light" and had some input on this post!
+
 In my first few years as a developer, I used Team Foundation Server's [Team Foundation Version Control (TFVC)](https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/what-is-tfvc?view=azure-devops) which is a centralized source control system similar to [SubVersion](https://subversion.apache.org/). I remember being introduced to Git and thinking, "Who would want to use a source control system where you can rewrite history!?" But all the cool kids were using it, and I eventually "came to the light" and now I am a huge proponent of Git. In fact, I have presented a talk a couple of times at VSLive in which I posit that you cannot _effectively_ do modern software development without Git.
 
 For a brief period, there was a war between Git and Mercurial and Git won. We see a similar war at the moment between [GitHub Advanced Security (GHAS)](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) and other entrenched security products such as [Fortify](https://www.microfocus.com/en-us/cyberres/application-security), [Checkmarx](https://checkmarx.com/), [Snyk](https://snyk.io/) and [SonarQube](https://www.sonarqube.org/). Gazing into my crystal ball, I predict that GHAS will win the war - at least, where it's competing: Software Composition Analysis (SCA), Static Application Security Testing (SAST) and secret scanning.
@@ -101,7 +103,13 @@ GHAS is designed to be very "clean" - that is, it has extremely low false positi
 
 ### GHAS is extensible
 
-GHAS is powerful in its own right, but GitHub knows it can't do everything. For example, GHAS does not (at this point) have a container image scanning solution. However, because our SAST offering is built using SARIF files, _any security tool that can produce a SARIF file can be integrated into GHAS_. This allows you to quickly integrate scanning tools like Anchore and Trivy into GHAS to give the developer a consistent experience.
+GHAS is powerful in its own right, but GitHub knows it can't do everything. For example, GHAS does not (at this point) have a container image scanning solution. However, because our SAST offering is built using SARIF files, _any security tool that can produce a SARIF file can be integrated into GHAS_. This allows you to quickly integrate scanning tools like Anchore and Trivy into GHAS to give the developer a consistent experience. Even some Dynamic Application Security Testing (DAST) tools like StackHawk have [extensions that upload SARIF files](https://github.com/marketplace/actions/stackhawk-hawkscan-action#codescanningalerts).
+
+### GHAS is open source
+
+CodeQL is open source - you can see the repo [here](https://github.com/github/codeql). In this repo, you'll see standard query suites for CodeQL so you don't have to be a security professional to run comprehensive scans - ensuring that you can get going quickly. Of course, if you're fortunate enough as a developer to have security professionals in your company, they can create custom queries since CodeQL is a T-SQL-like language.
+
+Because CodeQL is open source, we all get to benefit from the _collective brain power of the security community_. Just as Actions is by far the most widely used CI/CD tool on the planet, in large part because of the community, CodeQL is poised to becoming the most widely used SAST tool on the planet. This means that the standard query suites are growing all the time, adding further value _which you don't pay more for_.
 
 ## Conclusion
 
