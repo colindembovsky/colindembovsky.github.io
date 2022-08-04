@@ -42,15 +42,15 @@ Additionally, there's no simple way to force developers to turn certain tools an
 
 IDEs are great for "simple" analysis - linters that enforce coding standards work really well in IDEs, assuming you can effectively share the linting rules. Most linters are built this way, storing configuration dotfiles alongside the code. Most linters are _fast_ because they typically require very little compute, so running them in the IDE doesn't distract the developer.
 
-However, most security analysis tools (worth their salt) tend to require heavier compute and take longer to scan because of the more complex problem domain. Putting code scanning into an IDE becomes a resource hog for developers (have you ever seen a developer waiting for an IDE to compile their code - it's not pretty!). Furthermore, inundating developers with tons of results can be distracting and actually reduce the remediation effort of the developer since they get fatigued by noisy alerts.
+However, most security analysis tools (worth their salt) tend to require heavier compute and take longer to scan because of the more complex problem domain. Putting code scanning into an IDE becomes a resource hog for developers (have you ever seen a developer waiting for an IDE to compile their code - it's not pretty!). Furthermore, inundating developers with tons of results can be distracting and end up reducing the remediation effort of the developer since they get fatigued by noisy alerts.
 
 ### Background analysis
 
-What about running the code scanning _in the background_ on the developer laptop? This can get problematic because of compute constraints, and also may end up with the situation where code is changed before the scans complete, so you get alerts for code that has already changed or been removed - way too much friction and frustration.
+What about running the code scanning _in the background_ on the developer laptop? This can get problematic because of compute constraints, and may end up with the situation where code is changed before the scans complete, so you get alerts for code that has already changed or been removed - way too much friction and frustration.
 
 ### CLI Tools before pushing code
 
-You could require developers to run CLI tools before pushing code - but this is now outside of the IDE anyway. Developers will invariable forget to run the tool, or just avoid running it since it is disruptive to their coding workflow.
+You could require developers to run CLI tools before pushing code - but this is now outside of the IDE anyway. Developers will invariably forget to run the tool, or just avoid running it since it is disruptive to their coding workflow.
 
 ### Pre-commit hooks
 
@@ -65,7 +65,7 @@ Dependency scanning (SCA) is performed on the repo with GHAS. While the dependen
 
 Taking the above considerations into account, it becomes clear that placing security scanning at the repo/PR is as far left as you should go. Not only does this make security remediation a _team sport_ since team members can collaborate around alerts/remediation process, but this is very little disruption to the daily workflow of a developer. For complex codebases where scanning takes longer than 10 minutes and could potentially slow CI/CD, scheduled jobs or parallel workflows (a CI workflow and a scanning workflow) are perfectly acceptable workarounds.
 
-Dependabot runs post-push (and on a schedule) on the repo, and is able to then compare the dependency graph to the vulnerability databases. Automated PRs to bump to patched versions further aids developers to quickly and easily remediate vulnerable packages with very low friction and interruption.
+Dependabot runs post-push (and on a schedule) on the repo and is able to then compare the dependency graph to the vulnerability databases. Automated PRs to bump to patched versions further aids developers to quickly and easily remediate vulnerable packages with very low friction and interruption.
 
 Secret scanning is the one exception - that you want to shift as far left as possible to prevent secrets from ever making their way into the shared repo. Secret Scanning in GHAS scans a repo's entire history when you enable it for the first time, but you can also turn on Push Protection to ensure that secrets are kept out of the repo in the first place! Under the hood this is achieved conceptually by a pre-commit hook - but the computation time for secret scanning is far smaller than that required to perform code analysis. Secret scanning tends to complete well within seconds, allowing it to be shifted "more left" to the `push`.
 
