@@ -16,7 +16,7 @@ tags:
 
 I have a developer background, so App Security (AppSec) was always anathema to me. However, I had an epiphany about GitHub Advanced Security and how it is unique in it's approach - it is _security for developers_. I wrote some thoughts about that in a [previous post]({% post_url 2022-06-08-ghas-will-win-the-appsec-wars %}).
 
-GitHub Advanced Security (GHAS) allows you to reduce risk _without impeding velocity_. This is a big deal in today's fast-paced world. The way that GHAS does this is by centering AppSec on the developer, rather than the security professional. Integrating AppSec into the developers' daily workflow with very low friction is the secret to actually securing your software effectively.
+GitHub Advanced Security (GHAS) allows you to reduce risk _without impeding velocity_. This is a big deal in today's fast-paced world. The way that GHAS does this is by centering AppSec on the developer, while still meeting requirements of security professionals. Integrating AppSec into the developers' daily workflow with very low friction is the secret to securing your software effectively.
 
 GHAS centers itself around the _repo_ and the _Pull Request_. I have had a number of customers ask why GHAS does not have an IDE plugin. If shifting left is the Holy Grail of AppSec, and GHAS is built to be developer-centric, then why isn't GHAS in the IDE? Isn't that the furthest left we can shift?
 
@@ -44,6 +44,10 @@ IDEs are great for "simple" analysis - linters that enforce coding standards wor
 
 However, most security analysis tools (worth their salt) tend to require heavier compute and take longer to scan because of the more complex problem domain. Putting code scanning into an IDE becomes a resource hog for developers (have you ever seen a developer waiting for an IDE to compile their code - it's not pretty!). Furthermore, inundating developers with tons of results can be distracting and end up reducing the remediation effort of the developer since they get fatigued by noisy alerts.
 
+### Baked in or optional?
+
+Security testing that isn't built into the inner sanctum of your code is _effectively optional_. External tools require someone to build them, install and configure and maintain them, integrate them and automate them. Even if you buy a 3rd party tool rather than build it yourself, you still have to operate, configure, intergrate and automate it yourself. This friction and extra overhead tends to cause developers to avoid these tools - and you lose any value they offer if just one person "forgets" to run the scan.
+
 ### Background analysis
 
 What about running the code scanning _in the background_ on the developer laptop? This can get problematic because of compute constraints, and may end up with the situation where code is changed before the scans complete, so you get alerts for code that has already changed or been removed - way too much friction and frustration.
@@ -64,6 +68,8 @@ Dependency scanning (SCA) is performed on the repo with GHAS. While the dependen
 ## The sweet spot
 
 Taking the above considerations into account, it becomes clear that placing security scanning at the repo/PR is as far left as you should go. Not only does this make security remediation a _team sport_ since team members can collaborate around alerts/remediation process, but this is very little disruption to the daily workflow of a developer. For complex codebases where scanning takes longer than 10 minutes and could potentially slow CI/CD, scheduled jobs or parallel workflows (a CI workflow and a scanning workflow) are perfectly acceptable workarounds.
+
+Developers are already used to collaborating around the PR. The PR is already the rallying point for code review, automated unit testing, linting and other quality gates. GHAS allows teams to add security testing into this pivot point smoothly. This means developers can keep using whatever IDEs they want - but still gain all the benefits of security scanning early and often in the software life cycle.
 
 Dependabot runs post-push (and on a schedule) on the repo and is able to then compare the dependency graph to the vulnerability databases. Automated PRs to bump to patched versions further aids developers to quickly and easily remediate vulnerable packages with very low friction and interruption.
 
