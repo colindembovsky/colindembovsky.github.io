@@ -32,7 +32,7 @@ For teams that are building their own automation, they can still benefit from a 
 There are still some limitations to reusable wofklows:
 
 1. ~~Reusable workflows only run on _hosted_ runners, not yet on _private_ runners.~~ **Update**: Reusable workflows are supported on self-hosted runners now (10/14/2021)!
-1. Reusable workflows cannot call other reusable workflows.
+1. ~~Reusable workflows cannot call other reusable workflows.~~ **Update**: You can nest reusable workflows [up to 4 levels](https://github.blog/changelog/2022-08-22-github-actions-improvements-to-reusable-workflows-2/) now (8/22/2022)!
 1. ~~You cannot access job outputs from reusable workflows.~~ **Update**: You can now declare `outputs` to reusable workflows. These work just like `job` outputs and are available via `needs.<reusable>.outputs.<output>` format once you declare the output.
 1. `env` variables set in the calling workflow are not accessible to the called workflow.
 1. The only parameter types that are supported are `string`, `number` and `boolean`. Arrays are not supported.
