@@ -458,6 +458,54 @@ Invoking a reusable workflow with a secret.
 
 You can see how the secret `token` is passed using `secrets` under the `uses` keyword.
 
+**Edit**: GitHub has [added a way to make passing in secrets easier](https://github.blog/changelog/2022-05-03-github-actions-simplify-using-secrets-with-reusable-workflows/) in reusable workflows. Workflows that call reusable workflows in the same organization or enterprise can use the `secrets: inherit` keyword to implicitly pass the secrets. Here's an example:
+
+~~~yml
+{% raw %}
+# file: 'reusable.yml'
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./.github/actions/some-authenticated-action@v1
+      with:
+        username: ${{ inputs.username }}
+        token: ${{ secrets.token }}      
+{% endraw %}
+~~~
+
+Defining a `secret` input to a reusable workflow where the caller workflow is using the `secrets: inherit` keyword.
+{:.figcaption}
+
+~~~yml
+{% raw %}
+# file: 'caller.yml'
+name: Deploy
+
+on:
+  push:
+    
+jobs:
+  deploy:
+    - uses: my-org/my-workflow-repo./.github/workflows/reusable.yml@v1
+      with:
+        username: ${{ github.actor }}
+      secrets: inherit
+{% endraw %}
+~~~
+
+Invoking a reusable workflow with a secret using the `secrets: inherits` keyword.
+{:.figcaption}
+
 # Conclusion
 
 Reusable Workflows are a great evolution for GitHub Actions. They can drastically reduce redundancy in your workflows and start paving the way for some centralized templates that can be used to standardize jobs in an org. While they have limitations, they are still powerful tools to add to your toolbelt.
