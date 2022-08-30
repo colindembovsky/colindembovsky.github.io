@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Fine Tuning CodeQL Scans'
+title: 'Fine Tuning CodeQL Scans using Query Filters'
 date: '2022-08-30 01:22:01'
 image: /assets/images/2022/08/fine-tune/target.jpg
 description: >
