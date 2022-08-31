@@ -60,13 +60,15 @@ We'll use some of these metadata properties to filter - notably the `kind`, `sec
 
 ## Why filter?
 
-If you do not specify a suite in the [CodeQL Action](https://github.com/github/codeql-action/blob/main/init/action.yml), then you'll get queries in the `security-extended` suite for the language you're scanning. You can also [specify the query suite](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs) to be `security-and-quality` to add in some "more queries".
+If you do not specify a suite in the [CodeQL Action](https://github.com/github/codeql-action/blob/main/init/action.yml), then you'll get a default set of queries for the language you're scanning. However, the default set is a subset of all the queries. There are some queries that have higher or lower severity or "precision" (we'll discuss what that is later). Rather than give you _all_ the queries, the default setting _filters out_ some queries. [This file](https://github.com/github/codeql/blob/main/misc/suite-helpers/code-scanning-selectors.yml) contains the default set of filters.
 
-What are these "more queries"? Let's take a look at the default suits and how they are specified, and then at a couple of use-cases where we want to tweak the filters (or selectors).
+You can also customize the [query suite](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs) by specifying other "standard" selectors: either `security-extended` or `security-and-quality`, which change the filter criteria by adding in additional queries that are excluded in the default selection.
 
-## Default Suites
+Let's examine a couple of selectors and how they are specified, and then a couple of use-cases where we use selectors to specify a different set of queries to execute during the Analyse phase.
 
-If you look at the `includes` from the [default selectors](https://github.com/github/codeql/tree/main/misc/suite-helpers) you'll see that [security-extended-selectors.yml](https://github.com/github/codeql/blob/main/misc/suite-helpers/security-extended-selectors.yml) selects queries that contain the `security` `tag`:
+## Standard Selectors
+
+If you look at the `includes` from the [standard selectors](https://github.com/github/codeql/tree/main/misc/suite-helpers) you'll see that [security-extended-selectors.yml](https://github.com/github/codeql/blob/main/misc/suite-helpers/security-extended-selectors.yml) selects queries that contain the `security` `tag`:
 
 ~~~yml
 {% raw %}
@@ -106,7 +108,7 @@ By contrast, the [security-and-quality-selectors.yml](https://github.com/github/
 Selectors in the `security-and-quality-selectors.yml` file.
 {:.figcaption}
 
-This means that the `security-extended` suite will only include queries that include `security` in the `tags` metadata, while the `security-and-quality` suite will include additional queries that don't contain this `tag`.
+This means that the `security-extended` suite will only include queries that have `security` in their `tags` metadata, while the `security-and-quality` suite will include additional queries that do not contain this `tag`.
 
 However, we can also filter on other properties - such as `kind`, `security-severity` or `precision`.
 
