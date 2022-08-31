@@ -60,7 +60,7 @@ We'll use some of these metadata properties to filter - notably the `kind`, `sec
 
 ## Why filter?
 
-If you do not specify a suite in the [CodeQL Action](https://github.com/github/codeql-action/blob/main/init/action.yml), then you'll get a default set of queries for the language you're scanning. However, the default set is a subset of all the queries. There are some queries that have higher or lower severity or "precision" (we'll discuss what that is later). Rather than give you _all_ the queries, the default setting _filters out_ some queries. [This file](https://github.com/github/codeql/blob/main/misc/suite-helpers/code-scanning-selectors.yml) contains the default set of filters.
+If you do not specify a suite in the [CodeQL Action](https://github.com/github/codeql-action/blob/main/init/action.yml), then you'll get a default set of queries for the language you're scanning. However, the default set is a subset of all the queries. There are some queries that have higher or lower severity or different levels of "precision" (we'll discuss what that is later). Rather than give you _all_ the queries, the default setting _filters out_ some queries. [This file](https://github.com/github/codeql/blob/main/misc/suite-helpers/code-scanning-selectors.yml) contains the default set of filters.
 
 You can also customize the [query suite](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs) by specifying other "standard" selectors: either `security-extended` or `security-and-quality`, which change the filter criteria by adding in additional queries that are excluded in the default selection.
 
