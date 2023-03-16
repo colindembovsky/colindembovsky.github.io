@@ -81,7 +81,7 @@ In short, workarounds make detection harder, and so increase risk.
 This doesn't mean that allowing bypasses is insecure! With some simple steps, organizations can implement effective controls for bypasses, allowing them to retain customer trust as well as prevent secrets from leaking.
 
 There are two primary methods to track bypasses of push protections:
-1. The `secret_scanning_alert` [webhook](https://docs.github.com/webhooks-and-events/webhooks/webhook-events-and-payloads#secret_scanning_alert) which is fired every time a protection is bypasses (the `push_protection_bypassed` property is set to `true`)
+1. The `secret_scanning_alert` [webhook](https://docs.github.com/webhooks-and-events/webhooks/webhook-events-and-payloads#secret_scanning_alert) which is fired every time a protection is bypassed (the `push_protection_bypassed` property is set to `true`)
 1. The `secret_scanning_push_protection` category of [audit logs](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/audit-log-events-for-your-enterprise#secret_scanning_push_protection-category-actions)
 
 You can use either of these to send automated emails or notify admins when bypasses occur. This allows you to maintain visibility without losing developer trust, since the bypass can be inspected and, if valid for cases like false positives, ignored. For cases where the bypass was not valid, admins can have conversations with the developer who bypassed the protection.
