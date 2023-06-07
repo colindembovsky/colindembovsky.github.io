@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Management by Exception - the Key to Scaling DevSecOps'
-date: '2023-06-06 01:22:01'
-image: /assets/images/2023/06/management/chili.jpg
+title: 'Team Autonomy vs Enterprise Alignment'
+date: '2023-06-07 01:22:01'
+image: /assets/images/2023/06/teamautonomy/row.jpg
 description: >
-  Tooling is an important aspect of DevSecOps - but culture and management style are key factors that can dramatically influence how you scale. In this post I'll discuss some thoughts about management by exception.
+  Tooling is an important aspect of DevSecOps - but culture dramatically influences how organization scale. In this post I'll talk about a key cultural concept: Team Autonomy vs Enterprise Alignment.
 tags:
 - devops
 - security
@@ -13,7 +13,7 @@ tags:
 1. TOC
 {:toc}
 
-> Image by [Pickled Stardust](https://unsplash.com/@pickledstardust?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/4xc6i5BKPWs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+> Image by [Matteo Vistocco](href="https://unsplash.com/@mrsunflower94?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash](https://unsplash.com/s/photos/team?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
   
 I work for GitHub - so naturally I have a lot of conversations about tooling and products. However, let's take a step back and remember Donovan Brown's seminal definition of DevOps:
 
@@ -83,8 +83,6 @@ How would we do this with builds? One way would be to standardize on a single bu
 
 ## Considering AppSec
 
-We can also consider AppSec on the spectrum.
-
 ### Extreme Enterprise Alignment
 
 Most organizations I work with have a Cyber security team. These teams are typically involved late in the development lifecycle and are the official gate-keepers to "going to prod". The idea is that this centralized team is the enterprise alignment for securing applications.
@@ -99,4 +97,46 @@ On the other extreme, teams are not bound to any security standards at all, lead
 
 ### Well Balanced
 
-How can we balance these requirements - centralized risk management and good developer experience?
+How can we balance these requirements - centralized risk management and good developer experience? We standardize on a single platform/tool and mandate that teams scan their code and dependencies and scan for secrets. We can enforce branch protection rules to ensure that these scans complete before deployment. These are the non-negotiables.
+
+We then let teams figure out how to treat remediation in their backlogs. We may have to set some sort of SLA on remediation. As long as we have visibility into which teams are in compliance, we can let the teams decide when/how to remediate. This gives the teams autonomy within some good boundaries.
+
+## DevSecOps At Scale
+
+There is no _effective_ way to scale DevSecOps if your culture is either too centralized (enterprise alignment) or decentralized (team autonomy). Organizations must find a good set of non-negotiables and then extend trust to the team for everything else.
+
+For this to work, however, you must have a platform that can support this culture. I believe that GitHub is the platform for this. Here are a few recommendations that will allow you to scale DevSecOps:
+
+### Treat the PR as the center of quality and security
+
+- Enabling branch protection for your `main` branch forces teams to use Pull Requests (PRs) to flow code changes to your stable code.
+- Require peer code review for your PRs. This ensures that you get more eyes onto code changes, and encourages teams to work in smaller batches (there's nothing worse that doing a code review for a large number of changes).
+- Require passing builds that include unit tests. This ensures that code at least compiles and that it passes some level of unit testing. Code that can't pass these basic gates should not be deployed to production!
+- Require code scanning (SAST). This ensures that security issues for your code are picked up early and fixed immediately. This also removes the burden on the (scarce) security professionals in your organization.
+- Require dependency scanning and [Dependency Review](https://docs.github.com/en/enterprise-cloud@latest/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review). This ensures that you are not introducing vulnerable dependencies with your code changes.
+
+### Enable secret scanning and push protection
+
+- There are too many breaches because of secrets checked into source control. Turning this on to remediate existing secrets (get clean) and turning on push protection (stay clean) dramatically reduces this risk.
+- The ease of switching this on at the org level should not be underestimated. There are no IDE plugins to configure or build steps to configure - it's just switching a button. _There is no other secret scanning tool that can be scaled as easily_.
+
+### Treat security vulnerabilities as "work"
+
+- This removes the "scare" factor from security issues.
+- This lets teams prioritize remediation along with other feature requests. Teams look at bugs and determine if they need to be fixed immediately or not - they should treat vulnerabilities in the same manner.
+
+### Let teams build/test/package/scan/deploy their apps
+
+- A centralized build team may work at a small scale, but at larger scales (> 50 devs) this can become a bottleneck.
+- Reuse small jobs rather than large pipelines. Large, generic pipelines that try to deploy every app become unwieldy and fragile. Rather create small reusable jobs that are like Lego bricks to encapsulate common parts of a workflow, and let teams compose these in their own pipelines. This gives a good balance of reusability without bloating.
+
+### Manage by exception
+
+- "Trust, but verify." Assume that teams will do the right thing, and then check for cases where they do not. For example, monitor bypasses of push protection. If a team does this repeatedly, it could be an indication that they are doing something wrong. This is better than "hard gating" and blocking developers.
+- Teams must own their apps - and that includes _failing_. If you can fail fast, then you can recover fast too. Once teams see that good quality makes their lives better, they will be more motivated to produce quality code without the need for heavy handed processes! This means that you should be prepared for them to fail from time to time - and to trust them to recover quickly.
+
+## Conclusion
+
+Scaling DevSecOps effectively requires organizations to think about their culture. Finding a good spot on the spectrum of Team Autonomy and Enterprise Alignment is critical to success. Organizations must find a small set of core non-negotiables and give teams choice for everything else. The GitHub platform enables organizations to configure these "non-negotiables" in a transparent way, allowing teams to move quickly without compromising quality and security. 
+
+Happy scaling!
