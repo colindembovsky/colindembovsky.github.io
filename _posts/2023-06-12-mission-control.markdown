@@ -47,7 +47,7 @@ The seven principles of Mission Command are:
 - **Shared understanding** - creating common language and culture and clear visions and values
 - **Commander's intent** - commanders must clearly communicate intent to everyone, articulating purpose and desired end state
 - **Mission orders** - describing the situation, commander's intent, desired results and required tasks, _without specifying how tasks are to be accomplished_
-- **Disciplined initiative** - wether the benefits of a localized decision outweigh the risk of desynchronizing the overall operation, and wether the action further's the commander's intent
+- **Disciplined initiative** - whether the benefits of a localized decision outweigh the risk of desynchronizing the overall operation, and whether the action further's the commander's intent
 - **Risk acceptance** - commanders must assess risk to mission while mitigating risks with control measures, trusting that their intent has been relayed and subordinate decisions will be made based on that intent
 
 ## Applying Mission Control to DevSecOps
