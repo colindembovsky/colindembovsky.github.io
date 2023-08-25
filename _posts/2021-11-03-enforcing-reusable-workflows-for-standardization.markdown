@@ -17,7 +17,7 @@ tags:
 
 # Problem Statement
 
-There is a delicate balance between _team autonomy_ and _enterprise alignment_. Too much autonomy can result in chaos, rework and runaway spending. Too much red tape can result in logn cycle times, frustration and lack of innovation. But it is possible to implement some level of compliance and leave teams some autonomy too.
+There is a delicate balance between _team autonomy_ and _enterprise alignment_. Too much autonomy can result in chaos, rework and runaway spending. Too much red tape can result in long cycle times, frustration and lack of innovation. But it is possible to implement some level of compliance and leave teams some autonomy too.
 
 Imagine you want to ensure that code that gets deployed is scanned using CodeQL. Furthermore, you want to enforce a specific set of steps for deploying your apps. You would prefer your app teams to be able to build, test and package applications themselves. In this post I'll show how you can achieve do this using GitHub.
 
@@ -83,9 +83,9 @@ Overview of how the workflows are structured.
 
 Let's now dig into the workflows.
 
-### App Team Code Scan Workflow
+### Compliance Team Code Scan Workflow
 
-The Compliance Team should add a workflow in the App Repo to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the App Team:
+The Compliance Team should add a workflow in the App Repo to scan code. We'll have a look at the called workflow later, but for now, here is the workflow for the Compliance Team:
 
 ~~~yml
 {% raw %}
