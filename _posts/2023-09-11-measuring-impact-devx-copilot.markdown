@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Measuring the impact of Developer Experience and GitHub Copilot'
-date: '2023-07-11 01:22:01'
+date: '2023-09-11 01:22:01'
 image: /assets/images/2023/07/measuring/productivity.jpg
 description: >
   Measuring the impact of Developer Experience and GitHub Copilot is a complex subject. Understanding leading and lagging indicators can help organizations measure the right things, and thus prove out the value of good Developer Experience in general, as well as the impact of GitHub Copilot.
