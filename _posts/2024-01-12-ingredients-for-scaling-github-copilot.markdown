@@ -22,7 +22,7 @@ I work with a number of enterprises with large development communities: 5,000 - 
 Most customers I work with would agree (even if only intuitively) that GitHub Copilot is a productivity booster for developers. However, executives are often skeptical when they see numbers such as [developers who use GitHub Copilot complete tasks ~55% faster than developers without GitHub Copilot](https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/). This is not just vaporware from GitHub - customers are also reporting large productivity gains:
 
 1. Duolingo is seeing a [25% increase in developer speed with GitHub Copilot](https://github.com/customer-stories/duolingo)
-1. Cayote Logistics is reporting [50% decrease in time to write Terraform config files](https://github.com/customer-stories/coyote-logistics)
+1. Coyote Logistics is reporting [50% decrease in time to write Terraform config files](https://github.com/customer-stories/coyote-logistics)
 1. Marcado Libre reports a [50% reduction in time spent writing code with GitHub Copilot](https://github.com/customer-stories/mercado-libre)
 
 These are just a few examples - there are more stories reporting similar numbers.
