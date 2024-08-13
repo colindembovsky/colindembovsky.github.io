@@ -2,7 +2,7 @@
 layout: post
 title: 'Why Culture is so important in the Age of AI'
 date: '2024-01-11 01:22:01'
-image: assets/images/2024/08/culture/ai.jpg
+image: /assets/images/2024/08/culture/ai.jpg
 description: >
   GitHub Copilot is proven to improve individual productivity at the task level. However, organizations need to be intentional and systematic in how they scale GitHub Copilot broadly in order to realize organizational benefits. In this post I'll discuss why culture is so important in the Age of AI.
 tags:
@@ -91,6 +91,8 @@ You should also start with investment in unit testing. Many teams try to "skip" 
 Given the increase in both the quality and frequency of cyber-attacks, security scanning, secret scanning and dependency scanning should be non-negotiable. Security scanning is non-trivial, and requires both tools and a change in culture. "Secure as we code" and "shift-left" are easy buzz words, but implementing this in real life can be challenging.
 
 The cultural challenge for "shift-left" security requires a focus on tools and processes that are very low-friction for developers. Scanning late in the cycle on disparate tools by security teams that are incentivized to find vulnerabilities is a recipe for low remediation rates. Organizations that focus security teams on scale (setting organizational level standards) and focusing on helping developers quickly find (and easily remediate) vulnerabilities is the only way to stay ahead.
+
+Besides static code scanning, don't forget secret scanning! You'll also need to continuously scan your dependencies to ensure that you aren't reliant on vulnerable packages.
 
 ## The GitHub Platform
 
