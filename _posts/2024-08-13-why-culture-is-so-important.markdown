@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Why Culture is so important in the Age of AI'
-date: '2024-01-11 01:22:01'
+date: '2024-08-13 01:22:01'
 image: /assets/images/2024/08/culture/ai.jpg
 description: >
   GitHub Copilot is proven to improve individual productivity at the task level. However, organizations need to be intentional and systematic in how they scale GitHub Copilot broadly in order to realize organizational benefits. In this post I'll discuss why culture is so important in the Age of AI.
