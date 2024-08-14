@@ -42,7 +42,7 @@ In other words, if you have inefficient processes, you won't realize the real im
 
 ## Remember the advent of Agile?
 
-The Age of AI reminds me a lot of the Age of Agile. Initially, many waterfall teams renamed their Product Managers as Scum Leads and called themselves Agile. Unfortunately, that didn't work. The organizations that really benefited from Agile were the organizations that really shifted their culture. Large, top-heavy groups were decomposed into smaller, autonomous teams. People were valued over process - and all of the [Agile Manifesto](https://agilemanifesto.org/) principles were truly put in place, not just paid lip service.
+The Age of AI reminds me a lot of the Age of Agile. Initially, many waterfall teams renamed their Product Managers as Scrum Leads and called themselves Agile. Unfortunately, that didn't work. The organizations that really benefited from Agile were the organizations that really shifted their culture. Large, top-heavy groups were decomposed into smaller, autonomous teams. People were valued over process - and all of the [Agile Manifesto](https://agilemanifesto.org/) principles were truly put in place, not just paid lip service.
 
 In the same way, organizations that truly wish to realize the benefits of Generative AI (and GitHub Copilot in particular) need to focus on culture - and the entire DevSecOps cycle. While GitHub Copilot can feel magical, it's not a silver bullet (to mix metaphors).
 
