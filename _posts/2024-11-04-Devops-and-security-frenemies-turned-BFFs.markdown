@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 'DevOps and security - Frenemies turned BFFs'
-date: '2024-08-13 01:22:01'
-image: assets/images/2024/2011/frenemies/frenemies.jpg
+date: '2024-10-31 01:22:01'
+image: /assets/images/2024/2011/frenemies/frenemies.jpg
 description: >
-  TODO
+  This post is my summary of the Universe 2024 Fireside Chat with Brian Rossi from Caterpillar Digital.
 tags:
 - security
 - process
@@ -13,78 +13,58 @@ tags:
 1. TOC
 {:toc}
 
-> This post is my summary of the Universe 2024 Fireside Chat with Brian Rossi from Caterpillar Digital
-  
-## DevOps and security - Frenemies turned BFFs
+# DevOps and security - Frenemies turned BFFs
 
-TODO: embed Youtube URL: https://www.youtube.com/watch?v=yBlDDZhWGj4
+This post is a summary of some of the key insights from a recent GitHub Universe 2024 Fireside Chat with [Brian Rossi](https://www.linkedin.com/in/brian-rossi-61b840b/), Director, DevOps and Cybersecurity at Caterpillar.
 
-- 250 dev teams
-- wanted to create a centralized way to develop software
-- we help teams to enable the SDLC
-- a huge challenge was bringing security work to the dev teams
-- !! how does DevOps enable cybersecurity for our org
-- !! how do we get dev teams to adopt security as work?
-- !! huge challenge coming from a centralized cyber team was not knowing how dev teams work
-- how do we speak in terms that devs understand? They glaze over when talking about vulns
-- we refer to vulns as "defects"
-- !! security is part of quality
-- how to devs manage quality? through issues and defects and backlogs and terms devs understand
-- we changed our language to terms devs understood - then they could manage security as part of normal work
-- challenge: 250 teams that own their own SDLC
-- how do we ensure teams have the pieces in place to security as part of their SDLC
-- started with fragmented tools: GitHub and Boards and other security tools
-- how do we bring security work to where the developers live
-- it's the repos! Was a huge challenge with our existing toolset
-- GHAS was a natural way to get security work directly in front of the devs
-- we stopped talking about vulns - it's just work that needs to be prioritized
-- when do you prioritize? how long can this exist before you do something?
-- DevOps org and cyber partnered very closely
-- Cyber said, "YOU own your SDLC - we're not going to change it! We're bringing visibility."
-- how do we make it visible? we needed metrics that devs understood to help prioritize
-- how can we help them make good decisions?
-- created a scorecard (letter grades) based on age of vulns
-- teams were able to work towards their goal grade
-- have about 15 sec engineers specifically focused on AppSec (as opposed to infra/data etc.)
-- intentional about naming our org: "DevOps and Cybersecurity"
-  - want devs to know we're DevOps first
-  - never been a fan of the term "DevSecOps" because security isn't "special" in the life cycle
-  - it's a part of what we do
-  - we're there to help, not just label problems
-- GHAS was important because of the integration into repos
-- had to contend with the CISO that GHAS was what we needed to truly shift left
-- segmented tools don't get devs the info they need early in the SDLC - which is where GHAS came in
-- we see ourselves as enablers of developer teams
-  - once we had that in place, the divide between dev/sec solved itself
-  - devs don't feel pressure from sec
-  - we don't dictate breaking builds - it's a tool that devs can use if they want
-  - we can help you - but it's your decision
-  - how you remediate vulns should fit into your SDLC
-  - we removed the stigma of "we're here to stop you" to "we're here to help you"
-  - security has been the "Office of No"
-- metrics:
-  - started a bug bounty program
-  - 2 sets of metrics: maturity of SDLC, risk reduction
-  - separated pruposefully since we don't measure risk in the SDLC if vulns are just work
-  - we focused on maturing teams so that they can remediate effectively
-  - !! letting vulns age is more a reflection on maturity than a reflection of risk posture
-  - low scores were not a reflection of risk: they meant we needed to improve prioritization or mature our life cycle
-  - gameification: self-reporting defects got you a +1, bugs found in the bounty got you a -1
-  - devs felt helpless against bug bounty: have to drop everything to fix
-- goal wasn't to have security drive teams to a score: it was to look at the SDLC and find a better way to do this
-- if we can push code every day, I may accept more risk since I can fix tomorrow vs we deploy every 6 months, so if we find we have to fix NOW
-- going faster makes you more secure
-- focus on Dev Ex
-  - Cyber never focused on devEx
-  - if was always: Identify Risk, Communicate Risk, Address Risk
-  - little opty to spend time understanding how dev teams work
-  - the better your SDLC is, the more opportunity you will have for remediation
-  - let devs lead: started an annual "Secure the Work" conference: a developer-led security conf (no sec pros)
-  - teams with good practices that led to good outcomes got to share their stories
-  - we're empowering our dev teams to be security leaders rather than just sec pros
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yBlDDZhWGj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
+## Centralized Approach and Team Autonomy
 
-## Conclusion
+Creating a secure culture at scale requires a centralized _approach_ (not a centralized _team_). The centralized approch can streamline processes, ensure a uniform standard of security, and simplify the adoption of security measures within the Software Development Life Cycle (SDLC). However, a key challenge in this approach is balancing the centralized vision with the autonomy of various development teams. For organizations managing many teams — each with distinct workflows — adopting a flexible, support-oriented strategy is crucial to avoid being perceived as imposing rigid controls on SDLC ownership.
 
+## Enabling DevOps Rather Than Policing Security
+
+Integrating security into the SDLC through DevOps practices rather than being "The Office of No" fosters a collaborative environment where security is seen as part of quality rather than a separate function. This approach allows security to naturally align with the processes that development teams are already using to manage quality, such as tracking issues, defects, and backlogs. By embedding security into these familiar workflows, security becomes “just another type of work” that developers prioritize based on risk, urgency, and capacity, enhancing both the security and efficiency of software development.
+
+## Language and Terminology Matters: From Vulnerabilities to Defects
+
+One of the most effective strategies in scaling application security is to adapt terminology that resonates with development teams. Reframing vulnerabilities as “defects” places security issues in a context developers understand, enabling them to treat security as a quality issue rather than an external mandate. This subtle shift in language helps bridge the gap between security and development, making it easier for developers to prioritize and track security issues in line with other quality concerns.
+
+## Distributed Ownership of Security Across Development Teams
+
+In organizations with numerous development teams, each owning its SDLC, enabling effective security practices can be daunting. This decentralized ownership requires a scalable approach, where security teams provide visibility and guidance without mandating a one-size-fits-all approach. By emphasizing visibility and equipping teams with security metrics tailored to their development processes, cybersecurity becomes an enabler rather than a roadblock, allowing teams to prioritize security work autonomously while maintaining a consistent standard across the organization.
+
+## Leveraging GitHub Advanced Security (GHAS) for Seamless Integration
+
+GitHub Advanced Security (GHAS) offers an integrated solution that brings security work directly into the developer workflow. GHAS provides insights at the repository level, where developers are already managing their code, reducing the friction associated with fragmented security tools. By surfacing security issues within the repository, organizations ensure that security is considered earlier in the SDLC, effectively “shifting left” and fostering a proactive security mindset among developers.
+
+> **Aside**: Conway's Law posits that teams will architect software that mirrors lines of communication in the organization. The [Inverse Conway Manuever]({% post_url 2018-05-03-vsts-one-team-project-and-inverse-conway-maneuver %}) is a way to foster a cultural change by intentionally changing the architecture and tooling of your teams - so it's no surprise that using GHAS (which embeds security where the developers work) can be a powerful change agent to truly "shifting left" with regards to security. 
+
+## Building a Strong Developer/Security Partnership: “You Own Your SDLC”
+
+A collaborative partnership between DevOps and Cybersecurity is foundational to embedding security in the SDLC without disrupting workflows. By allowing teams to retain ownership of their SDLC while providing visibility into security issues and collaborative support, security teams foster trust and partnership rather than being seen as police. This approach empowers development teams to make informed security decisions while maintaining accountability for their codebase, helping eliminate the "blocker" stigma often associated with security.
+
+## Distinguishing Between Risk Posture and DevOps Maturity
+
+Separating risk posture from DevOps maturity provides clarity for both security leaders and development teams, allowing them to prioritize actions effectively. Risk posture assesses the actual security risks an organization faces, while DevOps maturity reflects the team’s ability to manage and remediate those risks efficiently. By focusing on DevOps maturity, security leaders can identify areas where process improvements could reduce risk over time, without conflating a low maturity score with an immediate risk issue. For teams, this distinction emphasizes continuous improvement rather than a reactive “fix everything now” mentality. Leaders benefit from this clarity as they gain insights into which teams may need additional support or resources to reach maturity, while developers are empowered to make incremental improvements, ultimately building a more resilient, secure SDLC. This approach aligns security improvements with business needs and development workflows, fostering sustainable growth in both security practices and development capabilities.
+
+## Empowering Developers to Lead Security Initiatives
+
+Empowering developers to take the lead in security efforts, such as through developer-led conferences and initiatives, encourages them to take ownership of security outcomes. When developers are provided with the opportunity to share successful practices and learn from their peers, they’re more likely to integrate security into their workflow naturally. By giving developers this responsibility, organizations not only enhance their security posture but also build a culture where security is recognized as a shared priority across all functions.
+
+## Moving Fast As a Strategy for Better Risk Management
+
+In a DevOps environment where code can be pushed daily, organizations can embrace a more agile approach to risk management. Rapid deployment cycles allow teams to fix issues quickly, potentially reducing the need to prioritize every security defect immediately. This flexibility enables a balanced approach to risk: teams that deploy frequently can accept some level of vulnerability knowing it can be promptly addressed, whereas teams with slower release cycles may need to prioritize fixes more urgently. Counterintuitively, improving velocity is a key enabler to reducing risk.
+
+## Prioritizing Developer Experience (DevEx) in Cybersecurity
+
+Improving the developer experience (DevEx) is essential for sustainable security integration. Historically, security teams focused primarily on identifying and addressing risk, often without fully understanding developers’ workflows. By prioritizing DevEx, cybersecurity efforts align more naturally with development processes, providing developers with tools, guidance, and autonomy that enhance productivity and foster a more collaborative security culture. Ultimately, the better an organization supports DevEx, the more effective it will be in achieving security outcomes without sacrificing speed or innovation.
+
+# Conclusion
+
+For organizations to truly "shift left", they need to move from a culture of "managing risk" to a culture of "improving DevOps maturity". Cybersecuritty teams need to understand the developer workflow and become enablers rather than blockers. By prioritizing collaboration, adjusting language, embedding security in the SDLC, and creating actionable metrics, organizations can build an AppSec program that enhances both security and productivity.
 
 Happy securing!
