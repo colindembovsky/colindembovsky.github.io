@@ -240,7 +240,7 @@ Notes:
 1. We invoke the deploy runner workflow which spins up a self-hosted runner in an ACI connected to our private VNet. To make sure that our job targets the correct runner, we add a `labels` value of `uniqueString`.
 1. In the `build` job, we target any runner that has labels `self-hosted` and `uniqueString` (there should only be the one).
 1. Steps executed here run on the self-hosted runner, that is connected to our private VNet, so it should be able to access resource on this VNet and any peered VNets.
-1. The `delete_aci` job invokes the reusable workflow to clean up the ACI after the job complets. We add `if: ${{ always() }}` to ensure that the job executes even if the `build` job fails.
+1. The `delete_aci` job invokes the reusable workflow to clean up the ACI after the job complets. We add {% raw %}`if: ${{ always() }}`{% endraw %} to ensure that the job executes even if the `build` job fails.
 1. We use `needs` to specify the ordering: first create the ACI hosting the runner, then execute the `build` and then only delete the ACI.
 
 ### Secrets
