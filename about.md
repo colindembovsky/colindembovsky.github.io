@@ -9,7 +9,7 @@ permalink: /about/
 </div>
 
 <br/><br/>
-Colin Dembovsky is a Principal Solution Engineer at [GitHub](https://github.com). He is a self-proclaimed DevOpsologist and was an [ALM MVP](https://mvp.microsoft.com/en-us/mvp/Colin%20Dembovsky-4034924) from 2011 to 2022. He is based in Spring, TX but remains proudly South African 🇿🇦!
+Colin Dembovsky is the Director of Field Services for [GitHub](https://github.com) Copilot. He is a self-proclaimed DevOpsologist and was an [ALM MVP](https://mvp.microsoft.com/en-us/mvp/Colin%20Dembovsky-4034924) from 2011 to 2022. He is based in Spring, TX but remains proudly South African 🇿🇦!
 
 After completing an MSc in Computer Science at [Rhodes University](http://www.ru.ac.za/), he worked as a developer and later systems architect, implementing DevOps "by feel" and in the trenches. In 2010, he left development to start consulting, using his experience, insight and strategic thinking to help organizations put DevOps into practice. By 2019, Colin was leading a DevOps practice and joined GitHub in 2021.
 
