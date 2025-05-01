@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Agentic Software Delivery'
-date: '2024-11-04 01:22:01'
+date: '2025-05-01 01:22:01'
 image: /assets/images/2025/05/agentic-sw-delivery.png
 description: >
   The SDLC needs to evolve for the agentic future - but how do we define the next chapter?

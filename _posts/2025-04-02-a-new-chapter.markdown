@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'A New Chapter'
-date: '2024-11-04 01:22:01'
+date: '2025-04-02 01:22:01'
 image: /assets/images/2025/04/do-something-great.jpg
 description: >
   I am taking on a new role at GitHub as Director of Field Services for GitHub Copilot.
