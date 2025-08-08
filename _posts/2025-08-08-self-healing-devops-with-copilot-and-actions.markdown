@@ -20,7 +20,7 @@ tags:
 Here’s a short video showing the self-healing loop analyzing a failed run, classifying the issue, and opening a remediation issue which Copilot Coding Agent immediately fixes!
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-  <iframe class="center-image" src="https://youtu.be/N53ddmqmABg" title="Self-healing DevOps demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" loading="lazy"></iframe>
+  <iframe class="center-image" src="https://www.youtube-nocookie.com/embed/N53ddmqmABg?rel=0&modestbranding=1" title="Self-healing DevOps demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" loading="lazy"></iframe>
 </div>
 Watch the self-healing loop analyze a failed run, open a remediation issue and fix it.
 {:.figcaption}
