@@ -1,3 +1,10 @@
+PATH
+  remote: #jekyll-theme-hydejack
+  specs:
+    jekyll-theme-hydejack (9.2.1)
+      jekyll (>= 3.8, < 5.0)
+      jekyll-include-cache (~> 0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -281,6 +288,7 @@ DEPENDENCIES
   jekyll (~> 3.8)
   jekyll-compose
   jekyll-include-cache
+  jekyll-theme-hydejack!
 
 BUNDLED WITH
-   2.3.20
+   2.4.22

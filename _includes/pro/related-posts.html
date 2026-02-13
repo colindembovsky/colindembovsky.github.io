@@ -14,11 +14,6 @@
   {% assign related_posts = site.categories[post.categories.first] | where_exp:"post", "post.url != page.url" %}
 {% elsif post.tags.first %}
   {% assign related_posts = site.tags[post.tags.first] | where_exp:"post", "post.url != page.url" %}
-  {% if post.tags.size > 1 %}
-    {% assign second_tag = post.tags[1] %}
-    {% assign related_posts_2 = site.tags[second_tag] | where_exp:"post", "post.url != page.url" %}
-    {% assign related_posts = related_posts | concat:related_posts_2 %}
-  {% endif %}
 {% else %}
   {% assign related_posts = site.related_posts %}
 {% endif %}
