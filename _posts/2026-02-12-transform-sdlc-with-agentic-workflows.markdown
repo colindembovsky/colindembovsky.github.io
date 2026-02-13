@@ -57,7 +57,7 @@ The truth is that the possibilities are really endless - you're truly only limit
 
 But the sky is the limit. If you can describe it, you can probably build it. The best way to get a sense of the possibilities is to check out the [Agentic Workflows gallery](https://github.github.com/gh-aw/) and see the examples that the GitHub team has built - and then start thinking about how you can build your own.
 
-# Anatomy of an Agentic Workflow
+## Anatomy of an Agentic Workflow
 
 At this point, I would normally show you a snippet of a workflow markdown or YAML, but I won't do that here. You shouldn't ever have to see or edit these files, since you can just talk to your agent in natural language and let it do the work of creating and refining these files for you. Instead, I'll show you the actual prompt I used to create a workflow, and then I'll break down the resulting markdown file so you can understand how the intent maps to the implementation.
 
@@ -75,7 +75,7 @@ Once again: never ever edit the `.lock.yml` file. You can edit the markdown body
 
 > Note: While the `.lock.yml` file is an committed to the repo, you should consider it a build artifact rather than source code. When a workflow executes, it will fetch the intent from the markdown of the `workflow.md` file. You only need to update the `.lock.yml` file when you change the frontmatter in the `.md` file - and if you use Copilot to perform your updates with the custom agent, this is done for you.
 
-# Updating a project when a dependency changes: A real example
+## Updating a project when a dependency changes: A real example
 
 I was recently playing with the Copilot SDK and wanted to create a simple TUI (text-based UI) to experiment with the SDK and show off some of its capabilities. I built [Planeteer](https://github.com/colindembovsky/planeteer) as an experiment in work breakdown and orchestration using Copilot. But even as I was building Planeteer, I realized that the SDK was changing rapidly - new features, API changes, and improvements were landing on a daily basis. I wanted to stay up to date with those changes and incorporate them into Planeteer, but it was a lot of manual effort to track the SDK repo for updates, read changelogs, analyze relevance, create issues and implement changes. This is a perfect scenario for an Agentic Workflow.
 
@@ -209,7 +209,7 @@ If I click "Edit" on the Issue body, I also see the following hidden HTML metada
 
 Searching `weekly-enhancement-suggestions` in the repo yields code references (to the workflow files) as well as any issues created by the workflow, and you can easily correlate these together to trace outputs back to the specific workflow run and its associated markdown instructions.
 
-# A New Way of Thinking: Intent Over Implementation
+## A New Way of Thinking: Intent Over Implementation
 
 This is the mindset shift that matters most. For over a decade, "automation" has meant "write the steps." Need to check an API? Write a `curl` command, parse the JSON, handle errors, format the output. Need to create an issue? Construct the body string, call `gh issue create`, capture the URL.
 
@@ -221,7 +221,7 @@ This isn't "vibe coding your CI." The structure is there. The security is there.
 
 Think of it this way: you wouldn't write YAML to tell a teammate how to review a PR. You'd say "check if the tests pass, flag any security concerns, and make sure the docs are updated." Agentic Workflows let you talk to your automation the same way.
 
-## Failed Build Autofix
+### Failed Build Autofix
 
 In a past post I outlined the "manual way" to create ["self-healing DevOps"]({% post_url 2025-08-08-self-healing-devops-with-copilot-and-actions %}). This can now be replaced by a prompt like this to CCA using the `agentic-workflow` custom agent:
 
@@ -233,7 +233,7 @@ Create a workflow that runs on every failed build. The workflow should analyze t
 
 Much easier!
 
-## Patterns worth exploring
+### Patterns worth exploring
 
 The planeteer SDK monitor is just one pattern. The [Agentic Workflows gallery](https://github.github.com/gh-aw/) showcases several others:
 
@@ -246,7 +246,7 @@ The planeteer SDK monitor is just one pattern. The [Agentic Workflows gallery](h
 
 The common thread is that these are all tasks where you know *what* you want but the *how* requires judgment and context. That's exactly the sweet spot for Agentic Workflows.
 
-# Security considerations
+## Security considerations
 
 Giving an AI agent write access to a repo sounds terrifying. But Agentic Workflows are designed with security in mind. Here's why the security model matters:
 
@@ -258,7 +258,7 @@ Giving an AI agent write access to a repo sounds terrifying. But Agentic Workflo
 
 When creating or updating workflows, the compilation step (`gh aw compile`) bakes all of this into the `.lock.yml` file. You can audit it, review it, and version-control it just like any other Actions workflow.
 
-# Tips and Gotchas
+## Tips and Gotchas
 
 - **Start small**: Try one workflow in one repo. A daily status report or issue triage is a great first candidate. Get comfortable with the model before scaling up.
 - **Iterate on the body, not the frontmatter**: Edits to the markdown instructions take effect on the next run without recompilation. Frontmatter changes (triggers, permissions, engine) require `gh aw compile`. Even better - don't edit the markdown at all. Just instruct CCA (using the agentic workflow custom agent) to update the workflow for you.
@@ -268,7 +268,7 @@ When creating or updating workflows, the compilation step (`gh aw compile`) bake
 
 > Note: Agentic Workflows are actively evolving. Expect changes to the CLI, engine options, and security features. Pin to specific versions and monitor the [documentation](https://github.github.com/gh-aw/) for updates.
 
-# Conclusion
+## Conclusion
 
 Agentic Workflows represent a fundamental shift in how we think about automation. Instead of scripting steps in YAML, you declare intent. Instead of building one-off integrations, you describe outcomes and let AI agents handle execution. The combination of Agentic Workflows, GitHub Actions, and Copilot creates a natural language continuous AI loop where your codebase improves itself - with you in the decision seat, not the execution treadmill.
 
