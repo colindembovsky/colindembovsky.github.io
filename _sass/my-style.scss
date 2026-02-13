@@ -42,3 +42,22 @@
 hy-push-state a {
     text-underline-offset: .2rem;
 }
+
+// Prevent headings from overflowing into the TOC area
+body:not(.no-large-headings) .content h1,
+body:not(.no-large-headings) .content .h1 {
+  max-width: 100%;
+}
+
+// Enable word wrapping in code blocks
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+pre > code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
