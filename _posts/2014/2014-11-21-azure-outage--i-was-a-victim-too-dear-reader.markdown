@@ -2,6 +2,7 @@
 layout: post
 title: Azure Outage – I was a victim too, dear Reader
 date: '2014-11-21 22:35:02'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

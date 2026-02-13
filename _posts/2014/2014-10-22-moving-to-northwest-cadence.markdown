@@ -2,6 +2,7 @@
 layout: post
 title: Moving to Northwest Cadence
 date: '2014-10-22 11:31:08'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

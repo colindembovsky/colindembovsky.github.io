@@ -2,6 +2,7 @@
 layout: post
 title: Reflections on DSC for Release Management
 date: '2015-01-19 19:05:59'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

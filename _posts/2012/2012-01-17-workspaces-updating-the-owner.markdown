@@ -2,6 +2,7 @@
 layout: post
 title: 'Workspaces: Updating the owner'
 date: '2012-01-17 19:19:00'
+image: /assets/images/default.jpeg
 tags:
 - sourcecontrol
 ---

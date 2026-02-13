@@ -2,6 +2,7 @@
 layout: post
 title: 'Container DevOps: Beyond Build (Part 1)'
 date: '2019-05-08 09:36:17'
+image: /assets/images/default.jpeg
 tags:
 - docker
 ---

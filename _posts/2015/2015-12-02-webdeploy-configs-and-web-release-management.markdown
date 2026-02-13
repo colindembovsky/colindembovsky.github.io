@@ -2,6 +2,7 @@
 layout: post
 title: WebDeploy, Configs and Web Release Management
 date: '2015-12-02 19:18:38'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - build

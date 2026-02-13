@@ -2,6 +2,7 @@
 layout: post
 title: Extending Hybrid Lab Workflow Virtual Hosts
 date: '2012-11-01 22:08:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 - labmanagement

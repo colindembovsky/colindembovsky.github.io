@@ -2,6 +2,7 @@
 layout: post
 title: Implement an Azure DevOps Release Gate to ServiceNow
 date: '2018-10-20 03:24:53'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

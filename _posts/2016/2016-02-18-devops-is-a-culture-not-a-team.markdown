@@ -2,6 +2,7 @@
 layout: post
 title: DevOps is a Culture, Not a Team
 date: '2016-02-18 22:33:28'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - alm

@@ -15,7 +15,7 @@ tags:
 
 [Reusable workflows](https://docs.github.com/en/actions/learn-github-actions/reusing-workflows) have just been released to beta. Some level of reuse has been possible previously using [Composite Actions](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action).
 
-I wrote about Composite Actions and some of their limitations [here]({% post_url 2021-09-01-github-composite-actions %}). In that post I also compared Composite Actions to Azure Pipeline `step` templates. Reusable workflows are akin to `job` templates in Azure Pipelines.
+I wrote about Composite Actions and some of their limitations [here]({% post_url 2021/2021-09-01-github-composite-actions %}). In that post I also compared Composite Actions to Azure Pipeline `step` templates. Reusable workflows are akin to `job` templates in Azure Pipelines.
 
 ## Motivation for Reusable Workflows
 

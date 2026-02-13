@@ -2,6 +2,7 @@
 layout: post
 title: Using the Fakes Framework to Test TFS API Code (Part 1 of 2)
 date: '2012-03-20 20:20:00'
+image: /assets/images/default.jpeg
 tags:
 - tfsapi
 - testing

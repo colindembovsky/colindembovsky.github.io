@@ -2,6 +2,7 @@
 layout: post
 title: DevOps Drives Better Architecture–Part 1 of 2
 date: '2017-02-19 05:05:42'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

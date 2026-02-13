@@ -2,6 +2,7 @@
 layout: post
 title: 'Build with a Hosted Build Controller: A First Attempt'
 date: '2012-07-03 17:48:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

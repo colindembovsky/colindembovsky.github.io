@@ -2,6 +2,7 @@
 layout: post
 title: 'Hybrid Lab Workflow: Standard Lab Environment with Snapshots'
 date: '2012-11-01 04:19:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 - testing

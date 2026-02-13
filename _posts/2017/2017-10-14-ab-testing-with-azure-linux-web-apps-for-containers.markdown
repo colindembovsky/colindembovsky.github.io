@@ -2,6 +2,7 @@
 layout: post
 title: A/B Testing with Azure Linux Web Apps for Containers
 date: '2017-10-14 09:43:18'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - testing

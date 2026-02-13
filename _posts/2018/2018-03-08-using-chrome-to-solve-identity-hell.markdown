@@ -2,6 +2,7 @@
 layout: post
 title: Using Chrome to Solve Identity Hell
 date: '2018-03-08 01:33:59'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

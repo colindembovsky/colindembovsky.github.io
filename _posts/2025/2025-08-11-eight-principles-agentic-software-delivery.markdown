@@ -17,7 +17,7 @@ In this post, I'll show you eight principles for implementing Agentic Software D
 
 ## The Evolution from Continuous Delivery to ASD
 
-Right as DevOps was becoming an industry standard, Continuous Delivery gave us some good [foundational principles](https://devopsnet.com/2011/08/04/continuous-delivery/) to put into practice: automate everything, maintain quality, and deliver frequently to name three. In one of my previous posts, I define [Agentic Software Delivery]({% post_url 2025-05-01-agentic-software-delivery %}) (ASD) but in this post I want to start making it more practical by providing a set of principles. For each principal I want to assess its impact on the three pillars of ASD and show some practical GitHub implementation tips.
+Right as DevOps was becoming an industry standard, Continuous Delivery gave us some good [foundational principles](https://devopsnet.com/2011/08/04/continuous-delivery/) to put into practice: automate everything, maintain quality, and deliver frequently to name three. In one of my previous posts, I define [Agentic Software Delivery]({% post_url 2025/2025-05-01-agentic-software-delivery %}) (ASD) but in this post I want to start making it more practical by providing a set of principles. For each principal I want to assess its impact on the three pillars of ASD and show some practical GitHub implementation tips.
 
 ## Principle 1: Outcome-Focused Delivery
 
@@ -56,7 +56,7 @@ Integrate human expertise with AI at every stage. Design processes where routine
 Automate everything feasible and use AI to extend automation into complex, context-driven tasks. Go beyond simple CI/CD to intelligent pipeline optimization. Teams that use build automation always outperform teams that build manually: the same will be said of teams that leverage AI in their pipelines to keep pipelines running continuously - they will outperform teams that rely on "traditional", static pipelines.
 
 ### GitHub Application
-- Implement GitHub Actions workflows that [self-heal]({% post_url 2025-08-08-self-healing-devops-with-copilot-and-actions %}) based when they fail
+- Implement GitHub Actions workflows that [self-heal]({% post_url 2025/2025-08-08-self-healing-devops-with-copilot-and-actions %}) based when they fail
 - Use Dependabot for automated dependency [updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates) with intelligent grouping
 - In high-activity repositories, deploy GitHub's [merge queue](https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/) to prevent failing PRs from blocking the entire pipeline
 - Use [GitHub Hosted Runners](https://github.blog/enterprise-software/ci-cd/when-to-choose-github-hosted-runners-or-self-hosted-runners-with-github-actions/) so that you can concentrate on software delivery rather than trying to scale and manage build farms

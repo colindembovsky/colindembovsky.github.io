@@ -2,6 +2,7 @@
 layout: post
 title: 'Running Load Tests in Lab Management: Perfmon Issues'
 date: '2011-05-16 23:59:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

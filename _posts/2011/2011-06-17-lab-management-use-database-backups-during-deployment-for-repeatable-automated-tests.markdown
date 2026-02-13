@@ -3,6 +3,7 @@ layout: post
 title: 'Lab Management: Use Database Backups During Deployment for Repeatable Automated
   Tests'
 date: '2011-06-17 23:02:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

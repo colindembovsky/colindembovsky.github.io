@@ -2,6 +2,7 @@
 layout: post
 title: 'Fix: Release Management WebDeploy Deployment Fails: Access Denied'
 date: '2014-02-07 18:17:00'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

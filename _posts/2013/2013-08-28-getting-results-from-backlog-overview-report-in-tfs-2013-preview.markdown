@@ -2,6 +2,7 @@
 layout: post
 title: Getting Results from Backlog Overview Report in TFS 2013 Preview
 date: '2013-08-28 17:19:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

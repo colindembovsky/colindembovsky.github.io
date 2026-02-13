@@ -2,6 +2,7 @@
 layout: post
 title: DotNet Core, VS 2015, VSTS and Docker
 date: '2016-07-20 20:52:30'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - docker

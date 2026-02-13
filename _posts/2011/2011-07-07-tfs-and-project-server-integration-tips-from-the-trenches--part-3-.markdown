@@ -2,6 +2,7 @@
 layout: post
 title: 'TFS and Project Server Integration: Tips from the Trenches (Part 3)'
 date: '2011-07-07 20:15:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

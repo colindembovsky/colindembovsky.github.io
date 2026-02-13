@@ -2,6 +2,7 @@
 layout: post
 title: Using TFS ALM for Sharepoint Development (The Easy Way – with Lab Management)
 date: '2012-02-10 20:46:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: Project Plans, Agile, Pizza and Startups
 date: '2014-04-14 17:49:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

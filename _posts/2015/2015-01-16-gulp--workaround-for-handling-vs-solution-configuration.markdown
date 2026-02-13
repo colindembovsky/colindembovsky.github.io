@@ -2,6 +2,7 @@
 layout: post
 title: Gulp – Workaround for Handling VS Solution Configuration
 date: '2015-01-16 19:30:54'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

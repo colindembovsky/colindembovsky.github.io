@@ -13,7 +13,7 @@ tags:
 1. TOC
 {:toc}
 
-In this post, I'll show you how [GitHub Agentic Workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/) fundamentally change the way you should think about automation, and why "Continuous AI" is the next frontier of [agentic software delivery]({% post_url 2025-05-01-agentic-software-delivery %}). I'll cover what Agentic Workflow are and show a real example where a few sentences of intent replace hours of manual SDK tracking, issue creation, and implementation work.
+In this post, I'll show you how [GitHub Agentic Workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/) fundamentally change the way you should think about automation, and why "Continuous AI" is the next frontier of [agentic software delivery]({% post_url 2025/2025-05-01-agentic-software-delivery %}). I'll cover what Agentic Workflow are and show a real example where a few sentences of intent replace hours of manual SDK tracking, issue creation, and implementation work.
 
 ## Intent-driven Development
 
@@ -21,13 +21,13 @@ For years, teams have been scripting automation in declarative languages like YA
 
 Most automation teams rely on today is a rigid set of *steps*. We're now at an inflection point where we need to start thinking in terms of *outcomes* instead. GitHub Actions is fantastic for repeatable processes that checkout, build and test the applications we work on day to day. But how can we add more intelligence into these workflows? 
 
-In a previous post about ["self-healing DevOps"]({% post_url 2025-08-08-self-healing-devops-with-copilot-and-actions %}), I showed how to inference build failure analysis via GitHub models wrapped in Actions steps. The idea was solid: "Why should I debug failed builds - surely models are better at trawling build logs and diagnosing issues than I am?" - but the implementation was laborious and required writing procedural logic in YAML, even if there was some inferencing sandwiched in the middle.
+In a previous post about ["self-healing DevOps"]({% post_url 2025/2025-08-08-self-healing-devops-with-copilot-and-actions %}), I showed how to inference build failure analysis via GitHub models wrapped in Actions steps. The idea was solid: "Why should I debug failed builds - surely models are better at trawling build logs and diagnosing issues than I am?" - but the implementation was laborious and required writing procedural logic in YAML, even if there was some inferencing sandwiched in the middle.
 
 But what if there was an easier way to perform regular, intelligent tasks on a codebase? What if you could describe a goal in natural language, and have that intent transpiled into a GitHub Actions workflow? That's exactly what Agentic Workflows do. They abstract workflows into natural language.
 
 When I first saw the demo of Agentic Workflows at Universe 2025 I was intrigued, but unconvinced. The barrier to entry was still fairly steep - there was a GitHub CLI extension that you had to install and you had to author markdown with special frontmatter before you got to a workflow. However, the amazing team at GitHub Next has done a fantastic job iterating on the experience and reducing a lot of friction. And the mind shift of "use agentic workflow to generate agentic workflows" is a game changer - and definetely carries tones of Inception!
 
-[Agentic Workflows](https://gh.io/gh-aw/) is an open source repo in technical preview and you can use it today. The framework is the enabler of some of the ideas I've been writing about for a while now like [Agentic Software Delivery]({% post_url 2025-05-01-agentic-software-delivery %}), [eight principles for ASD]({% post_url 2025-08-11-eight-principles-agentic-software-delivery %}) and [teaching async thinking]({% post_url 2025-11-25-teaching-async-thinking-with-copilot %}). This is the next chapter that makes all of these "Continuous AI" concepts practical.
+[Agentic Workflows](https://gh.io/gh-aw/) is an open source repo in technical preview and you can use it today. The framework is the enabler of some of the ideas I've been writing about for a while now like [Agentic Software Delivery]({% post_url 2025/2025-05-01-agentic-software-delivery %}), [eight principles for ASD]({% post_url 2025/2025-08-11-eight-principles-agentic-software-delivery %}) and [teaching async thinking]({% post_url 2025/2025-11-25-teaching-async-thinking-with-copilot %}). This is the next chapter that makes all of these "Continuous AI" concepts practical.
 
 ## What Are Agentic Workflows?
 
@@ -223,7 +223,7 @@ Think of it this way: you wouldn't write YAML to tell a teammate how to review a
 
 ### Failed Build Autofix
 
-In a past post I outlined the "manual way" to create ["self-healing DevOps"]({% post_url 2025-08-08-self-healing-devops-with-copilot-and-actions %}). This can now be replaced by a prompt like this to CCA using the `agentic-workflow` custom agent:
+In a past post I outlined the "manual way" to create ["self-healing DevOps"]({% post_url 2025/2025-08-08-self-healing-devops-with-copilot-and-actions %}). This can now be replaced by a prompt like this to CCA using the `agentic-workflow` custom agent:
 
 ~~~markdown
 {% raw %}

@@ -2,6 +2,7 @@
 layout: post
 title: 'Fix: InRelease Demo “Hangs” on Keller’s 2013 Preview VM'
 date: '2013-08-26 19:02:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

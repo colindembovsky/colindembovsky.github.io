@@ -2,6 +2,7 @@
 layout: post
 title: DevOps Benefits of Limiting WIP
 date: '2020-11-19 01:57:40'
+image: /assets/images/default.jpeg
 description: >
   Generally limiting WIP is discussed in the context of work item tracking - but too much WIP has detrimental effects on branching, testing, architecture and technical debt too!
 tags:

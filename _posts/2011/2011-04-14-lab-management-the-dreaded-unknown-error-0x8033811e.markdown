@@ -2,6 +2,7 @@
 layout: post
 title: 'Lab management: The Dreaded “Unknown Error: 0x8033811e”'
 date: '2011-04-14 17:42:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

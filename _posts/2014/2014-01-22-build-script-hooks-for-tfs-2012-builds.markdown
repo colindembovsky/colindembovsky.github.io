@@ -2,6 +2,7 @@
 layout: post
 title: Build Script Hooks for TFS 2012 Builds
 date: '2014-01-22 21:51:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

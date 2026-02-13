@@ -2,6 +2,7 @@
 layout: post
 title: LetsEncrypt Auto-Renewal For Azure Web Apps for Linux
 date: '2020-04-24 22:34:56'
+image: /assets/images/default.jpeg
 description: >
   In this post I show how I achieved automated LetsEncrypt cert registration and renewal for Azure Web Apps for Linux using nginx and CertBot.
 tags:

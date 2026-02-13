@@ -14,7 +14,7 @@ tags:
 
 > Image by [Nick Fewings](https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/left?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-I have a developer background, so App Security (AppSec) was always anathema to me. However, I had an epiphany about GitHub Advanced Security and how it is unique in it's approach - it is _security for developers_. I wrote some thoughts about that in a [previous post]({% post_url 2022-06-08-ghas-will-win-the-appsec-wars %}).
+I have a developer background, so App Security (AppSec) was always anathema to me. However, I had an epiphany about GitHub Advanced Security and how it is unique in it's approach - it is _security for developers_. I wrote some thoughts about that in a [previous post]({% post_url 2022/2022-06-08-ghas-will-win-the-appsec-wars %}).
 
 GitHub Advanced Security (GHAS) allows you to reduce risk _without impeding velocity_. This is a big deal in today's fast-paced world. The way that GHAS does this is by centering AppSec on the developer, while still meeting requirements of security professionals. Integrating AppSec into the developers' daily workflow with very low friction is the secret to securing your software effectively.
 

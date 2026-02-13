@@ -2,6 +2,7 @@
 layout: post
 title: Adding Custom Team Field to MS Project Mappings
 date: '2013-07-11 16:26:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

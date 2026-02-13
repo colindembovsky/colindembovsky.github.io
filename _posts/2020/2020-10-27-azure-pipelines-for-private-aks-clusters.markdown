@@ -2,6 +2,7 @@
 layout: post
 title: Azure Pipelines for Private AKS Clusters
 date: '2020-10-27 19:25:25'
+image: /assets/images/default.jpeg
 description: >
   Creating private AKS clusters is a good step in hardening your Azure Kubernetes clusters. In this post I walk through the steps you'll need to follow to enable deployment to private AKS clusters.
 tags:

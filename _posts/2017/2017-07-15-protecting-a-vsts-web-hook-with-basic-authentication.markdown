@@ -2,6 +2,7 @@
 layout: post
 title: Protecting a VSTS Web Hook with Basic Authentication
 date: '2017-07-15 03:42:54'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

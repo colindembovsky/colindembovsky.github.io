@@ -2,6 +2,7 @@
 layout: post
 title: Integrating TFS and Project Server – Two Way Manual Sync
 date: '2014-04-10 18:55:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

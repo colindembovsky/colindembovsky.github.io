@@ -2,6 +2,7 @@
 layout: post
 title: 'Subtle MSF Agile Enhancement: Adding Bugs to the Backlogs'
 date: '2013-01-18 20:08:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: TFS 2013 Default Build – The GetEnvironmentVariable<T> Activity
 date: '2013-10-30 20:34:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

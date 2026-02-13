@@ -3,6 +3,7 @@ layout: post
 title: Managing Config for .NET Core Web App Deployments with Tokenizer and ReplaceTokens
   Tasks
 date: '2016-10-26 10:20:20'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - build

@@ -2,6 +2,7 @@
 layout: post
 title: 'Test Case Manager: Customize Failure and Resolution Type'
 date: '2013-03-20 03:54:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

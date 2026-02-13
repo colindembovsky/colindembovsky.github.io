@@ -2,6 +2,7 @@
 layout: post
 title: Continuous Deployment with Docker and Build vNext
 date: '2015-09-18 16:59:39'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - build

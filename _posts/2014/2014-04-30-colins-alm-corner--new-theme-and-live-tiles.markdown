@@ -2,6 +2,7 @@
 layout: post
 title: Colin’s ALM Corner – New Theme and Live Tiles
 date: '2014-04-30 22:29:34'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

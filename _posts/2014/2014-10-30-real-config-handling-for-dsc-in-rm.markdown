@@ -2,6 +2,7 @@
 layout: post
 title: Real Config Handling for DSC in RM
 date: '2014-10-30 17:35:49'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

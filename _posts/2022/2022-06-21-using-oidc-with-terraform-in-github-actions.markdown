@@ -15,7 +15,7 @@ tags:
 
 > Image by [olieman.eth](https://unsplash.com/@moneyphotos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/safe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-In a [previous post]({% post_url 2021-11-10-actions-authenticate-to-azure-without-a-secret %}) I covered how to use OIDC to connect to Azure in Actions securely _without secrets_. I recently wanted to use some Terraform templates to deploy some infrastructure and I found that it wasn't as easy as I thought. I figured that if I had already logged in via OIDC, then I could just start running `terraform` commands using the `run` step. However, the challenge comes into how Terraform itself authenticates when you have a backend stored in an Azure storage account. In this post I'll walk through how you can use OIDC with GitHub Actions and Terraform.
+In a [previous post]({% post_url 2021/2021-11-10-actions-authenticate-to-azure-without-a-secret %}) I covered how to use OIDC to connect to Azure in Actions securely _without secrets_. I recently wanted to use some Terraform templates to deploy some infrastructure and I found that it wasn't as easy as I thought. I figured that if I had already logged in via OIDC, then I could just start running `terraform` commands using the `run` step. However, the challenge comes into how Terraform itself authenticates when you have a backend stored in an Azure storage account. In this post I'll walk through how you can use OIDC with GitHub Actions and Terraform.
 
 ## tl;dr
 

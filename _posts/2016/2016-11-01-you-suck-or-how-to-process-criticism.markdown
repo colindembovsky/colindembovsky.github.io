@@ -2,6 +2,7 @@
 layout: post
 title: 'You Suck: Or, How to Process Criticism'
 date: '2016-11-01 11:11:25'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

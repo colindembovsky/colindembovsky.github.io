@@ -2,6 +2,7 @@
 layout: post
 title: Custom CodeQL
 date: '2021-02-09 17:17:58'
+image: /assets/images/default.jpeg
 description: >
   CodeQL is a powerful code scanning tool that can be integrated into your pipelines. In this post I show you some basics, as well as how to develop and integrate custom queries into your pipelines.
 tags:
@@ -150,7 +151,7 @@ There are two kinds of query: `problem` and `path-problem`. `problem` is used fo
 
 For `problem` queries, we must only output two values: a CodeQL object and a description string. You'll also want to add meaningful metadata to describe what the query is doing - the metadata is used to mark up results in the repo itself. There is also the ability to write [CodeQL help files](https://codeql.github.com/docs/writing-codeql-queries/query-help-files/) that can guide developers on what the query is detecting and include examples of how to fix issues and links to CVEs and other useful information. Unfortunately, help files only render for standard queries, and not for custom queries.
 
-> **Update: 11/23/2021** GitHub will now render custom help files! You can read more about how to do this in [this post]({% post_url 2021-11-23-custom-codeql-help-files %}).
+> **Update: 11/23/2021** GitHub will now render custom help files! You can read more about how to do this in [this post]({% post_url 2021/2021-11-23-custom-codeql-help-files %}).
 
 ### Example CodeQL Query
 

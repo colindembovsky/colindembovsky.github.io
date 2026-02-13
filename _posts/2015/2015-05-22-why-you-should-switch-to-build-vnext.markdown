@@ -2,6 +2,7 @@
 layout: post
 title: Why You Should Switch to Build VNext
 date: '2015-05-22 20:38:39'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

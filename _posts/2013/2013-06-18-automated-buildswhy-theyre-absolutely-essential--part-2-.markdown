@@ -2,6 +2,7 @@
 layout: post
 title: Automated Builds–Why They’re Absolutely Essential (Part 2)
 date: '2013-06-18 19:27:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

@@ -71,7 +71,7 @@ Besides permissions in GitHub, the compute for your runner needs access to targe
 
 # Autoscaling Runners
 
-[Autoscaling self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/autoscaling-with-self-hosted-runners) is not trivial. The only "official" options are the Kubernetes controller (for scaling runners in a Kubernetes cluster) or the AWS Terraform auto-scaler. I have blogged about other mechanisms like using [Azure Container Instances for on-demand ephemeral runner scaling]({% post_url 2021-10-26-on-demand-ephemeral-self-hosted-runners %}).
+[Autoscaling self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/autoscaling-with-self-hosted-runners) is not trivial. The only "official" options are the Kubernetes controller (for scaling runners in a Kubernetes cluster) or the AWS Terraform auto-scaler. I have blogged about other mechanisms like using [Azure Container Instances for on-demand ephemeral runner scaling]({% post_url 2021/2021-10-26-on-demand-ephemeral-self-hosted-runners %}).
 
 The point for this discussion is who is going to be responsible for scaling (or auto-scaling) your self-hosted runners. The more you centralize, the more crucial scaling becomes.
 

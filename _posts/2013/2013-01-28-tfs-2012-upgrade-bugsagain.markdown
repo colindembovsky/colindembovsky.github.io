@@ -2,6 +2,7 @@
 layout: post
 title: TFS 2012 Upgrade Bugs–again?
 date: '2013-01-28 21:17:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

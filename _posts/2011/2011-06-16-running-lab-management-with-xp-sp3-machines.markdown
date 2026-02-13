@@ -2,6 +2,7 @@
 layout: post
 title: Running Lab Management with XP SP3 Machines
 date: '2011-06-16 20:24:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

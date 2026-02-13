@@ -41,7 +41,7 @@ In organizations with numerous development teams, each owning its SDLC, enabling
 
 GitHub Advanced Security (GHAS) offers an integrated solution that brings security work directly into the developer workflow. GHAS provides insights at the repository level, where developers are already managing their code, reducing the friction associated with fragmented security tools. By surfacing security issues within the repository, organizations ensure that security is considered earlier in the SDLC, effectively “shifting left” and fostering a proactive security mindset among developers.
 
-> **Aside**: The [Inverse Conway Manuever]({% post_url 2018-05-03-vsts-one-team-project-and-inverse-conway-maneuver %}) is a way to foster a cultural change by intentionally changing the architecture and tooling of your teams - so it's no surprise that using GHAS (which embeds security where the developers work) can be a powerful change agent to truly "shifting left" with regards to security. Coupled with the change in language above, this can be a powerful way to facilitate real change.
+> **Aside**: The [Inverse Conway Manuever]({% post_url 2018/2018-05-03-vsts-one-team-project-and-inverse-conway-maneuver %}) is a way to foster a cultural change by intentionally changing the architecture and tooling of your teams - so it's no surprise that using GHAS (which embeds security where the developers work) can be a powerful change agent to truly "shifting left" with regards to security. Coupled with the change in language above, this can be a powerful way to facilitate real change.
 
 ## Building a Strong Developer/Security Partnership: “You Own Your SDLC”
 

@@ -3,6 +3,7 @@ layout: post
 title: '2012 Lab Management Standard Environment: Configuring UI Tests Agent Identity
   Problem'
 date: '2012-07-12 21:58:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

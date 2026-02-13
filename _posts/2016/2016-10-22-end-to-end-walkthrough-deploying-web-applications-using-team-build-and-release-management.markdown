@@ -3,6 +3,7 @@ layout: post
 title: 'End to End Walkthrough: Deploying Web Applications Using Team Build and Release
   Management'
 date: '2016-10-22 02:32:19'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - build

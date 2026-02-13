@@ -2,6 +2,7 @@
 layout: post
 title: az devops cli like a boss
 date: '2020-07-20 19:59:14'
+image: /assets/images/default.jpeg
 description: >
   One of the best features of Azure DevOps is the extensive API. However, while having a REST API is great, interacting with a service at HTTP level can be frustrating. In this post, I examine the az devops cli using 10 practical examples.
 tags:

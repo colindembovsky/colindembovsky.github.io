@@ -3,6 +3,7 @@ layout: post
 title: Microsoft Fakes – Customizing the System Whitelist (or, enabling Fakes for
   classes you’ve always wanted to fake, like WebClient)
 date: '2012-06-25 20:35:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

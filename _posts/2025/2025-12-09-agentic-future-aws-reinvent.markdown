@@ -38,7 +38,7 @@ The session covers the evolution of tools designed to decrease the time it takes
 
 The agentic future isn't coming - it's here. Even if you are faster at "coding" you can dilute those gains if you spend more time planning and validating! GitHub's visions is to bring agentic capabilities to all parts of the SDLC so that you can scale your acceleration beyond the IDE.
 
-Agentic workflows are not just about new shiny tools - they are about a new way of thinking and working. For more on these topics, see my posts about principles of [agentic software delivery]({% post_url 2025-08-11-eight-principles-agentic-software-delivery %}) and [teaching async thinking]({% post_url 2025-11-25-teaching-async-thinking-with-copilot %}).
+Agentic workflows are not just about new shiny tools - they are about a new way of thinking and working. For more on these topics, see my posts about principles of [agentic software delivery]({% post_url 2025/2025-08-11-eight-principles-agentic-software-delivery %}) and [teaching async thinking]({% post_url 2025/2025-11-25-teaching-async-thinking-with-copilot %}).
 
 ## Conclusion
 

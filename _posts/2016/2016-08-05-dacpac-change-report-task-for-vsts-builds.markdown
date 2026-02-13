@@ -2,6 +2,7 @@
 layout: post
 title: DacPac Change Report Task for VSTS Builds
 date: '2016-08-05 22:57:24'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

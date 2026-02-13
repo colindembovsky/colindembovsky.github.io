@@ -14,7 +14,7 @@ tags:
 
 > Image from dashu83 on [www.freepik.com](https://www.freepik.com/photos/background)
 
-A few months ago, I created a [repo](https://github.com/colindembovsky/custom-codeql-python) for experimenting with a custom CodeQL query. I [blogged]({% post_url 2021-02-09-custom-codeql %}) about how I went about that. One of the limitations I encountered was that custom query help files were not displayed, even when you created them.
+A few months ago, I created a [repo](https://github.com/colindembovsky/custom-codeql-python) for experimenting with a custom CodeQL query. I [blogged]({% post_url 2021/2021-02-09-custom-codeql %}) about how I went about that. One of the limitations I encountered was that custom query help files were not displayed, even when you created them.
 
 Fortunately, the [latest release of CodeQL tools](https://github.blog/changelog/2021-11-23-display-help-text-for-your-custom-codeql-queries-in-code-scanning/) includes the ability to display custom query help files!
 

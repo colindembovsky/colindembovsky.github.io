@@ -2,6 +2,7 @@
 layout: post
 title: 'Hosting Code On Premises: GitHub Enterprise with Azure DevOps'
 date: '2020-06-25 19:12:33'
+image: /assets/images/default.jpeg
 description: >
   Do you want to be on the latest DevOps platforms, but are required to keep source code on premises? In this post I talk about considerations for hosting GitHub Enterprise and Azure DevOps Server on premises.
 tags:

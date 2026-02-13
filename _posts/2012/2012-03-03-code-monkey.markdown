@@ -2,6 +2,7 @@
 layout: post
 title: Code Monkey?
 date: '2012-03-03 04:12:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

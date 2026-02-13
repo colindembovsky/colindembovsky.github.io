@@ -16,7 +16,7 @@ tags:
 
 ## The Fundamental Question: "Should Copilot Do This?"
 
-Once you've built an enablement program (see my companion post on [Building a GitHub Copilot Enablement Program That Actually Works]({% post_url 2025-11-25-building-copilot-enablement-program %})), the next challenge is teaching your team a new way of thinking.
+Once you've built an enablement program (see my companion post on [Building a GitHub Copilot Enablement Program That Actually Works]({% post_url 2025/2025-11-25-building-copilot-enablement-program %})), the next challenge is teaching your team a new way of thinking.
 
 The fundamental shift is asking a new question before starting any task: **"Should Copilot do this instead of me?"**
 
@@ -62,7 +62,7 @@ This saves days compared to sequential implementation and dramatically improves 
 
 **Async approach with Copilot**: GitHub Actions can automatically invoke Copilot to analyze failures, categorize them (code, config, test, infrastructure, transient), and generate remediation plans with the appropriate team member tagged.
 
-You can implement this today with the [actions/ai-inference](https://github.com/actions/ai-inference) action and GitHub Models (see my post on [self-healing devops]({% post_url 2025-08-08-self-healing-devops-with-copilot-and-actions %}) for details).
+You can implement this today with the [actions/ai-inference](https://github.com/actions/ai-inference) action and GitHub Models (see my post on [self-healing devops]({% post_url 2025/2025-08-08-self-healing-devops-with-copilot-and-actions %}) for details).
 
 **Key technique**: Set up automated workflows that capture build/test output and feed it to Copilot with context about your repo structure and conventions.
 
@@ -158,6 +158,6 @@ Start by teaching your team to ask "Should Copilot do this?" before starting tas
 
 The shift from sequential, single-threaded development to async, multi-threaded workflows takes practice. But once your team internalizes the mindset, they'll wonder how they ever worked any other way.
 
-For the leadership and enablement foundation that makes this possible, see my companion post on [Building a GitHub Copilot Enablement Program That Actually Works]({% post_url 2025-11-25-building-copilot-enablement-program %}).
+For the leadership and enablement foundation that makes this possible, see my companion post on [Building a GitHub Copilot Enablement Program That Actually Works]({% post_url 2025/2025-11-25-building-copilot-enablement-program %}).
 
 Happy orchestrating!

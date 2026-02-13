@@ -2,6 +2,7 @@
 layout: post
 title: Enable SAFe Features in Existing Team Projects After Upgrading to TFS 2015
 date: '2015-07-17 15:50:11'
+image: /assets/images/default.jpeg
 tags:
 - tfsconfig
 - alm

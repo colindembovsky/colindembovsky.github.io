@@ -2,6 +2,7 @@
 layout: post
 title: Using the TFS API to display results of a Hierarchical Work Item Query
 date: '2011-10-10 18:37:00'
+image: /assets/images/default.jpeg
 tags:
 - tfsapi
 ---

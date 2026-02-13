@@ -2,6 +2,7 @@
 layout: post
 title: 'ISubscriber: Getting the TFS Url for Client Operations'
 date: '2011-12-30 05:03:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

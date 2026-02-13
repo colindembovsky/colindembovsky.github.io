@@ -2,6 +2,7 @@
 layout: post
 title: VSTS, One Team Project and Inverse Conway Maneuver
 date: '2018-05-03 20:26:35'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

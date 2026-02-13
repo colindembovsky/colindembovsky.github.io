@@ -2,6 +2,7 @@
 layout: post
 title: Build-Deploy-Test Workflow for Physical Environments
 date: '2011-02-19 21:12:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

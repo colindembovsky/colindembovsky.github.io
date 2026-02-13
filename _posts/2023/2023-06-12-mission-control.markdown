@@ -70,7 +70,7 @@ Executives must clearly communicate the vision and values of the organization so
 
 Beyond the values and vision, executives must clearly communicate _purpose_ and _desired end state_. Clearly articulating what success looks like and what the key objectives are at the executive level keeps everyone aligned.
 
-In my [previous post]({% post_url 2023-06-07-scaling-dev-sec-ops %}) I spoke about the balance between _Team autonomy_ and _Enterprise alignment_. When executives are crystal clear on the purpose of an organization as well as desired end state, this gives teams strong enterprise alignment. Strong enterprise alignment at the _strategic level_ promotes a culture where Teams feel empowered to innovate within the boundaries that the organization really cares about.
+In my [previous post]({% post_url 2023/2023-06-07-scaling-dev-sec-ops %}) I spoke about the balance between _Team autonomy_ and _Enterprise alignment_. When executives are crystal clear on the purpose of an organization as well as desired end state, this gives teams strong enterprise alignment. Strong enterprise alignment at the _strategic level_ promotes a culture where Teams feel empowered to innovate within the boundaries that the organization really cares about.
 
 ### Mission orders
 

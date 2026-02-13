@@ -143,7 +143,7 @@ You can't use `environment` with `uses`.
 
 That's not cool.
 
-At this point we could refactor the reusable workflow into a [composite workflow]({% post_url 2021-09-01-github-composite-actions %}) so that we can use the `environment`. Or...
+At this point we could refactor the reusable workflow into a [composite workflow]({% post_url 2021/2021-09-01-github-composite-actions %}) so that we can use the `environment`. Or...
 
 # Attempt 2: Make Environment an Input
 

@@ -2,6 +2,7 @@
 layout: post
 title: Parallel Testing in a Selenium Grid with VSTS
 date: '2016-07-29 01:24:24'
+image: /assets/images/default.jpeg
 tags:
 - testing
 - devops

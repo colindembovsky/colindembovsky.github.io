@@ -2,6 +2,7 @@
 layout: post
 title: 'Imaginet Timesheet: Time Tracking for TFS and Visual Studio Online'
 date: '2014-05-30 02:33:06'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

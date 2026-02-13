@@ -2,6 +2,7 @@
 layout: post
 title: 'New Task: Tag Build or Release'
 date: '2017-05-02 12:49:12'
+image: /assets/images/default.jpeg
 tags:
 - development
 - releasemanagement

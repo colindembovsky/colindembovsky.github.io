@@ -2,6 +2,7 @@
 layout: post
 title: 'More DSC Release Management Goodness: Readying a Webserver for Deployment'
 date: '2014-07-10 15:22:08'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: Automating Office Tasks in a TeamBuild
 date: '2011-04-29 21:01:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

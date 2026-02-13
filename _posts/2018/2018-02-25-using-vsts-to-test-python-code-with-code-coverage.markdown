@@ -2,6 +2,7 @@
 layout: post
 title: Using VSTS to Test Python Code (with Code Coverage)
 date: '2018-02-25 02:45:11'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

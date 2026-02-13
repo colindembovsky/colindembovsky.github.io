@@ -2,6 +2,7 @@
 layout: post
 title: More on Fakes – the beta has issues
 date: '2012-04-04 18:34:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: 'Testing in Production: Routing Traffic During a Release'
 date: '2017-05-10 07:13:27'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - devops

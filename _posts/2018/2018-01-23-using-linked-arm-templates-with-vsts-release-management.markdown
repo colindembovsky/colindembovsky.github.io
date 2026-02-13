@@ -2,6 +2,7 @@
 layout: post
 title: Using Linked ARM Templates with VSTS Release Management
 date: '2018-01-23 04:29:33'
+image: /assets/images/default.jpeg
 tags:
 - cloud
 - releasemanagement

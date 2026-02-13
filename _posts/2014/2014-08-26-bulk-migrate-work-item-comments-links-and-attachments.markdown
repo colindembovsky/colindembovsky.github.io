@@ -2,6 +2,7 @@
 layout: post
 title: Bulk Migrate Work Item Comments, Links and Attachments
 date: '2014-08-26 02:50:57'
+image: /assets/images/default.jpeg
 tags:
 - tfsapi
 ---

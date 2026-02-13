@@ -2,6 +2,7 @@
 layout: post
 title: Aurelia – Debugging from within Visual Studio
 date: '2015-03-24 19:18:06'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

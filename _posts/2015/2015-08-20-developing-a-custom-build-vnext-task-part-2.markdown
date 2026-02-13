@@ -2,6 +2,7 @@
 layout: post
 title: 'Developing a Custom Build vNext Task: Part 2'
 date: '2015-08-20 22:32:51'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: Developing the Hybrid Lab Workflow
 date: '2012-11-01 19:12:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 - labmanagement

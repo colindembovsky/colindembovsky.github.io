@@ -2,6 +2,7 @@
 layout: post
 title: 'Branch Is Not Equal to Environment: CODE-PROD Branching Strategy'
 date: '2014-08-27 23:34:05'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - development

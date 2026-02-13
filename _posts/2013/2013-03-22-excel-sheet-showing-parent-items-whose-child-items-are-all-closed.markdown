@@ -2,6 +2,7 @@
 layout: post
 title: Excel Sheet Showing Parent Items Whose Child Items Are All Closed
 date: '2013-03-22 20:32:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

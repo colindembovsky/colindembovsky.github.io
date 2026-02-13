@@ -2,6 +2,7 @@
 layout: post
 title: Default Team Build to Invoke Instead of Build
 date: '2011-03-10 05:37:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

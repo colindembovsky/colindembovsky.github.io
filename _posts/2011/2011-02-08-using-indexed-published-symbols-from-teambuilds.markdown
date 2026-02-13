@@ -2,6 +2,7 @@
 layout: post
 title: Using Indexed Published Symbols from TeamBuilds
 date: '2011-02-08 15:05:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

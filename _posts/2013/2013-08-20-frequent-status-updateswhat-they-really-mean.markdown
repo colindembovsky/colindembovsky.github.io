@@ -2,6 +2,7 @@
 layout: post
 title: Frequent Status Updates–What They Really Mean
 date: '2013-08-20 21:39:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

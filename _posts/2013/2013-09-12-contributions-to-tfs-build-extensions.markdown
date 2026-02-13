@@ -2,6 +2,7 @@
 layout: post
 title: Contributions to TFS Build Extensions
 date: '2013-09-12 00:23:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

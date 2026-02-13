@@ -2,6 +2,7 @@
 layout: post
 title: Don’t Just Fix It, Red-Green Refactor It!
 date: '2014-12-11 21:04:30'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

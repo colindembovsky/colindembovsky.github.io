@@ -2,6 +2,7 @@
 layout: post
 title: Lessons about DevOps from 3D Printing
 date: '2019-02-07 01:11:20'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

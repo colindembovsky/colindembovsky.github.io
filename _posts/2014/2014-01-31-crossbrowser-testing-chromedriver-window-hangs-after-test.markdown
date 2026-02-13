@@ -2,6 +2,7 @@
 layout: post
 title: 'CrossBrowser Testing: ChromeDriver Window Hangs after Test'
 date: '2014-01-31 22:07:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

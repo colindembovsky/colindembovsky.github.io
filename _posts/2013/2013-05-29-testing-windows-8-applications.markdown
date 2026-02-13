@@ -2,6 +2,7 @@
 layout: post
 title: Testing Windows 8 Applications
 date: '2013-05-29 15:02:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

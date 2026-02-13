@@ -2,6 +2,7 @@
 layout: post
 title: 'Fix: You Open TfcvTemplate.12.xaml and Don’t See Any Parameters'
 date: '2013-09-14 00:23:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

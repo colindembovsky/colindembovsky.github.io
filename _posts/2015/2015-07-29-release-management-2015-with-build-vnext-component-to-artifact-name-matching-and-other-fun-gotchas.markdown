@@ -3,6 +3,7 @@ layout: post
 title: 'Release Management 2015 with Build vNext: Component to Artifact Name Matching
   and Other Fun Gotchas'
 date: '2015-07-29 15:55:14'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - build

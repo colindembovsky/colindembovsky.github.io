@@ -3,6 +3,7 @@ layout: post
 title: Updating XAML Release Builds after Upgrading Release Management Legacy from
   2013 to 2015
 date: '2016-05-17 21:13:18'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

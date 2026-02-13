@@ -2,6 +2,7 @@
 layout: post
 title: Aurelia, Karma and More VS Debugging Goodness
 date: '2015-04-06 23:56:47'
+image: /assets/images/default.jpeg
 tags:
 - development
 - testing

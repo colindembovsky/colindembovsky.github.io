@@ -2,6 +2,7 @@
 layout: post
 title: Why You Absolutely Need to Unit Test
 date: '2013-07-18 20:56:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 - testing

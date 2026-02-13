@@ -2,6 +2,7 @@
 layout: post
 title: Using Data Generation Plans to create repeatable data for code unit tests
 date: '2011-02-13 03:25:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: 'My First VSO Extension: Retry Build'
 date: '2015-05-25 17:58:53'
+image: /assets/images/default.jpeg
 tags:
 - tfsapi
 ---

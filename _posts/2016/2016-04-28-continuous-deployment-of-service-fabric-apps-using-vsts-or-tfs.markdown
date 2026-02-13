@@ -2,6 +2,7 @@
 layout: post
 title: Continuous Deployment of Service Fabric Apps using VSTS (or TFS)
 date: '2016-04-28 19:41:34'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - cloud

@@ -2,6 +2,7 @@
 layout: post
 title: Azure DevOps Work Item Hierarchy Reports in PowerBI
 date: '2020-05-11 23:13:44'
+image: /assets/images/default.jpeg
 description: >
   In this post I show how you can query Work Item data and build hierarchical reports using PowerBI.
 tags:

@@ -2,6 +2,7 @@
 layout: post
 title: 'Tip: Creating Task Groups with Azure Service Endpoint Parameters'
 date: '2018-04-26 02:03:43'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: 'Container DevOps: Beyond Build (Part 4) - Telemetry with Prometheus'
 date: '2019-05-08 09:37:11'
+image: /assets/images/default.jpeg
 tags:
 - docker
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: GenericAutomationPeer – Helping the Coded UI Framework Find Your Custom Controls
 date: '2011-11-03 22:21:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

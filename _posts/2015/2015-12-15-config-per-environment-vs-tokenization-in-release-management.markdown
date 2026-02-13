@@ -2,6 +2,7 @@
 layout: post
 title: Config Per Environment vs Tokenization in Release Management
 date: '2015-12-15 16:37:49'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - build

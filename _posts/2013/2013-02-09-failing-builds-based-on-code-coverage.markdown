@@ -2,6 +2,7 @@
 layout: post
 title: Failing Builds based on Code Coverage
 date: '2013-02-09 01:01:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

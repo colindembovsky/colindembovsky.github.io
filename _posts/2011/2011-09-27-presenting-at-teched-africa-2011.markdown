@@ -2,6 +2,7 @@
 layout: post
 title: Presenting at TechEd Africa 2011
 date: '2011-09-27 22:44:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

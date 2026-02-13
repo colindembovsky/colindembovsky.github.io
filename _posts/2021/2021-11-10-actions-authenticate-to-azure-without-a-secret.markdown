@@ -195,7 +195,7 @@ Notes:
 
 ## The Composite Workflow
 
-Why is there a [composite action]({% post_url 2021-09-01-github-composite-actions %}) at all? This is because in order to authenticate to Azure using OIDC, we have to use a beta version of the `az cli`. Rather than install this each time, I extracted this script and the `azure/login` step into a composite that can be reused.
+Why is there a [composite action]({% post_url 2021/2021-09-01-github-composite-actions %}) at all? This is because in order to authenticate to Azure using OIDC, we have to use a beta version of the `az cli`. Rather than install this each time, I extracted this script and the `azure/login` step into a composite that can be reused.
 
 Here is the composite action code:
 

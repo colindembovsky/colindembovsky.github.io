@@ -2,6 +2,7 @@
 layout: post
 title: Building VS 2015 Setup Projects in Team Build
 date: '2016-01-13 05:13:20'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: WebDeploy Gets Even More Awesome – Profile Specific Transforms
 date: '2014-04-23 16:37:00'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

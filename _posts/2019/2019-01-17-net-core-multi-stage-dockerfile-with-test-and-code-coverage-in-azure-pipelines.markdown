@@ -2,6 +2,7 @@
 layout: post
 title: ".NET Core Multi-Stage Dockerfile with Test and Code Coverage in Azure Pipelines"
 date: '2019-01-17 07:39:29'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - build

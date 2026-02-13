@@ -2,6 +2,7 @@
 layout: post
 title: TechDays and Jhb Training Class
 date: '2012-10-02 00:14:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

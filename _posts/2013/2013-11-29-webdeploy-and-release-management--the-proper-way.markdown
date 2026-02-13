@@ -2,6 +2,7 @@
 layout: post
 title: WebDeploy and Release Management – The Proper Way
 date: '2013-11-29 23:50:00'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

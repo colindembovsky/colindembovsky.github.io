@@ -2,6 +2,7 @@
 layout: post
 title: 'DevOps with Kubernetes and VSTS: Part 1'
 date: '2017-07-04 11:37:20'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - development

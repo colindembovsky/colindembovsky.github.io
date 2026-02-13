@@ -2,6 +2,7 @@
 layout: post
 title: 'Upgrading MSF Agile 5.0 to MSF Agile 6.0: Why does my velocity chart not work?'
 date: '2012-08-28 16:42:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

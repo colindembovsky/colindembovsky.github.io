@@ -2,6 +2,7 @@
 layout: post
 title: 'Build vNext and SonarQube Runner: Dynamic Version Script'
 date: '2015-08-11 19:34:58'
+image: /assets/images/default.jpeg
 tags:
 - build
 - development

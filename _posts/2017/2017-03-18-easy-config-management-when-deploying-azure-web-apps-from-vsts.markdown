@@ -2,6 +2,7 @@
 layout: post
 title: Easy Config Management when Deploying Azure Web Apps from VSTS
 date: '2017-03-18 05:51:34'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

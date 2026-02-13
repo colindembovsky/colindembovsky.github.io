@@ -2,6 +2,7 @@
 layout: post
 title: Auditing VSTS Client Access IPs
 date: '2018-05-30 20:27:41'
+image: /assets/images/default.jpeg
 tags:
 - tfsconfig
 ---

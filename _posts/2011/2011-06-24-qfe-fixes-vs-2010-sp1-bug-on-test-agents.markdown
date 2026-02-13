@@ -2,6 +2,7 @@
 layout: post
 title: QFE Fixes VS 2010 SP1 Bug on Test Agents
 date: '2011-06-24 15:15:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

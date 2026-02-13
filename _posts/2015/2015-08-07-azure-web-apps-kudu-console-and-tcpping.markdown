@@ -2,6 +2,7 @@
 layout: post
 title: Azure Web Apps, Kudu Console and TcpPing
 date: '2015-08-07 03:32:53'
+image: /assets/images/default.jpeg
 tags:
 - cloud
 ---

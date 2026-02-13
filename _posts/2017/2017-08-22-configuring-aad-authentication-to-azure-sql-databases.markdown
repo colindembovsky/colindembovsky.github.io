@@ -2,6 +2,7 @@
 layout: post
 title: Configuring AAD Authentication to Azure SQL Databases
 date: '2017-08-22 06:03:40'
+image: /assets/images/default.jpeg
 tags:
 - development
 - cloud

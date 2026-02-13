@@ -2,6 +2,7 @@
 layout: post
 title: 'Using PowerShell DSC in Release Management: The Hidden Manual'
 date: '2014-07-04 21:05:08'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

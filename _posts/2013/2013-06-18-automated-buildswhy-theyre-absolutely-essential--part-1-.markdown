@@ -2,6 +2,7 @@
 layout: post
 title: Automated Builds–Why They’re Absolutely Essential (Part 1)
 date: '2013-06-18 19:23:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 - alm

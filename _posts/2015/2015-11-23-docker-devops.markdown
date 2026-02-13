@@ -2,6 +2,7 @@
 layout: post
 title: Docker DevOps
 date: '2015-11-23 16:02:06'
+image: /assets/images/default.jpeg
 tags:
 - devops
 - cloud

@@ -2,6 +2,7 @@
 layout: post
 title: JSPM, NPM, Gulp and WebDeploy in a TeamBuild
 date: '2015-03-17 17:00:27'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

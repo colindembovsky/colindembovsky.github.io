@@ -2,6 +2,7 @@
 layout: post
 title: New vNext Config Variable Options in RM Update 4 RC
 date: '2014-10-21 22:59:47'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

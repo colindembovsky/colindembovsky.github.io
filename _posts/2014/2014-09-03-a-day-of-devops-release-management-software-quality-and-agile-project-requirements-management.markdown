@@ -3,6 +3,7 @@ layout: post
 title: A Day of DevOps, Release Management, Software Quality and Agile Project Requirements
   Management
 date: '2014-09-03 14:43:22'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

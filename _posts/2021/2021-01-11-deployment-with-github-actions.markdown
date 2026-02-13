@@ -2,6 +2,7 @@
 layout: post
 title: 'Deployment with GitHub Actions: The Bad and the Ugly'
 date: '2021-01-11 22:42:40'
+image: /assets/images/default.jpeg
 description: >
   GitHub Actions can be used for Continuous Deployment (CD) - but there are some rough edges. In this post I take you through a deep dive and lift the kimono on Actions.
 tags:

@@ -2,6 +2,7 @@
 layout: post
 title: Enabling JavaScript Code Coverage Link in Builds
 date: '2014-05-14 20:43:03'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

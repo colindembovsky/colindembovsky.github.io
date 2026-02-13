@@ -2,6 +2,7 @@
 layout: post
 title: Monitoring Web Applications – Continuous IntelliTrace
 date: '2013-09-27 20:01:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

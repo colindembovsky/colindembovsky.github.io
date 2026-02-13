@@ -2,6 +2,7 @@
 layout: post
 title: 'Custom Build Task: Include Merged Changesets (and Work Items) in Build Report'
 date: '2013-02-04 08:00:00'
+image: /assets/images/default.jpeg
 ---
 
  **Update 2013-07-24** : This activity is now part of [Community TFS Build Extensions](http://tfsbuildextensions.codeplex.com/).

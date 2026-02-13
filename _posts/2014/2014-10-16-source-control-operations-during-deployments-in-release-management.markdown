@@ -2,6 +2,7 @@
 layout: post
 title: Source Control Operations During Deployments in Release Management
 date: '2014-10-16 16:57:03'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - sourcecontrol

@@ -2,6 +2,7 @@
 layout: post
 title: 'Build Fails: Path Limit Exceeded'
 date: '2013-04-26 21:54:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

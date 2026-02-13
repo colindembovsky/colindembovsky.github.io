@@ -2,6 +2,7 @@
 layout: post
 title: AppInsights Analytics in the Real World
 date: '2016-03-31 18:57:35'
+image: /assets/images/default.jpeg
 tags:
 - appinsights
 - devops

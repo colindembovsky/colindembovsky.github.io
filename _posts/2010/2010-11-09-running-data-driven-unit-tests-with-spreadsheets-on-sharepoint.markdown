@@ -2,6 +2,7 @@
 layout: post
 title: Running Data-Driven Unit Tests with SpreadSheets on Sharepoint
 date: '2010-11-09 22:38:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

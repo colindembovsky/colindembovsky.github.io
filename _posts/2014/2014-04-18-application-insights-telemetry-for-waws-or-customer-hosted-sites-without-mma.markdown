@@ -2,6 +2,7 @@
 layout: post
 title: Application Insights Telemetry for WAWS or Customer-Hosted Sites Without MMA
 date: '2014-04-18 02:25:00'
+image: /assets/images/default.jpeg
 tags:
 - appinsights
 ---

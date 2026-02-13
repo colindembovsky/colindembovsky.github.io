@@ -2,6 +2,7 @@
 layout: post
 title: Modernizing Source Control - Migrating to Git
 date: '2018-12-19 08:22:15'
+image: /assets/images/default.jpeg
 tags:
 - sourcecontrol
 ---

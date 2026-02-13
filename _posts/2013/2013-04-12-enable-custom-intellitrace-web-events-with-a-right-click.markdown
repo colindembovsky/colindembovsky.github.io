@@ -2,6 +2,7 @@
 layout: post
 title: Enable Custom IntelliTrace Web Events with a Right-Click
 date: '2013-04-12 15:15:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 - development

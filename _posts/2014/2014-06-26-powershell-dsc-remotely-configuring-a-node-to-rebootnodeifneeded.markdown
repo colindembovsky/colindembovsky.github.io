@@ -2,6 +2,7 @@
 layout: post
 title: 'PowerShell DSC: Remotely Configuring a Node to “RebootNodeIfNeeded”'
 date: '2014-06-26 16:35:19'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

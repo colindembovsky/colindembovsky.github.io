@@ -2,6 +2,7 @@
 layout: post
 title: 'IntelliTrace Tips and Tricks: IntelliTrace Everywhere'
 date: '2013-06-18 21:35:00'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

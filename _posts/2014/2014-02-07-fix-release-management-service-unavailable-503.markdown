@@ -2,6 +2,7 @@
 layout: post
 title: 'Fix: Release Management “Service Unavailable 503”'
 date: '2014-02-07 17:01:00'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

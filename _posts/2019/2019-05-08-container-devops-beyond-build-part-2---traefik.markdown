@@ -2,6 +2,7 @@
 layout: post
 title: 'Container DevOps Beyond Build: Part 2 - Traefik'
 date: '2019-05-08 09:36:39'
+image: /assets/images/default.jpeg
 tags:
 - docker
 ---

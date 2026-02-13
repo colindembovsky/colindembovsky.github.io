@@ -2,6 +2,7 @@
 layout: post
 title: Custom Code Review Checkin Policy
 date: '2012-12-21 07:33:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

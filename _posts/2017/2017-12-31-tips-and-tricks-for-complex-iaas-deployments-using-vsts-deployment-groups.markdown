@@ -2,6 +2,7 @@
 layout: post
 title: Tips and Tricks for Complex IaaS Deployments Using VSTS Deployment Groups
 date: '2017-12-31 13:55:50'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 - devops

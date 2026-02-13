@@ -2,6 +2,7 @@
 layout: post
 title: Matching Binary Version to Build Number Version in TFS 2013 Builds
 date: '2014-10-22 08:40:02'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

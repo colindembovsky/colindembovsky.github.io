@@ -2,6 +2,7 @@
 layout: post
 title: 'Presenting @ DevDays SA 2011: Cape Town and Johannesburg'
 date: '2011-05-10 22:28:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

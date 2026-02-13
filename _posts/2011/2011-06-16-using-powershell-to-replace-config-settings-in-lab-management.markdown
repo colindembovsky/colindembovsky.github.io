@@ -2,6 +2,7 @@
 layout: post
 title: Using Powershell to Replace Config Settings in Lab Management
 date: '2011-06-16 20:49:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

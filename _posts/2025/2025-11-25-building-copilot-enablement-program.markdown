@@ -24,7 +24,7 @@ This isn't a tool problem. **It's a leadership problem**.
 
 GitHub Copilot boosts task productivity - most developers instinctively know this. But *systemic* gains don't materialize automatically. They require intentional investment in training, cultural change, and workflow redesign. In this post, I'll share what leaders must build to drive real Copilot adoption, and why productivity improvement is a change management issue rather than a technology issue.
 
-In my companion post, [Teaching Your Team to Think Async-First with GitHub Copilot]({% post_url 2025-11-25-teaching-async-thinking-with-copilot %}), I cover the specific mindset shifts and workflow changes teams need to make. This post focuses on the leadership and enablement foundation that makes those changes possible.
+In my companion post, [Teaching Your Team to Think Async-First with GitHub Copilot]({% post_url 2025/2025-11-25-teaching-async-thinking-with-copilot %}), I cover the specific mindset shifts and workflow changes teams need to make. This post focuses on the leadership and enablement foundation that makes those changes possible.
 
 ## The Innovation Curve: Understanding Adoption Patterns
 
@@ -237,6 +237,6 @@ Start by understanding the innovation curve and building enablement programs tha
 
 The organizations that win in the age of AI won't be the ones who simply buy the best tools. They'll be the ones who build the best enablement programs, foster the right culture, and empower their developers to think differently about how work gets done.
 
-In my companion post, [Teaching Your Team to Think Async-First with GitHub Copilot]({% post_url 2025-11-25-teaching-async-thinking-with-copilot %}), I dive into the specific mindset shifts and workflow redesigns that make async, multi-threaded development possible.
+In my companion post, [Teaching Your Team to Think Async-First with GitHub Copilot]({% post_url 2025/2025-11-25-teaching-async-thinking-with-copilot %}), I dive into the specific mindset shifts and workflow redesigns that make async, multi-threaded development possible.
 
 Happy leading!

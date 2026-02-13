@@ -2,6 +2,7 @@
 layout: post
 title: Azure DevOps Build and Test Reports using OData and REST in PowerBI
 date: '2019-09-17 05:06:26'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

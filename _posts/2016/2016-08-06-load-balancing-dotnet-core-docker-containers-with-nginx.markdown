@@ -2,6 +2,7 @@
 layout: post
 title: Load Balancing DotNet Core Docker Containers with nginx
 date: '2016-08-06 14:15:13'
+image: /assets/images/default.jpeg
 tags:
 - docker
 ---

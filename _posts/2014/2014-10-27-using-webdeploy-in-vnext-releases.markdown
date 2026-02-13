@@ -2,6 +2,7 @@
 layout: post
 title: Using WebDeploy in vNext Releases
 date: '2014-10-27 15:43:21'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

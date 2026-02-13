@@ -2,6 +2,7 @@
 layout: post
 title: 'Container DevOps: Beyond Build (Part 5) - Prometheus Operator'
 date: '2019-05-08 09:35:23'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - devops

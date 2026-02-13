@@ -2,6 +2,7 @@
 layout: post
 title: 'TF50299: The value named ‘xxx’ was not found when evaluating a condition'
 date: '2011-08-16 04:31:00'
+image: /assets/images/default.jpeg
 tags:
 - tfsconfig
 ---

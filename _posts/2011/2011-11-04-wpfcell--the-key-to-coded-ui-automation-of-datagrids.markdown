@@ -2,6 +2,7 @@
 layout: post
 title: WpfCell – The Key to Coded UI Automation of DataGrids
 date: '2011-11-04 17:52:00'
+image: /assets/images/default.jpeg
 tags:
 - testing
 ---

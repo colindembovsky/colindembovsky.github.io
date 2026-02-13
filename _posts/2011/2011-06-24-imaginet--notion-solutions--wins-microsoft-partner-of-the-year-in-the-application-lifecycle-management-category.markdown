@@ -3,6 +3,7 @@ layout: post
 title: Imaginet (Notion Solutions) wins Microsoft Partner of the Year in the Application
   Lifecycle Management Category
 date: '2011-06-24 15:09:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

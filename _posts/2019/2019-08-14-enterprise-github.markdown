@@ -2,6 +2,7 @@
 layout: post
 title: Enterprise GitHub
 date: '2019-08-14 06:54:11'
+image: /assets/images/default.jpeg
 tags:
 - sourcecontrol
 ---

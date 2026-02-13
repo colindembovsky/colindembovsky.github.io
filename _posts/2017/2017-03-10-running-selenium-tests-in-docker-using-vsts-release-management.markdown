@@ -2,6 +2,7 @@
 layout: post
 title: Running Selenium Tests in Docker using VSTS Release Management
 date: '2017-03-10 00:43:25'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - releasemanagement

@@ -2,6 +2,7 @@
 layout: post
 title: 'Aurelia: Object Binding Without Dirty Checking'
 date: '2015-03-23 21:31:53'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

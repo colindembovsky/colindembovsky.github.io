@@ -2,6 +2,7 @@
 layout: post
 title: Improvements to Code Review Checkin Policy
 date: '2013-05-21 00:33:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

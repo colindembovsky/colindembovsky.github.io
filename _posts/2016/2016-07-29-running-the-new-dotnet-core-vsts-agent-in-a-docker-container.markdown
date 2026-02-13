@@ -2,6 +2,7 @@
 layout: post
 title: Running the New DotNet Core VSTS Agent in a Docker Container
 date: '2016-07-29 01:12:06'
+image: /assets/images/default.jpeg
 tags:
 - docker
 - build

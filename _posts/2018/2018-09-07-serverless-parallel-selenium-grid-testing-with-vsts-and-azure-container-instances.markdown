@@ -2,6 +2,7 @@
 layout: post
 title: Serverless Parallel Selenium Grid Testing with VSTS and Azure Container Instances
 date: '2018-09-07 02:12:08'
+image: /assets/images/default.jpeg
 tags:
 - testing
 - releasemanagement

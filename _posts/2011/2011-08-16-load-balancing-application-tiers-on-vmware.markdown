@@ -2,6 +2,7 @@
 layout: post
 title: Load Balancing Application Tiers on VMWare
 date: '2011-08-16 04:18:00'
+image: /assets/images/default.jpeg
 tags:
 - tfsconfig
 ---

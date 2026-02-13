@@ -2,6 +2,7 @@
 layout: post
 title: BITE–Branch Info Team Explorer Extension
 date: '2013-07-02 15:38:00'
+image: /assets/images/default.jpeg
 tags:
 - development
 - sourcecontrol

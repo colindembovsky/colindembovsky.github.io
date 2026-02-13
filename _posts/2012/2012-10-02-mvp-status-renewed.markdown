@@ -2,6 +2,7 @@
 layout: post
 title: MVP Status Renewed
 date: '2012-10-02 00:20:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

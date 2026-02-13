@@ -2,6 +2,7 @@
 layout: post
 title: Using Release Management to Manage Ad-Hoc Deployments
 date: '2016-10-19 12:08:56'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: Code Coverage doesn’t work with Fakes on Hosted Build
 date: '2012-07-13 19:01:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

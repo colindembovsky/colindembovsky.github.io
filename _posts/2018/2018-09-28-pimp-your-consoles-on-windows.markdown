@@ -2,6 +2,7 @@
 layout: post
 title: Pimp Your Consoles on Windows
 date: '2018-09-28 21:45:35'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

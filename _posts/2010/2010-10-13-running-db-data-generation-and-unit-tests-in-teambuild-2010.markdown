@@ -2,6 +2,7 @@
 layout: post
 title: Running DB Data Generation and Unit Tests in TeamBuild 2010
 date: '2010-10-13 23:38:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

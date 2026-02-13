@@ -2,6 +2,7 @@
 layout: post
 title: TFS 2010 is Complete ALM
 date: '2011-03-18 21:36:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

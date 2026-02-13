@@ -2,6 +2,7 @@
 layout: post
 title: Colin’s ALM Corner – Updated Blog Engine
 date: '2014-04-25 18:26:08'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

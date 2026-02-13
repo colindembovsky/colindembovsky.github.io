@@ -2,6 +2,7 @@
 layout: post
 title: Monitoring Check-in Policy Overrides
 date: '2011-03-28 16:06:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---

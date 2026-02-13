@@ -2,6 +2,7 @@
 layout: post
 title: Terraform all the Things with VSTS
 date: '2018-08-08 01:08:54'
+image: /assets/images/default.jpeg
 tags:
 - releasemanagement
 ---

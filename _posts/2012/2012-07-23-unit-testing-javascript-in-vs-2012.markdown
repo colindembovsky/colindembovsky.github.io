@@ -2,6 +2,7 @@
 layout: post
 title: Unit Testing Javascript in VS 2012
 date: '2012-07-23 19:24:00'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

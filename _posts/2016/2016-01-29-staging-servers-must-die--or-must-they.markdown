@@ -2,6 +2,7 @@
 layout: post
 title: Staging Servers Must Die – Or Must They?
 date: '2016-01-29 17:12:37'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: 'Lab Management: Configuring Workgroup Lab Machines to a TFS on a Domain'
 date: '2012-08-30 04:45:00'
+image: /assets/images/default.jpeg
 tags:
 - labmanagement
 ---

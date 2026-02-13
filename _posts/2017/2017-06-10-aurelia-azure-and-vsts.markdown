@@ -2,6 +2,7 @@
 layout: post
 title: Aurelia, Azure and VSTS
 date: '2017-06-10 00:05:22'
+image: /assets/images/default.jpeg
 tags:
 - development
 - alm

@@ -2,6 +2,7 @@
 layout: post
 title: Install and Configure SQL Server using PowerShell DSC
 date: '2014-07-15 21:35:13'
+image: /assets/images/default.jpeg
 tags:
 - devops
 ---

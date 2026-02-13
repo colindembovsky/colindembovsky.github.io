@@ -2,6 +2,7 @@
 layout: post
 title: VS 2012 RC – Fakes Bugs Fixed
 date: '2012-06-20 19:27:00'
+image: /assets/images/default.jpeg
 tags:
 - development
 ---

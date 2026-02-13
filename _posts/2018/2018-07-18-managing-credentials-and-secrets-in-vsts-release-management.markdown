@@ -2,6 +2,7 @@
 layout: post
 title: Managing Credentials and Secrets in VSTS Release Management
 date: '2018-07-18 02:36:55'
+image: /assets/images/default.jpeg
 tags:
 - tfsconfig
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: ClickOnce Versioning and Deployment in a TeamBuild
 date: '2011-02-06 23:49:00'
+image: /assets/images/default.jpeg
 tags:
 - build
 ---

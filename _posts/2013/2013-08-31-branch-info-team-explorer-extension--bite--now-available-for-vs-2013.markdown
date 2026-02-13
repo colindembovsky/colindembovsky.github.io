@@ -2,6 +2,7 @@
 layout: post
 title: Branch Info Team Explorer Extension (BITE) Now Available for VS 2013
 date: '2013-08-31 03:24:00'
+image: /assets/images/default.jpeg
 tags:
 - tfsapi
 - alm

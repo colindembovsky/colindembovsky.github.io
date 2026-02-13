@@ -2,6 +2,7 @@
 layout: post
 title: PaaS and Time Compression in the Cloud
 date: '2015-06-22 16:31:08'
+image: /assets/images/default.jpeg
 tags:
 - cloud
 ---

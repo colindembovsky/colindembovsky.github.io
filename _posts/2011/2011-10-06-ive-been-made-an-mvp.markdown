@@ -2,6 +2,7 @@
 layout: post
 title: I’ve been made an MVP
 date: '2011-10-06 18:30:00'
+image: /assets/images/default.jpeg
 tags:
 - news
 ---

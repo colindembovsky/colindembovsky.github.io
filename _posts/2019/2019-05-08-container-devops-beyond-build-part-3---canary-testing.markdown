@@ -2,6 +2,7 @@
 layout: post
 title: 'Container DevOps: Beyond Build (Part 3) - Canary Testing'
 date: '2019-05-08 09:36:56'
+image: /assets/images/default.jpeg
 tags:
 - docker
 ---

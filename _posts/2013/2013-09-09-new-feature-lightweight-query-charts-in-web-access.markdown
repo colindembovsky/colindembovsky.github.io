@@ -2,6 +2,7 @@
 layout: post
 title: 'New Feature: Lightweight Query Charts in Web Access'
 date: '2013-09-09 22:40:00'
+image: /assets/images/default.jpeg
 tags:
 - alm
 ---
