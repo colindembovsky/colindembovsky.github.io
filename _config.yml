@@ -11,6 +11,7 @@
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 # baseurl:               '/hydejack-starter-kit'
 
+repository:            colindembovsky/colindembovsky.github.io
 
 # General settings
 # ---------------------------------------------------------------------------------------
