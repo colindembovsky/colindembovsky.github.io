@@ -89,7 +89,7 @@ Initialize this repository for GitHub Agentic Workflows using https://raw.github
 
 Copilot Coding Agent (CCA) got to work and created the necessary files to set up the framework in my repo and submitted a PR with the changes. I merged that PR, and then I was ready to create my first workflow.
 
-I also added two secrets ([tokens](https://github.github.com/gh-aw/reference/tokens/)) to the repo since these are required for the workflows I had in mind: one for Copilot inference (`GH_COPILOT_TOKEN`) and one for assigning Copilot to issues and PRs `GH_AW_AGENT_TOKEN`. The [tokens docs page](https://github.github.com/gh-aw/reference/tokens/) has detailed instructions on how to create these tokens and what permissions they need.
+I also added two secrets (tokens) to the repo since these are required for the workflows I had in mind: one for Copilot inference (`GH_COPILOT_TOKEN`) and one for assigning Copilot to issues and PRs `GH_AW_AGENT_TOKEN`. The [auth page](https://github.github.com/gh-aw/reference/auth/) has detailed instructions on how to create these tokens and what permissions they need.
 
 Now I was ready to create a workflow. I went back to the "Agents" tab, ensured that I was using the `agentic-workflows` custom agent and typed in this prompt:
 
@@ -98,7 +98,7 @@ Now I was ready to create a workflow. I went back to the "Agents" tab, ensured t
 Check the release notes and recent commits in `github/copilot-sdk`.
 Identify new features or enhancements from the last 7 days.
 Suggest 3 ways to use these updates to improve my app.
-For each suggestion, create a GitHub Issue with implementation details and assing it to Copilot for implementation.
+For each suggestion, create a GitHub Issue with implementation details and assign it to Copilot for implementation.
 Run this workflow once a week on Wednesdays.
 {% endraw %}
 ~~~
