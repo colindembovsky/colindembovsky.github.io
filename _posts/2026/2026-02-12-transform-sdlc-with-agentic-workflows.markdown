@@ -83,7 +83,7 @@ I headed to the Planeteer repo and clicked on the "Agents" tab. I bootstrapped A
 
 ~~~markdown
 {% raw %}
-Initialize this repository for GitHub Agentic Workflows using https://raw.githubusercontent.com/github/gh-aw/main/install.md
+Initialize this repository for GitHub Agentic Workflows using https://raw.githubusercontent.com/github/gh-aw/main/create.md
 {% endraw %}
 ~~~
 
