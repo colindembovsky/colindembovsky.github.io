@@ -48,16 +48,15 @@ The Pull Request (PR) has always been a critical hinge for successful DevOps tea
 
 ## Then vs Now
 
-- fixed sprint cadences
-- async continuous PR streams
-- one developer, one task
-- human plus agent parallel execution
-- story points
-- time-to-merge
-- QA after the fact
-- always-on governance
-- tacit tribal knowledge
-- explicit context packets
+Why did teams create a Sprint anyway? What was the point of (the dreaded) daily standups? A lot of that was based on *human coordination.* Humans can't work 24/7, and we have limits on how much context we can hold in our heads at once. Humans are also single-threaded. All of this meant breaking work down into chunks that could be completed by a single user, and then coordinating "merging" those chunks together at the end of the Sprint (the synchronization point). Story Points and estimates were an attempt to make sure you were able to complete enough for the coordination to work.
+
+Agents change this flow. We now have access to asynchronous, continuous PR streams. We can have multiple agents working in parallel on different tasks (or on different variants of the same task!). What should human developers be focusing on? What work is best suited to agents vs humans?
+
+Let's also consider QA. In the old world, QA was often a phase at the end of the Sprint. In the new world, we need to think about how to integrate QA into the flow in a more continuous way. Many teams (but probably not enough) have been "shifting left" with security - we need to do that and shift left for quality too. Ending up with a large batch of work waiting for QA at the end of the Sprint creates a bottleneck. Instead, we need to think about how to do QA in a more continuous way - and this should be built on the CI/CD foundation of DevOps. Automation becomes even more important than before.
+
+We need to "shift left" on governance too. There's a balance between "enterprise alignment" (centralized control) and "team autonomy". Too much enterprise alignment can stifle innovation and prevent teams from accelerating - while too much autonomy can fragment the SDLC and create risk. 
+
+Before, tribal knowledge was manageable because of the ceremonies like standups and retrospectives. But that doesn't scale for a team of autononomous agents. We need to find new ways to capture and share knowledge across the team. But models (and agents) have context limits, so we can't just "spray and pray" - we have to be targeted with how we handle context.
 
 ## New Bottlenecks
 
