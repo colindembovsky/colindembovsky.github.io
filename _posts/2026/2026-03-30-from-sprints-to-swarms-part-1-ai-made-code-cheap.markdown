@@ -2,10 +2,9 @@
 layout: post
 title: 'From Sprints to Swarms, Part 1: AI Made Code Cheap But Delivery Hard.'
 date: '2026-03-30 09:00:00'
-image: /assets/images/2026/03/sprints-to-swarms-part-1.jpg
-image_prompt: "Photo-realistic image of a modern software delivery control room with multiple monitors showing pull requests, CI pipelines, dashboards, and AI coding agents working in parallel, diverse engineering team reviewing flow metrics, natural lighting, focused collaborative atmosphere"
+image: /assets/images/2026/03/carrigae.png
 description: >
-  Keyword outline for part 1 of the From Sprints to Swarms series, focused on why faster code generation makes DevOps, merge flow, and verification more important than ever.
+  In the first part of this series, we examine how AI made code generation cheap while shifting bottlenecks to delivery. Pull requests are the critical unit of flow, exposing pressure on review, testing, merge speed, and human-agent coordination. We challenge current processes and assumptions and probe into what teams need to think about as they embrace agentic engineering.
 tags:
 - ai
 - devops
@@ -19,14 +18,7 @@ tags:
 
 You've heard all the hype: "The age of agents is here!", "AI is taking over coding!" and so on and so on. But you've also seen the value of LLMs in coding - they're not a silver bullet, but they've come so far in such a short time that it's impossible to ignore the impact they're having on how we write software. In this series I'll cover some thoughts about how I think software teams can adapt to the new world of *agentic engineering*, challenge some assumptions and hopefully provoke some new thinking about how we can work with these tools to build better software, faster.
 
-There's a lot to cover, so I'm going to post three articles:
-
-- Part 1: AI Made Code Cheap But Delivery Hard
-  - We'll cover how the economics of software delivery are changing when code generation is no longer the bottleneck, and why that makes DevOps, merge flow, and verification more important than ever.
-- Part 2: [Context Is Infrastructure, Policy Is the Runtime]
-  - We'll dive into how the shift to agentic software delivery means that context - in the form of documentation, architecture diagrams, ADRs, runbooks, etc - becomes a critical part of the infrastructure that supports safe and efficient delivery, and how policy-as-code and always-on governance are necessary to keep the system running smoothly.
-- Part 3: [When Code Gets Cheaper, Judgment Gets More Valuable]
-  - Finally, we'll talk about how the role of the developer evolves in this new world, where judgment, verification, and strategic decision-making become more important than ever as the cost of code itself plummets.
+There's a lot to cover, so I'm going to split into a mini-series of posts, starting with this one.
 
 ## Part 1: AI Made Code Cheap But Delivery Hard
 
@@ -69,11 +61,12 @@ These are some of the new bottlenecks that teams are facing in this new world of
 - **Context quality** - how well is context maintained and communicated across the team?
 - **Ownership ambiguity** - how clear is it who owns each piece of work?
 
-## Metrics That Matter
+## Metrics That (Mostly) Matter
 
-There are some metrics that teams should be paying attention to in this new world:
+Ultimately, if you're not meeting business goals, then it doesn't matter how fast your agents are generating code. Measuring business value delivered is far more important than microscoping agent performance. However, these are some metrics that teams should be paying attention to in this new world:
 
 - **PR size** - larger PRs require more context and more review time, and are more likely to introduce bugs.
+- **Agentic PR ratio** - what percentage of PRs are being created by agents vs humans?
 - **Review latency** - how long does it take for PRs to be reviewed?
 - **Agentic review ratio** - what percentage of PRs reviewed by agents? How successful are those reviews compared to human reviews?
 - **Median time-to-merge** - how long does it take for PRs to be merged after being opened?
@@ -96,30 +89,10 @@ Of course, these are not set in stone and as agents and models continue to evolv
 | Escalation handling | Repetitive toil |
 | Assessing business impact | Parallel experiments |
 
-## Practical DevOps Moves
+## Conclusion
 
-- small batches
-- trunk-based development
-- merge queue
-- branch protection
-- reviewer SLAs
-- dark launches
-- feature flags
-- rollback drills
-- automated evidence collection
+DevOps has always been about optimizing the flow of software delivery. With the advent of agentic engineering, teams need to double down on good DevOps practices to ensure that the benefits of faster code generation are not lost in bottlenecks around review, testing, and merging. But agentic engineering introduces some fundamentally different opportunities if teams take the time to develop new muscle memory and challenge existing assumptions. 
 
-## Anti-Patterns
+By focusing on PRs as the unit of flow and optimizing human/agent responsibilities, thinking in terms of async, multi-threaded workflows, teams can adapt to this new world intelligently. In Part 2, we'll dive into how context and policy become critical infrastructure in this new world of agentic engineering. Stay tuned, and...
 
-- velocity worship
-- massive AI PRs
-- context-free tickets
-- end-of-sprint QA
-- unowned agent work
-- "passed CI means done"
-
-## Closing Beat
-
-- merge flow as heartbeat
-- DevOps as control system
-- faster generation, tighter controls
-- swarms need orchestration
+... happy coding!
