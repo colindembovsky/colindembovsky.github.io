@@ -2,8 +2,7 @@
 layout: post
 title: 'From Sprints to Swarms, Part 2: Context Is Infrastructure, Policy Is the Runtime.'
 date: '2026-04-06 09:00:00'
-image: /assets/images/2026/04/sprints-to-swarms-part-2.jpg
-image_prompt: "Photo-realistic image of software engineers working with architecture diagrams, documentation, policy dashboards, and GitHub repository controls on large screens, AI agents operating within visible guardrails, modern office, crisp natural light, calm high-trust atmosphere"
+image: /assets/images/2026/04/building.png
 description: >
   In part 2 of this series, I argue that context and policy form the control plane for agentic software delivery. Good task framing, reliable documentation, and policy at the point of action let teams scale AI speed without scaling chaos.
 tags:
