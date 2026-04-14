@@ -14,6 +14,12 @@ tags:
 1. TOC
 {:toc}
 
+## Series
+
+- [Part 1: AI Made Code Cheap But Delivery Hard]({% post_url 2026/2026-04-03-from-sprints-to-swarms-part-1-ai-made-code-cheap %})
+- [Part 2: Context Is Infrastructure, Policy Is the Runtime]({% post_url 2026/2026-04-07-from-sprints-to-swarms-part-2-context-is-infrastructure %})
+- [Part 3: When Code Gets Cheaper, Judgment Gets More Valuable]({% post_url 2026/2026-04-14-from-sprints-to-swarms-part-3-judgment-gets-more-valuable %})
+
 In [Part 1]({% post_url 2026/2026-04-03-from-sprints-to-swarms-part-1-ai-made-code-cheap %}) of this series, I argued that AI made code cheap, not delivery easy. Once the pull request becomes the unit of flow, the constraint shifts into review, testing, merge speed, and all the coordination work teams used to treat as background noise.
 
 That raises the next question: what does the happy path look like when agents do a meaningful share of the implementation?

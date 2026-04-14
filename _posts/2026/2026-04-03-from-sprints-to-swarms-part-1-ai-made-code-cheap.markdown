@@ -14,6 +14,12 @@ tags:
 1. TOC
 {:toc}
 
+## Series
+
+- [Part 1: AI Made Code Cheap But Delivery Hard]({% post_url 2026/2026-04-03-from-sprints-to-swarms-part-1-ai-made-code-cheap %})
+- [Part 2: Context Is Infrastructure, Policy Is the Runtime]({% post_url 2026/2026-04-07-from-sprints-to-swarms-part-2-context-is-infrastructure %})
+- [Part 3: When Code Gets Cheaper, Judgment Gets More Valuable]({% post_url 2026/2026-04-14-from-sprints-to-swarms-part-3-judgment-gets-more-valuable %})
+
 We all know that software engineering has been irrevocably changed by LLMs and agents. It is a mistake to think the main change is *faster typing*. It isn't. The bigger change is economic: when code gets cheaper, the delivery system becomes the constraint.
 
 This series is about what that means for software teams. Part 1 is about flow. Part 2 will cover context and policy. Part 3 will cover judgment and the changing role of the developer.
